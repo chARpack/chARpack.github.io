@@ -9,16 +9,12 @@ const config = {
 
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
-  preprocess: [preprocess(), mdsvex(mdsvexConfig)],
+  preprocess: [
+    preprocess(),
+    mdsvex(mdsvexConfig),
+  ],
 
   kit: {
-    // hydrate the <div id="svelte"> element in src/app.html
-    // prerender: {
-    //   crawl: true,
-    //   enabled: true,
-    //   onError: 'continue',
-    //   default: true
-    //  },
     adapter: adapter({
       pages: "build",
       assets: "build",
