@@ -1,4 +1,4 @@
-import{S as Gt,i as Rt,s as It,k as a,r,a as Ht,l as n,m as l,u as s,h as e,c as Bt,b as o,G as f,n as pt}from"../chunks/index.216e3c34.mjs";function Tt(_t){let u,it,S,h,ot,P,H,B,_,G,R,I,T,D,E,g,U,x,p,rt,z,F,L,Y,A,W,k,j,K,O,q,C,J,M,N,b,st,Q,c,at,V,y,nt,X,m,lt,Z,v,ft,$,d,ut,tt,w,ht,et;return{c(){u=a("h1"),it=r("Privacy notice"),S=r(`
+import{S as Gt,i as Rt,s as It,k as a,r,a as Ht,l as n,m as l,u as s,h as e,c as Bt,b as o,G as f,n as pt}from"../chunks/index.705c026a.mjs";function Tt(_t){let u,it,S,h,ot,P,H,B,_,G,R,I,T,D,E,g,U,x,p,rt,z,F,L,Y,A,W,k,j,K,O,q,C,J,M,N,b,st,Q,c,at,V,y,nt,X,m,lt,Z,v,ft,$,d,ut,tt,w,ht,et;return{c(){u=a("h1"),it=r("Privacy notice"),S=r(`
 
 Data protection information / data protection declaration
 
