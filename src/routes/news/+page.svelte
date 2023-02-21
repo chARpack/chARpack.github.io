@@ -1,35 +1,38 @@
-<script context="module">
-    const allPosts = import.meta.glob("./**/*.md");
-    let body = [];
-    for (let path in allPosts) {
-        body.push(
-            allPosts[path]().then( ({metadata}) => {
-            return { path, metadata}
-            })
-        );  
-    }
-    export async function load() {
-        const posts = await Promise.all(body);
-            return {
-            props: {posts}
-        }
-    }
-</script>
-
 <script>
-    export let posts;
+    import { mdsvex } from 'mdsvex';
+    import globToArray from '$lib/globToArray';
+
+    const allPosts = import.meta.globEager("./content/**/*.md");
+    const posts = globToArray(allPosts);
+
+    // const posts = [];
+    // async function loadPosts() {
+    //     const allPosts = await import.meta.glob("./content/**/*.md");
+    
+        // console.log("Posts");
+        // console.log(allPosts);
+
+        // for await (const path of Object.keys(allPosts)) {
+        //     const file = await allPosts[path]();
+        //     //const { html, metadata } = await mdsvex.default()(file);
+        //     const { html, metadata } = file.then(({html, metadata}) => {return {html,metadata};});
+        //     const { title, date } = metadata;
+        //     const slug = path.replace('./content/', '').replace('.md', '');
+
+        //     posts.push({title, date, slug, html});
+
+        // }
+    // }
+    // loadPosts();
 </script>
 
 <h1>News</h1>
 
+{#each  posts as post }
 <section>
-    <h3>We're Online!</h3>
-    <p>2023-02-20</p>
-    <p>
-    The Webpage of chARp Molecular Builder is now up and running.<br>
-    Stay tuned for more content.
-    </p>
+    <svelte:component this={post.default} />
 </section>
+{/each}
 
 <style>
 	section {

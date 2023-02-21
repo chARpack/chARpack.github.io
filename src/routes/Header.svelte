@@ -1,37 +1,25 @@
 <script>
 	import { page } from '$app/stores';
-	import github from '$lib/images/github.svg';
+	import github from '$lib/images/github-mark-white.svg';
+	import { Button, Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://github.com/">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/news' ? 'page' : undefined}>
-				<a href="/news">News</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-
-	</nav>
-
-	<div class="corner">
-		<a href="https://github.com/">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
+<Navbar let:hidden let:toggle rounded color="form">
+  <NavBrand href="/">
+    <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"/>
+    <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">chARp</span>
+  </NavBrand>
+  <NavHamburger on:click={toggle} />
+  <div class="flex md:order-2">
+    <Button size="sm" href="https://github.com/UniStuttgart-VISUS/MolecularVRAR"><img src={github} class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
+    <NavHamburger on:click={toggle} />
+  </div>
+  <NavUl {hidden}>
+    <NavLi href="/" active={true}>Home</NavLi>
+    <NavLi href="/news">News</NavLi>
+  </NavUl>
+</Navbar>
 </header>
 
 <style>
