@@ -1,4 +1,4 @@
-import{S as Gt,i as Rt,s as It,k as a,r,a as Ht,l as n,m as l,u as s,h as e,c as Bt,b as o,G as f,n as pt}from"../chunks/index.705c026a.mjs";function Tt(_t){let u,it,S,h,ot,P,H,B,_,G,R,I,T,D,E,g,U,x,p,rt,z,F,L,Y,A,W,k,j,K,O,q,C,J,M,N,b,st,Q,c,at,V,y,nt,X,m,lt,Z,v,ft,$,d,ut,tt,w,ht,et;return{c(){u=a("h1"),it=r("Privacy notice"),S=r(`
+import{S as Gt,i as Rt,s as It,k as a,q as r,a as Ht,l as n,m as l,r as s,h as e,c as Bt,b as o,W as f,G as pt}from"../chunks/index.0ea9fb50.mjs";function Tt(_t){let u,it,S,h,ot,P,H,B,_,G,R,I,T,D,E,g,U,x,p,rt,z,F,L,Y,W,A,k,j,q,K,O,C,J,M,N,b,st,Q,c,at,V,y,nt,X,m,lt,Z,v,ft,$,d,ut,tt,w,ht,et;return{c(){u=a("h1"),it=r("Privacy notice"),S=r(`
 
 Data protection information / data protection declaration
 
@@ -12,10 +12,10 @@ Telephone: +49 711 685-0`),E=a("br"),g=r(`
 Email: poststelle(at)uni-stuttgart.de`),U=a("br"),x=Ht(),p=a("h3"),rt=r("2. Data protection officer:"),z=r(`
 
 University of Stuttgart`),F=a("br"),L=r(`
-Data protection officer`),Y=a("br"),A=r(`
-Breitscheidstr. 2`),W=a("br"),k=r(`
-70174 Stuttgart`),j=a("br"),K=r(`
-Tel: +49 711 685-83687`),O=a("br"),q=r(`
+Data protection officer`),Y=a("br"),W=r(`
+Breitscheidstr. 2`),A=a("br"),k=r(`
+70174 Stuttgart`),j=a("br"),q=r(`
+Tel: +49 711 685-83687`),K=a("br"),O=r(`
 Fax: +49 711 685-83688`),C=a("br"),J=r(`
 Email: datenschutz(at)uni-stuttgart.de`),M=a("br"),N=Ht(),b=a("h3"),st=r("3. Introductory notice"),Q=r(`
 
@@ -65,10 +65,10 @@ Telephone: +49 711 685-0`),E=n(t,"BR",{}),g=s(t,`
 Email: poststelle(at)uni-stuttgart.de`),U=n(t,"BR",{}),x=Bt(t),p=n(t,"H3",{});var ct=l(p);rt=s(ct,"2. Data protection officer:"),ct.forEach(e),z=s(t,`
 
 University of Stuttgart`),F=n(t,"BR",{}),L=s(t,`
-Data protection officer`),Y=n(t,"BR",{}),A=s(t,`
-Breitscheidstr. 2`),W=n(t,"BR",{}),k=s(t,`
-70174 Stuttgart`),j=n(t,"BR",{}),K=s(t,`
-Tel: +49 711 685-83687`),O=n(t,"BR",{}),q=s(t,`
+Data protection officer`),Y=n(t,"BR",{}),W=s(t,`
+Breitscheidstr. 2`),A=n(t,"BR",{}),k=s(t,`
+70174 Stuttgart`),j=n(t,"BR",{}),q=s(t,`
+Tel: +49 711 685-83687`),K=n(t,"BR",{}),O=s(t,`
 Fax: +49 711 685-83688`),C=n(t,"BR",{}),J=s(t,`
 Email: datenschutz(at)uni-stuttgart.de`),M=n(t,"BR",{}),N=Bt(t),b=n(t,"H3",{});var yt=l(b);st=s(yt,"3. Introductory notice"),yt.forEach(e),Q=s(t,`
 
@@ -104,4 +104,4 @@ datenschutz(at)uni-stuttgart.de
 
 You have the right to complain to the supervisory authority, should you be of the opinion that the processing of the personal data relating to you breaches legal regulations.
 
-The competent supervisory authority is the State Data Protection and Freedom of Information Officer of Baden-Württemberg – Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg.`)},m(t,i){o(t,u,i),f(u,it),o(t,S,i),o(t,h,i),f(h,ot),o(t,P,i),o(t,H,i),o(t,B,i),o(t,_,i),o(t,G,i),o(t,R,i),o(t,I,i),o(t,T,i),o(t,D,i),o(t,E,i),o(t,g,i),o(t,U,i),o(t,x,i),o(t,p,i),f(p,rt),o(t,z,i),o(t,F,i),o(t,L,i),o(t,Y,i),o(t,A,i),o(t,W,i),o(t,k,i),o(t,j,i),o(t,K,i),o(t,O,i),o(t,q,i),o(t,C,i),o(t,J,i),o(t,M,i),o(t,N,i),o(t,b,i),f(b,st),o(t,Q,i),o(t,c,i),f(c,at),o(t,V,i),o(t,y,i),f(y,nt),o(t,X,i),o(t,m,i),f(m,lt),o(t,Z,i),o(t,v,i),f(v,ft),o(t,$,i),o(t,d,i),f(d,ut),o(t,tt,i),o(t,w,i),f(w,ht),o(t,et,i)},p:pt,i:pt,o:pt,d(t){t&&e(u),t&&e(S),t&&e(h),t&&e(P),t&&e(H),t&&e(B),t&&e(_),t&&e(G),t&&e(R),t&&e(I),t&&e(T),t&&e(D),t&&e(E),t&&e(g),t&&e(U),t&&e(x),t&&e(p),t&&e(z),t&&e(F),t&&e(L),t&&e(Y),t&&e(A),t&&e(W),t&&e(k),t&&e(j),t&&e(K),t&&e(O),t&&e(q),t&&e(C),t&&e(J),t&&e(M),t&&e(N),t&&e(b),t&&e(Q),t&&e(c),t&&e(V),t&&e(y),t&&e(X),t&&e(m),t&&e(Z),t&&e(v),t&&e($),t&&e(d),t&&e(tt),t&&e(w),t&&e(et)}}}class Et extends Gt{constructor(u){super(),Rt(this,u,null,Tt,It,{})}}export{Et as default};
+The competent supervisory authority is the State Data Protection and Freedom of Information Officer of Baden-Württemberg – Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg.`)},m(t,i){o(t,u,i),f(u,it),o(t,S,i),o(t,h,i),f(h,ot),o(t,P,i),o(t,H,i),o(t,B,i),o(t,_,i),o(t,G,i),o(t,R,i),o(t,I,i),o(t,T,i),o(t,D,i),o(t,E,i),o(t,g,i),o(t,U,i),o(t,x,i),o(t,p,i),f(p,rt),o(t,z,i),o(t,F,i),o(t,L,i),o(t,Y,i),o(t,W,i),o(t,A,i),o(t,k,i),o(t,j,i),o(t,q,i),o(t,K,i),o(t,O,i),o(t,C,i),o(t,J,i),o(t,M,i),o(t,N,i),o(t,b,i),f(b,st),o(t,Q,i),o(t,c,i),f(c,at),o(t,V,i),o(t,y,i),f(y,nt),o(t,X,i),o(t,m,i),f(m,lt),o(t,Z,i),o(t,v,i),f(v,ft),o(t,$,i),o(t,d,i),f(d,ut),o(t,tt,i),o(t,w,i),f(w,ht),o(t,et,i)},p:pt,i:pt,o:pt,d(t){t&&e(u),t&&e(S),t&&e(h),t&&e(P),t&&e(H),t&&e(B),t&&e(_),t&&e(G),t&&e(R),t&&e(I),t&&e(T),t&&e(D),t&&e(E),t&&e(g),t&&e(U),t&&e(x),t&&e(p),t&&e(z),t&&e(F),t&&e(L),t&&e(Y),t&&e(W),t&&e(A),t&&e(k),t&&e(j),t&&e(q),t&&e(K),t&&e(O),t&&e(C),t&&e(J),t&&e(M),t&&e(N),t&&e(b),t&&e(Q),t&&e(c),t&&e(V),t&&e(y),t&&e(X),t&&e(m),t&&e(Z),t&&e(v),t&&e($),t&&e(d),t&&e(tt),t&&e(w),t&&e(et)}}}class Et extends Gt{constructor(u){super(),Rt(this,u,null,Tt,It,{})}}export{Et as default};
