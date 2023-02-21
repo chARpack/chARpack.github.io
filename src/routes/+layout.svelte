@@ -24,7 +24,7 @@
   
   <Footer>
     <FooterCopyright href="https://www.itheoc.uni-stuttgart.de/" by="ITheoC" year={2023} />
-    <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+    <FooterLinkGroup ulClass="max-w-2xl flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
       <FooterLink href="/privacy">Privacy Policy</FooterLink>
       <FooterLink href="/legal">Licensing</FooterLink>
       <FooterLink href="/contact">Contact</FooterLink>

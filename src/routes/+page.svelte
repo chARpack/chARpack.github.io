@@ -2,16 +2,17 @@
 	<title>Home</title>
 	<meta name="description" content="chARp Home" />
 </svelte:head>
+<script>
+	import { Carousel } from 'flowbite-svelte'
+	import { images } from './+server.js';
+	let showThumbs=false
+  	let showCaptions=false
+</script>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<!-- <source srcset={welcome} type="image/webp" /> -->
-				<img src="/images/placeholder.png" alt="placeholder" />
-			</picture>
-		</span>
-	</h1>
+	<div class="max-w-2xl">
+		<Carousel {images} loop {showCaptions} {showThumbs} duration="5000"/>
+	</div>
 </section>
 
 <section>
