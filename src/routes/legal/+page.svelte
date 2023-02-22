@@ -1,5 +1,10 @@
-<h1>Legal notice</h1>
+<script>
+	import { Heading, P, A, Mark, Secondary } from 'flowbite-svelte'
+</script>
 
+<Heading tag="h1" class="mb-6">Legal notice</Heading>
+
+<P>
 <table>
     <tr>
         <td>Address</td>
@@ -46,7 +51,7 @@
         <td>www.itheoc.uni-stuttgart.de</td>
     </tr>
 </table>
-
+</P>
 
 <style>
     table {
@@ -62,6 +67,6 @@
     }
     
     tr:nth-child(even) {
-      background-color: #dddddd;
+      background-color: #797979;
     }
 </style>
