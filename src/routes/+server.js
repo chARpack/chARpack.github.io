@@ -8,7 +8,7 @@ export const images = [
     {
         id: 1,
         name: "Different View",
-        imgurl: "images/pic1.png",
+        imgurl: "/images/pic1.png",
         attribution: "",
     }
 ];

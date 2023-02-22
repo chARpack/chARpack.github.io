@@ -22,6 +22,9 @@ const config = {
       assets: "build",
       fallback: null,
     }),
+    prerender : {
+      crawl: true
+    }
   },
 };
 

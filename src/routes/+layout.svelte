@@ -1,34 +1,44 @@
 <script>
   import "../app.postcss";
-  import Header from "./Header.svelte";
   // import "./styles.css";
-  import { DarkMode, Footer, FooterBrand, FooterCopyright, FooterIcon, FooterLink, FooterLinkGroup } from "flowbite-svelte"
-	let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
+  import { DarkMode, Footer, FooterBrand, FooterCopyright, FooterIcon, FooterLink, FooterLinkGroup, Button, Navbar, NavBrand, NavLi, NavUl, NavHamburger } from "flowbite-svelte"
+  import github from '$lib/images/github-mark-white.svg';
+	import charp from '$lib/images/charp_logo.svg';
+	let darkmodeButtonClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
+  let headerButtonClass = 'text-gray-500 dark:text-gray-200 hover:bg-gray-500 dark:hover:bg-gray-500 rounded-lg text-xl p-2'
 </script>
 
 <div class="app">
-  <Header />
+  <header class="self-center w-3/6">
+    <Navbar let:hidden let:toggle rounded color="form" class="min-w-full dark:bg-gray-900">
+      <NavBrand href="/">
+        <img src={charp} class="mr-3 h-20 sm:h-25" alt="chARp Logo"/>
+        <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">chARp</span>
+      </NavBrand>
+      <NavHamburger on:click={toggle} />
+      <div class="flex md:order-2">
+        <Button size="sm" gradient href="https://github.com/UniStuttgart-VISUS/MolecularVRAR"><img src={github} class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
+        <NavHamburger on:click={toggle} />
+      </div>
+      <NavUl {hidden}>
+        <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>
+        <NavLi href="/news"><Button color="dark" size="lg" class={headerButtonClass}>News</Button></NavLi>
+      <NavLi href="/manual/getting_started"><Button color="dark" size="lg" class={headerButtonClass}>Manual</Button></NavLi>
+      </NavUl>
+    </Navbar>
+  </header>
 
   <main>
     <slot />
   </main>
 
-  <!-- <footer>
-    <hr />
-    <p>
-      This Website is maintained by the Institute for Theoretical Chemistry of
-      the University Stuttgart.<br />
-      <a href="/privacy">Privacy notice</a> | <a href="/legal">Legal notice</a>
-    </p>
-  </footer> -->
-  
-  <Footer>
+  <Footer class="self-center w-3/6 dark:bg-gray-900">
     <FooterCopyright href="https://www.itheoc.uni-stuttgart.de/" by="ITheoC" year={2023} />
     <FooterLinkGroup ulClass="max-w-2xl flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
       <FooterLink href="/privacy">Privacy Policy</FooterLink>
       <FooterLink href="/legal">Licensing</FooterLink>
       <FooterLink href="/contact">Contact</FooterLink>
-      <DarkMode {btnClass} />
+      <DarkMode {darkmodeButtonClass} />
     </FooterLinkGroup>
   </Footer>
 </div>
@@ -49,23 +59,5 @@
     max-width: 64rem;
     margin: 0 auto;
     box-sizing: border-box;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-  }
-
-  footer a {
-    font-weight: bold;
-  }
-
-  @media (min-width: 480px) {
-    footer {
-      padding: 12px 0;
-    }
   }
 </style>
