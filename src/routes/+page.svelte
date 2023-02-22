@@ -10,7 +10,7 @@
   	let showCaptions=false
 </script>
 
-<div class="max-w-2xl self-center mb-1">
+<div class="max-w-2xl self-center mb-12 mt-4">
 	<div><Carousel {images} loop {showCaptions} {showThumbs} duration="5000"/></div>
 </div>
 

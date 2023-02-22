@@ -9,7 +9,6 @@
 		console.log(post);
 		console.log(post.default);
 	});
-
 </script>
 
 <div class="self-center">
@@ -28,14 +27,3 @@
 </div>
 {/each}
 
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-        border: 1px solid red;
-	}
-</style>
