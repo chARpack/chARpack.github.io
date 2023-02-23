@@ -1,38 +1,65 @@
-# create-svelte
+# chARp Molecular Builder Webpage
+This is the webpage repository of the software package chARp (add link later). The implementation of the webpage is based on [SevelteKit](https://kit.svelte.dev/). Instructions for adding content are presented below. For more information please refer to the [documentation of SvelteKit](https://kit.svelte.dev/docs).
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
+## Getting started
+As the first step, clone this repository to work with the source code locally
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone git@github.com:chARpMolecularBuilder/chARpMolecularBuilder.github.io.git chARp_page
+cd chARp_page
+git branch
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+and make sure you're on the `master` branch.
+Download and install [Node.js](https://nodejs.org/en/download/).
+During the installation process, make sure that the install directory is beeing added to your environment (`PATH`).
+Check if your Node.js installation is the latest version:
 ```bash
-npm run dev
+npm install -g npm@latest
+```
+### Preparing the repository
+To install all required dependencies run
+```bash
+npm install
+```
+in the source directory of this repository.
 
-# or start the server and open the app in a new browser tab
+### Developing
+Once you've created a project and installed dependencies, start a development server:
+```bash
 npm run dev -- --open
 ```
+The content of the page is located in `src/routes`.
+The file `+page.svelte` directly relates to the content that is rendered on the page `/` or `Home`.
+The `+layout.svelte` file configures the overall layout of the page, while nested `+layout.svelte` files only modify the layout of the main component on the page.
+You can modify the contents of the page and get direct updates in your browser.
 
-## Building
-
-To create a production version of your app:
-
+### Building
+After applying changes to the page, check if the page will build before pushing your changes:
 ```bash
 npm run build
 ```
+If the build runs without errors, you can preview the production build with `npm run preview`.
 
-You can preview the production build with `npm run preview`.
+### Deploying
+For the deploy on the live page, you just need to push the soruces (the `master` branch) to GitHub:
+```bash
+git add .
+git commit -m "<your commit message>"
+git push origin master
+```
+On GitHub an action is triggered on every push that automatically builds and deploys the static page in the `gh-pages` branch.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+#### Troubleshooting
+If there is any trouble with the automatic build and deploy process, you can execute this step by hand.
+For this, simply switch to the `gh-pages` branch,
+```bash
+git checkout gh-pages
+```
+copy the files from `./build` into the source directory,
+```bash
+cp -rf ./build .
+```
+commit and push the changes to the `gh-pages` branch
+```bash
+git commit -am "<your commit message>"
+git push origin gh-pages
+```
