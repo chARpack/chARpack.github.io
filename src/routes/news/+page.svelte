@@ -6,8 +6,8 @@
     const posts = globToArray(allPosts);
 
 	posts.forEach(post => {
-		console.log(post);
-		console.log(post.default);
+		const date = new Date(post.metadata.date);
+		post.metadata.date = date.toISOString().slice(0, 10);
 	});
 </script>
 
@@ -19,11 +19,9 @@
 
 {#each  posts as post }
 <div class="bg-gray-300 dark:bg-gray-700 p-5 rounded-lg">
-	<Heading tag="h1" class="mb-6">{post.metadata.title}</Heading>
-	<Heading tag="h2" class="mb-6">{post.metadata.date}</Heading>
-	<P>
+	<Heading tag="h1" class="mb-3">{post.metadata.title}</Heading>
+	<Heading tag="h3" class="mb-6">{post.metadata.date}</Heading>
     <svelte:component this={post.default} />
-	</P>
 </div>
 {/each}
 

@@ -1,14 +1,18 @@
 <script>
-    import { Sidebar, SidebarWrapper, SidebarBrand, SidebarItem, SidebarGroup } from 'flowbite-svelte'
-    import charp from '$lib/images/charp_logo.svg';
-    let spanClass = 'flex-1 ml-3 whitespace-nowrap';
-  
-    let site = {
-      name: 'chARp',
-      href: '/',
-      img: '/charp_logo.svg'
-    };
-  </script>
+  import { Sidebar, SidebarWrapper, SidebarBrand, SidebarItem, SidebarGroup } from 'flowbite-svelte';
+
+  let spanClass = 'flex-1 ml-3 whitespace-nowrap';
+
+  let site = {
+    name: 'chARp',
+    href: '/',
+    img: '/charp_logo.svg'
+  };
+
+  let data;
+  const {sections} = data;
+
+</script>
 
 <div class="app columns-2 max-w-full">
   <div>
@@ -16,9 +20,16 @@
       <SidebarWrapper class="dark:bg-gray-900">
         <SidebarGroup>
           <SidebarBrand {site} />
-          <SidebarItem label="Getting Started" href="/manual/getting_started">
-          </SidebarItem>
         </SidebarGroup>
+        <!-- {#each sections as section}
+          <SidebarGroup>
+          <h3>{section.name}</h3>
+          {#each section.dictionaries as page}
+            <SidebarItem label={page.metadata.title} href={page.route}>
+            </SidebarItem>
+          {/each}
+          </SidebarGroup>
+        {/each} -->
       </SidebarWrapper>
     </Sidebar>
   </div>

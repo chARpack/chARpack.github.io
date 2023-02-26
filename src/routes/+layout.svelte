@@ -1,11 +1,24 @@
 <script>
-  import "../app.postcss";
+  import "../app.css";
+  import 'flowbite';
   // import "./styles.css";
   import { DarkMode, Footer, FooterBrand, FooterCopyright, FooterIcon, FooterLink, FooterLinkGroup, Button, Navbar, NavBrand, NavLi, NavUl, NavHamburger } from "flowbite-svelte"
   import github from '$lib/images/github-mark-white.svg';
 	import charp from '$lib/images/charp_logo.svg';
 	let darkmodeButtonClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
   let headerButtonClass = 'text-gray-500 dark:text-gray-200 hover:bg-gray-500 dark:hover:bg-gray-500 rounded-lg text-xl p-2'
+
+  // globally add code highlighting
+  import Prism from 'prismjs';
+	import 'prismjs/themes/prism-okaidia.css';
+	import 'prismjs/components/prism-javascript';
+	import { onMount } from 'svelte';
+
+	function initSyntaxHighlighting() {
+		Prism.highlightAll();
+	}
+
+	onMount(initSyntaxHighlighting);
 </script>
 
 <div class="app">
@@ -23,7 +36,7 @@
       <NavUl {hidden}>
         <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>
         <NavLi href="/news"><Button color="dark" size="lg" class={headerButtonClass}>News</Button></NavLi>
-      <NavLi href="/manual/getting_started"><Button color="dark" size="lg" class={headerButtonClass}>Manual</Button></NavLi>
+      <NavLi href="/manual"><Button color="dark" size="lg" class={headerButtonClass}>Manual</Button></NavLi>
       </NavUl>
     </Navbar>
   </header>
