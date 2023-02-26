@@ -1,9 +1,13 @@
 import { loadFullTree } from '$lib/loadmd';
 
-export const load = ({params}) => {
-    console.log(params)
-
-    return {
-        sections: loadFullTree()
+export async function load({ params }) {
+    try {
+      const sections = await loadFullTree();
+      console.log("manual root page.js");
+      console.log(sections);
+      return { sections };
+    } catch (error) {
+      console.error(error);
+      return { sections: [] }; // Return an empty array if there's an error
     }
 }

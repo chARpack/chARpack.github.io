@@ -9,8 +9,15 @@
     img: '/charp_logo.svg'
   };
 
-  let data;
-  const {sections} = data;
+  import { onMount } from 'svelte';
+  import { load } from './+page.js';
+
+  let sections = [];
+
+  onMount(async () => {
+    const data = await load({ params: {} });
+    sections = data.sections;
+  });
 
 </script>
 

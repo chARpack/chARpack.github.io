@@ -1,7 +1,19 @@
-<script context="module">
-  let data;
-  const { sections } = data;
-    
+<script>
+  import { load } from './+page.js';
+  let sections;
+
+  async function loadData() {
+    const data = await load({ params: {} });
+    sections = data.sections;
+  }
+
+  loadData();
+
+  console.log("Manual mainpage")
+  console.log(sections);
+
+  // let data;
+  // const {sections} = data;
 
 </script>
 

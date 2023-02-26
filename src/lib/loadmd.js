@@ -22,7 +22,7 @@ export function loadFullTree() {
     const allPages = import.meta.globEager('/src/routes/manual/**/*.md');
     let pages = globToArray(allPages);
 
-    console.log("LoadFullTree");
+    //console.log("LoadFullTree");
 
     pages.forEach(page => {
         const section = page.path.split('/').slice(-2)[0];
@@ -38,7 +38,7 @@ export function loadFullTree() {
         page['route'] = route;
         page['prio'] = overall_prio;
 
-        console.log(page);
+        //console.log(page);
     });
     // sort by prio
     pages.sort(comparePrio);
@@ -54,7 +54,7 @@ export function loadFullTree() {
         return acc;
     }, {});
 
-    console.log(groupedBySection);
+    //console.log(groupedBySection);
 
     let sections = Object.keys(groupedBySection).map(function(section) {
         return {
@@ -69,7 +69,7 @@ export function loadFullTree() {
 export function loadSection(section) {
 
     //const allPages = import.meta.globEager('./*.md');
-    const allPages = import.meta.globEager('/src/routes/manual/' +section+  '/*.md');
+    const allPages = import.meta.globEager('/src/routes/manual/${section}/*.md');
     let pages = globToArray(allPages);
 
     pages.forEach(page => {
@@ -86,8 +86,8 @@ export function loadSection(section) {
         page['route'] = route;
         page['prio'] = overall_prio;
 
-        console.log("LoadSection");
-        console.log(page);
+        // console.log("LoadSection");
+        // console.log(page);
     });
     // sort by prio
     pages.sort(comparePrio);
@@ -95,13 +95,13 @@ export function loadSection(section) {
     return pages;
 }
 
-export function loadPage(page) {
+export function loadPage(pageParam) {
 
     //const allPages = import.meta.globEager('./*.md');
-    const page = import.meta.globEager('/src/routes/manual/' + page);
+    const page = import.meta.globEager('/src/routes/manual/${pageParam}');
 
-    console.log("LoadPage");
-    console.log(page);
+    // console.log("LoadPage");
+    // console.log(page);
 
     const section = page.path.split('/').slice(-2)[0];
     const sectionNeat = formatSectionString(section);
@@ -116,7 +116,7 @@ export function loadPage(page) {
     page['route'] = route;
     page['prio'] = overall_prio;
 
-    console.log(page);
+    //console.log(page);
 
     return page;
 }
