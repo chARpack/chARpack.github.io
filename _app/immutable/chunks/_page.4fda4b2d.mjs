@@ -1,1 +1,0 @@
-import{b as o}from"./loadmd.8ffaa9bb.mjs";import"./index.9ef489e8.mjs";import"./paths.76c508a1.mjs";async function t({params:r}){try{return{page:await o(r)}}catch(e){return console.error(e),{page:[]}}}const c=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{c as _,t as l};
