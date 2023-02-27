@@ -1,9 +1,15 @@
 import { loadPage } from '$lib/loadmd';
+import { page } from '$app/stores';
 
-export const load = ({params}) => {
+export async function load({ params }) {
+    console.log("Load Page params")
     console.log(params)
-
-    return {
-        page: loadPage(params)
+    console.log(page)
+    try {
+      const page = await loadPage(params);
+      return { page };
+    } catch (error) {
+      console.error(error);
+      return { page: [] }; // Return an empty array if there's an error
     }
 }

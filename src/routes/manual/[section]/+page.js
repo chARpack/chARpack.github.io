@@ -1,9 +1,13 @@
 import { loadSection } from '$lib/loadmd';
 
-export const load = ({params}) => {
+export async function load({ params }) {
+    console.log("Load Section params")
     console.log(params)
-
-    return {
-        section: loadSection(params)
+    try {
+      const section = await loadSection(params);
+      return { section };
+    } catch (error) {
+      console.error(error);
+      return { section: [] }; // Return an empty array if there's an error
     }
 }

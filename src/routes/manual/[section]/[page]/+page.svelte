@@ -1,9 +1,12 @@
 <script>
-    import { Heading, P, Hr, A, Mark, Secondary } from 'flowbite-svelte'
+    import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte'
     export let data;
     const { page } = data;
 </script>
 
-<Heading tag="h1" class="mb-3">{page.sectionTitle}</Heading>
-<Heading tag="h2" class="mb-3">{page.metadata.title}</Heading>
+<Breadcrumb aria-label="Solid background breadcrumb example" solid class="mb-3">
+    <BreadcrumbItem href="/manual" home>Manual</BreadcrumbItem>
+    <BreadcrumbItem href={page.absSectionRoute}>{page.sectionTitle}</BreadcrumbItem>
+    <BreadcrumbItem href={page.absRoute}>{page.metadata.title}</BreadcrumbItem>
+</Breadcrumb>
 <svelte:component this={page.default} />
