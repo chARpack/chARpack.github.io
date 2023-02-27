@@ -29,13 +29,22 @@ export function loadFullTree() {
         const sectionNeat = formatSectionString(section);
         const section_prio = section.split('-')[0];
         // const route = '/' + page.path.split('/').slice(-2).join('/').toLowerCase();
-        const route = page.key.replace('.md', '');
+        const fullRoute = page.key.replace('.md', '');
+        const absRoute = '/' + fullRoute.split('/').slice(-3)[0] + '/' + fullRoute.split('/').slice(-2)[0] + '/' + fullRoute.split('/').slice(-1)[0];
+        const route = fullRoute.split('/').slice(-2)[0] + '/' + fullRoute.split('/').slice(-1)[0];
+        const pageRoute = fullRoute.split('/').slice(-1)[0];
+        const absSectionRoute = '/' + fullRoute.split('/').slice(-3)[0] + '/' + fullRoute.split('/').slice(-2)[0];
         const file_prio = page.path.split('/').slice(-1)[0].split('-')[0];
         const overall_prio = section_prio + file_prio;
 
+        console.log(route);
+
         page['section'] = section;
         page['sectionTitle'] = sectionNeat;
+        page['absRoute'] = absRoute;
         page['route'] = route;
+        page['pageRoute'] = pageRoute;
+        page['absSectionRoute'] = absSectionRoute;
         page['prio'] = overall_prio;
 
         //console.log(page);
@@ -59,6 +68,8 @@ export function loadFullTree() {
     let sections = Object.keys(groupedBySection).map(function(section) {
         return {
             name: section,
+            title: formatSectionString(section),
+            absRoute: '/manual/' + section,
             dictionaries: groupedBySection[section],
         };
     });
@@ -66,57 +77,37 @@ export function loadFullTree() {
     return sections;
 }
 
-export function loadSection(section) {
+// params has key section
+export function loadSection(params) {
 
-    //const allPages = import.meta.globEager('./*.md');
-    const allPages = import.meta.globEager('/src/routes/manual/${section}/*.md');
-    let pages = globToArray(allPages);
-
-    pages.forEach(page => {
-        const section = page.path.split('/').slice(-2)[0];
-        const sectionNeat = formatSectionString(section);
-        const section_prio = section.split('-')[0];
-        // const route = '/' + page.path.split('/').slice(-2).join('/').toLowerCase();
-        const route = page.key.replace('.md', '');
-        const file_prio = page.path.split('/').slice(-1)[0].split('-')[0];
-        const overall_prio = section_prio + file_prio;
-
-        page['section'] = section;
-        page['sectionTitle'] = sectionNeat;
-        page['route'] = route;
-        page['prio'] = overall_prio;
-
-        // console.log("LoadSection");
-        // console.log(page);
+    let sections = loadFullTree();
+    let pages;
+    sections.forEach(sec => {
+        if (sec.name == params.section) pages = sec;
     });
-    // sort by prio
-    pages.sort(comparePrio);
 
     return pages;
 }
 
-export function loadPage(pageParam) {
 
-    //const allPages = import.meta.globEager('./*.md');
-    const page = import.meta.globEager('/src/routes/manual/${pageParam}');
+// params has keys section and page
+export function loadPage(params) {
 
-    // console.log("LoadPage");
-    // console.log(page);
+    console.log("LOAD PAGE FUNCTION");
+    console.log(params);
+    let sections = loadFullTree();
+    let returnPage;
+    sections.forEach(sec => {
+        console.log(params.section);
+        if (sec.name == params.section) {
+            sec.dictionaries.forEach(p => {
+                console.log(params.page);
+                if (p.pageRoute == params.page) returnPage = p;
+            });
+        }
+    });
+    console.log(returnPage);
+    console.log("END");
 
-    const section = page.path.split('/').slice(-2)[0];
-    const sectionNeat = formatSectionString(section);
-    const section_prio = section.split('-')[0];
-    // const route = '/' + page.path.split('/').slice(-2).join('/').toLowerCase();
-    const route = page.key.replace('.md', '');
-    const file_prio = page.path.split('/').slice(-1)[0].split('-')[0];
-    const overall_prio = section_prio + file_prio;
-
-    page['section'] = section;
-    page['sectionTitle'] = sectionNeat;
-    page['route'] = route;
-    page['prio'] = overall_prio;
-
-    //console.log(page);
-
-    return page;
+    return returnPage;
 }

@@ -2,7 +2,6 @@
     import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte'
     export let data;
     const { section } = data;
-    console.log(section);
 </script>
 
 <Breadcrumb aria-label="Solid background breadcrumb example" solid class="mb-3">
