@@ -1,0 +1,1 @@
+import{a as t}from"./loadmd.8ffaa9bb.mjs";async function r({params:e}){try{return{section:await t(e)}}catch(o){return console.error(o),{section:[]}}}const a=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{a as _,r as l};
