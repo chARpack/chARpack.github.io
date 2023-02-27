@@ -18,11 +18,8 @@
     const data = await load({ params: {} });
     sections = data.sections;
   });
-
-  const forceUpdate = async (_) => {};
 </script>
 
-{#await forceUpdate(0) then}
 <div class="columns-2">
   <div>
     <Sidebar>
@@ -32,9 +29,9 @@
         </SidebarGroup>
         {#each sections as section}
           <SidebarGroup>
-          <Heading tag="h4"><A data-sveltekit-reload="" class="text-gray-700 dark:text-gray-400 dark:hover:text-white hover:no-underline" href={section.absRoute}>{section.title}</A></Heading>
+          <Heading tag="h4"><A data-sveltekit-reload class="text-gray-700 dark:text-gray-400 dark:hover:text-white hover:no-underline" href={section.absRoute}>{section.title}</A></Heading>
           {#each section.dictionaries as page}
-            <SidebarItem data-sveltekit-reload="" label={page.metadata.title} href={page.absRoute} class="hover:no-underline">
+            <SidebarItem data-sveltekit-reload label={page.metadata.title} href={page.absRoute} class="hover:no-underline">
             </SidebarItem>
           {/each}
           </SidebarGroup>
@@ -48,4 +45,3 @@
     </main>
   </div>
 </div>
-{/await}

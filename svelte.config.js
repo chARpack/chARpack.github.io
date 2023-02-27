@@ -23,12 +23,7 @@ const config = {
       fallback: null,
     }),
     prerender : {
-      crawl: true,
-      entries: [
-        "*",
-        "/manual/[section]",
-        "/manual/[section]/[page]"
-      ]
+      crawl: true
     }
   },
 };
