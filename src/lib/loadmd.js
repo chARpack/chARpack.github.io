@@ -37,8 +37,6 @@ export function loadFullTree() {
         const file_prio = page.path.split('/').slice(-1)[0].split('-')[0];
         const overall_prio = section_prio + file_prio;
 
-        console.log(route);
-
         page['section'] = section;
         page['sectionTitle'] = sectionNeat;
         page['absRoute'] = absRoute;
@@ -81,10 +79,14 @@ export function loadFullTree() {
 export function loadSection(params) {
 
     let sections = loadFullTree();
-    let pages;
-    sections.forEach(sec => {
-        if (sec.name == params.section) pages = sec;
-    });
+
+    // let pages;
+    // sections.forEach(sec => {
+    //     if (sec.name == params.section) pages = sec;
+    // });
+    // return pages;
+
+    let pages = sections.filter(sec => {return sec.name === params.section})[0];
 
     return pages;
 }
@@ -93,21 +95,17 @@ export function loadSection(params) {
 // params has keys section and page
 export function loadPage(params) {
 
-    console.log("LOAD PAGE FUNCTION");
-    console.log(params);
     let sections = loadFullTree();
-    let returnPage;
-    sections.forEach(sec => {
-        console.log(params.section);
-        if (sec.name == params.section) {
-            sec.dictionaries.forEach(p => {
-                console.log(params.page);
-                if (p.pageRoute == params.page) returnPage = p;
-            });
-        }
-    });
-    console.log(returnPage);
-    console.log("END");
+    // let returnPage;
+    // sections.forEach(sec => {
+    //     if (sec.name == params.section) {
+    //         sec.dictionaries.forEach(p => {
+    //             console.log(params.page);
+    //             if (p.pageRoute == params.page) returnPage = p;
+    //         });
+    //     }
+    // });
+    let returnPage = sections.filter(sec => {return sec.name === params.section})[0].dictionaries.filter(p => {return p.pageRoute === params.page})[0];
 
     return returnPage;
 }
