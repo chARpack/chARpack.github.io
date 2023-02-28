@@ -1,6 +1,6 @@
 <script>
   import { A, Heading, Sidebar, SidebarWrapper, SidebarBrand, SidebarItem, SidebarGroup } from 'flowbite-svelte';
-
+  import { page } from "$app/stores";
   let spanClass = 'flex-1 ml-3 whitespace-nowrap';
 
   let site = {
@@ -9,15 +9,8 @@
     img: '/charp_logo.svg'
   };
 
-  import { onMount } from 'svelte';
-  import { load } from './+page.js';
+  let sections = $page.data.sections;
 
-  let sections = [];
-
-  onMount(async () => {
-    const data = await load({ params: {} });
-    sections = data.sections;
-  });
 </script>
 
 <div class="columns-2">
@@ -29,9 +22,9 @@
         </SidebarGroup>
         {#each sections as section}
           <SidebarGroup>
-          <Heading tag="h4"><A data-sveltekit-reload class="text-gray-700 dark:text-gray-400 dark:hover:text-white hover:no-underline" href={section.absRoute}>{section.title}</A></Heading>
+          <Heading tag="h4"><A data-sveltekit-reload="" class="text-gray-700 dark:text-gray-400 dark:hover:text-white hover:no-underline" href={section.absRoute}>{section.title}</A></Heading>
           {#each section.dictionaries as page}
-            <SidebarItem data-sveltekit-reload label={page.metadata.title} href={page.absRoute} class="hover:no-underline">
+            <SidebarItem data-sveltekit-reload="" label={page.metadata.title} href={page.absRoute} class="hover:no-underline">
             </SidebarItem>
           {/each}
           </SidebarGroup>

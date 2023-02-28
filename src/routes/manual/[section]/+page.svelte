@@ -1,7 +1,8 @@
 <script>
     import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte'
-    export let data;
-    const { section } = data;
+    import { page } from "$app/stores";
+    
+    let section = $page.data.sections.filter(sec => {return sec.name === $page.params.section})[0];
 </script>
 
 <Breadcrumb aria-label="Solid background breadcrumb example" solid class="mb-3">

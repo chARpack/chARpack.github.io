@@ -1,8 +1,8 @@
 import { loadFullTree } from '$lib/loadmd';
 
-export async function load({ params }) {
+export function load() {
     try {
-      const sections = await loadFullTree();
+      const sections = loadFullTree();
       return { sections };
     } catch (error) {
       console.error(error);
