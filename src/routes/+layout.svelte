@@ -3,8 +3,6 @@
   import 'flowbite';
   // import "./styles.css";
   import { DarkMode, Footer, FooterBrand, FooterCopyright, FooterIcon, FooterLink, FooterLinkGroup, Button, Navbar, NavBrand, NavLi, NavUl, NavHamburger } from "flowbite-svelte"
-  import github from '$lib/images/github-mark-white.svg';
-	import charp from '$lib/images/charp_logo.svg';
 	let darkmodeButtonClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
   let headerButtonClass = 'text-gray-500 dark:text-gray-200 hover:bg-gray-500 dark:hover:bg-gray-500 rounded-lg text-xl p-2'
 
@@ -25,12 +23,12 @@
   <header class="self-center w-3/6">
     <Navbar let:hidden let:toggle rounded color="form" class="min-w-full dark:bg-gray-900">
       <NavBrand href="/">
-        <img src={charp} class="mr-3 h-20 sm:h-25" alt="chARp Logo"/>
+        <img src="/charp_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARp Logo"/>
         <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">chARp</span>
       </NavBrand>
       <NavHamburger on:click={toggle} />
       <div class="flex md:order-2">
-        <Button size="sm" gradient href="https://github.com/UniStuttgart-VISUS/MolecularVRAR"><img src={github} class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
+        <Button size="sm" gradient href="https://github.com/UniStuttgart-VISUS/MolecularVRAR"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
       </div>
       <NavUl {hidden}>
         <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>
