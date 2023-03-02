@@ -7,23 +7,23 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../../../_app/immutable/assets/_layout.c573438d.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.49a0ca18.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.d5ef8bae.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.a84e3452.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.54d623fa.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.b96cc525.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.30ef3caf.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.svelte.6f3fde71.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.6f4695b3.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.c17d3942.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Heading.39f8c782.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.fa70bd4f.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.ddf68bfc.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.f1f3eed9.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.956173c7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.ec35adba.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.d9aa982c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/globToArray.54c2d47d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.1dbd8079.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.57019c51.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/BreadcrumbItem.74cbd37f.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Hr.1a300591.mjs"><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
       localStorage.getItem('color-theme') === 'dark' ||
@@ -87,9 +87,48 @@
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>Overview</h2>
 <p>The <strong>Normal Mode</strong> is the standard working environment of chARp.
-Here you can build and change molecules, inspect and manipulate structures and, load and save data.</p>
+Here you can build and change molecules, inspect and manipulate structures and, load and save data.
+Below the main menu of the normal mode is shown.</p>
 <img src="/images/manual/normal_mode_menu.png" alt="Normal Mode Menu" class="mx-auto max-w-md">
-<h2>Create Atom</h2>
+<p>Similar to the <strong>Login Menu</strong> you can toggle the follow me mode using the <strong>Pin Button</strong>.
+The button <strong>Exit</strong> brings you back to the login screen.</p>
+<h3>Toggle Log</h3>
+<p>The <strong>Toggle Log</strong> button shows and hides the debug log.
+Note: changing scenes does not clear the debug log for easier error detection.</p>
+<h4>Toggle Mesh</h4>
+<p>This button turns the rendering of the spatial awareness of <a href="https://www.khronos.org/OpenXR/" rel="nofollow">OpenXR</a> on and off.
+The real world surroundings are detected by your device in a (usually) 2.5 second interval.
+Toggling the button does not turn on/off the detection of your surroundings, just the rendered wireframe overlay.</p>
+<h3>Toggle Force Field</h3>
+<p>chARp calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
+The forces are integrated using a simple <a href="https://en.wikipedia.org/wiki/Euler_method" rel="nofollow">Euler integration</a>.
+The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARp Molecular Builder environment.
+Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
+This mode comes in handy, when creating a bond within a molecule, but the force field makes it difficult to bring these two dummies together.</p>
+<h3>Undo</h3>
+<p>Does what you would expect.
+Pressing the <strong>Undo</strong> button once or multiple times will bring the scene back to a state before the last interaction steps.</p>
+<h3>Clear All Molecules</h3>
+<p>Triggering the <strong>Clear All Molecules</strong> button empties the scene completely.
+All atoms and molecules are deleted.</p>
+<h3>Replace Dummies</h3>
+<p>Each spawned atom is created with bonded dummy atoms.
+These dummy atoms can be switched to Hydrogen atoms with the <strong>Replace Dummies</strong> button.</p>
+<h3>Create Atom</h3>
+<p>As already mentioned, atoms are created with dummies attached.
+These dummies are used to create bonds or to be switched out for Hydrogen atoms.</p>
+<blockquote><p>Currently in development: Create any atom you want, not only carbon.</p></blockquote>
+<p>The number of dummies depends on the hybridization of the atom.</p>
+<blockquote><p>Currently in development: Change the hybridization of a selected atom.</p></blockquote>
+<h3>Save/Load</h3>
+<p>The <strong>Save/Load</strong> button opens another dialog that shows you all the molecule files on your device.
+Loading a file adds its contents, which consists of one or multiple molecules, to the scene.
+Saving to a file saves the whole content of the current scene.
+The files are stored in chARp’s internal molecules/scene format.
+For saving or loading to different file formats, you need to connect your device to a dedicated chARp server.
+Check the later chapters for more information on how to do that.</p>
+<h3>Layer Selection</h3>
+<blockquote><p>Deprecated</p></blockquote>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -117,7 +156,7 @@ Here you can build and change molecules, inspect and manipulate structures and, 
 			
 			<script>
 				{
-					__sveltekit_5htbsi = {
+					__sveltekit_k9vdui = {
 						env: {},
 						assets: new URL("../../..", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -126,10 +165,10 @@ Here you can build and change molecules, inspect and manipulate structures and, 
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.49a0ca18.mjs"),
-						import("../../../_app/immutable/entry/app.54d623fa.mjs")
+						import("../../../_app/immutable/entry/start.d5ef8bae.mjs"),
+						import("../../../_app/immutable/entry/app.30ef3caf.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_5htbsi.element, {
+						kit.start(app, __sveltekit_k9vdui.element, {
 							node_ids: [0, 2, 8],
 							data,
 							form: null,
