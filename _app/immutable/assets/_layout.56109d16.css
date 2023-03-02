@@ -786,8 +786,6 @@ main h6 {
 main a {
   display: inline-flex;
   align-items: center;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
 }
