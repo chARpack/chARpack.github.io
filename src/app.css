@@ -55,7 +55,7 @@ pre {
     }
 
     main a {
-        @apply inline-flex items-center text-lg text-blue-600 dark:text-blue-500 hover:underline
+        @apply inline-flex items-center text-blue-600 dark:text-blue-500 hover:underline
     }
 
     main hr {

@@ -5,11 +5,11 @@
     let section = $page.data.sections.filter(sec => {return sec.name === $page.params.section})[0];
 </script>
 
-<Breadcrumb aria-label="Solid background breadcrumb example" solid class="mb-3">
+<Breadcrumb aria-label="breadcrumb" solid class="mb-3">
     <BreadcrumbItem href="/manual" home>Manual</BreadcrumbItem>
     <BreadcrumbItem href={section.absRoute}>{section.title}</BreadcrumbItem>
 </Breadcrumb>
-<h1>{section.title}</h1>
+<Heading tag="h2" class="mb-4">{section.title}</Heading>
 {#each section.dictionaries as page}
-    <a href={page.pageRoute}>{page.metadata.title}</a>
+    <Heading tag="h3" class="ml-6"><a href={page.pageRoute}>{page.metadata.title}</a></Heading><br>
 {/each}
