@@ -1,7 +1,0 @@
----
-title: Interaction
----
-
-# Interaction
-
-blablub
