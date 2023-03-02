@@ -1,4 +1,6 @@
 import globToArray from '$lib/globToArray';
+import path from 'path';
+
 
 // Comparison function to sort by priority
 function comparePrio(a, b) {
@@ -24,6 +26,8 @@ export function loadFullTree() {
 
     //console.log("LoadFullTree");
 
+    const newPages = [];
+
     pages.forEach(page => {
         const section = page.path.split('/').slice(-2)[0];
         const sectionNeat = formatSectionString(section);
@@ -45,14 +49,47 @@ export function loadFullTree() {
         page['absSectionRoute'] = absSectionRoute;
         page['prio'] = overall_prio;
 
+        // Fetch the contents of the Markdown file using `fetch`
+        // const markdownUrl = new URL(page.key, import.meta.env.VITE_APP_BASE_URL);
+        // const response = await fetch(markdownUrl);
+        // const fileContents = await response.text();
+        // Read the contents of the Markdown file
+        // const filePath = path.join(process.cwd(), page.key);
+        // const fileContents = readFileSync(filePath, 'utf-8');
+
+        // // Extract the `##` headings from the HTML using a regular expression
+        // const regex = /^## (.*)$/gm;
+        // const headings = [];
+        // let match;
+        // while ((match = regex.exec(fileContents))) {
+        //     headings.push(match[1]);
+        // }
+
+        // page['subsections'] = headings;
+
+        // page = Object.fromEntries(
+        //     Object.entries(page).filter(([key]) => typeof key !== 'symbol')
+        // );
+        // Object.keys(page).forEach(key => {
+        //     if (page[key] === 'Module') {
+        //       delete page[key];
+        //     }
+        // });
+
+        newPages.push(page);
+
         //console.log(page);
     });
+
+    //console.log(newPages);
     // sort by prio
-    pages.sort(comparePrio);
+    newPages.sort(comparePrio);
+
+
 
     // group by page
     // Group the dictionaries by section using Array.reduce()
-    let groupedBySection = pages.reduce(function(acc, cur) {
+    let groupedBySection = newPages.reduce(function(acc, cur) {
         let section = cur.section;
         if (!(section in acc)) {
             acc[section] = [];
@@ -68,9 +105,11 @@ export function loadFullTree() {
             name: section,
             title: formatSectionString(section),
             absRoute: '/manual/' + section,
-            dictionaries: groupedBySection[section],
+            pages: groupedBySection[section],
         };
     });
+
+    //console.log(sections[0].dictionaries);
 
     return sections;
 }
@@ -105,7 +144,7 @@ export function loadPage(params) {
     //         });
     //     }
     // });
-    let returnPage = sections.filter(sec => {return sec.name === params.section})[0].dictionaries.filter(p => {return p.pageRoute === params.page})[0];
+    let returnPage = sections.filter(sec => {return sec.name === params.section})[0].pages.filter(p => {return p.pageRoute === params.page})[0];
 
     return returnPage;
 }

@@ -13,15 +13,15 @@
 
 </script>
 
-<Sidebar class="fixed top-10 left-10 z-40 lg:w-64 md:w-auto sm:w-auto h-screen transition-transform -translate-x-full sm:translate-x-0">
+<Sidebar class="fixed top-10 left-10 z-40 lg:w-64 md:w-auto h-screen transition-transform -translate-x-full sm:translate-x-0">
   <SidebarWrapper class="dark:bg-gray-900">
-    <SidebarGroup>
-      <SidebarBrand {site} />
+    <SidebarGroup class="list-none">
+      <SidebarBrand class="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" {site} />
     </SidebarGroup>
     {#each sections as section}
-      <SidebarGroup>
-      <Heading tag="h4"><A data-sveltekit-reload="" class="text-gray-700 dark:text-gray-400 dark:hover:text-white hover:no-underline" href={section.absRoute}>{section.title}</A></Heading>
-      {#each section.dictionaries as page}
+      <SidebarGroup class="list-none">
+      <Heading tag="h4"><A data-sveltekit-reload="" class="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href={section.absRoute}>{section.title}</A></Heading>
+      {#each section.pages as page}
         <SidebarItem data-sveltekit-reload="" label={page.metadata.title} href={page.absRoute} class="hover:no-underline">
         </SidebarItem>
       {/each}
@@ -30,7 +30,7 @@
   </SidebarWrapper>
 </Sidebar>
 
-<div class="lg:w-full md:w-3/6 mx-auto bg-gray-100 dark:bg-gray-700 px-6">
+<div class="xl:w-full lg:w-4/6 md:w-3/6 flex mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2">
   <main>
     <slot />
   </main>

@@ -31,19 +31,19 @@ pre {
 	}
 
     main h1 {
-        @apply mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
+        @apply mb-4 mt-6 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
     }
 
     main h2 {
-        @apply text-4xl font-extrabold dark:text-white;
+        @apply text-4xl font-extrabold dark:text-white mb-3 mt-4;
     }
 
     main h3 {
-        @apply text-3xl font-bold dark:text-white;
+        @apply text-3xl font-bold text-gray-500 dark:text-gray-400 mb-2 mt-3;
     }
 
     main h4 {
-        @apply text-2xl font-bold dark:text-white;
+        @apply text-2xl font-bold text-gray-500 dark:text-gray-400 mb-1 mt-2;
     }
 
     main h5 {
@@ -55,7 +55,7 @@ pre {
     }
 
     main a {
-        @apply inline-flex items-center text-blue-600 dark:text-blue-500 hover:underline
+        @apply inline-flex items-center text-blue-600 dark:text-blue-500 hover:underline;
     }
 
     main hr {
@@ -63,21 +63,21 @@ pre {
     }
 
     main blockquote {
-        @apply p-4 my-4 border-l-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800 text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white
+        @apply p-4 my-4 border-l-4 border-gray-400 bg-gray-50 dark:border-gray-500 dark:bg-gray-800 text-xl italic font-medium leading-relaxed text-gray-900 dark:text-white;
     }
 
     main img {
-        @apply h-auto max-w-lg rounded-lg
+        @apply h-auto rounded-lg my-4;
     }
 
-    main ol {
-        @apply space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400
+    /* main ol {
+        @apply space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400;
     }
 
-    /* main ul {
-        @apply space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400
+    main ul {
+        @apply space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400;
     } */
-    
+
     /* main code {
         @apply text-gray-800 dark:text-gray-600 break-all font-mono text-sm;
     } */

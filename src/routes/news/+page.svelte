@@ -18,7 +18,7 @@
 <Hr class="my-8" height="h-1" />
 
 {#each  posts as post }
-<div class="bg-gray-300 dark:bg-gray-700 p-5 rounded-lg">
+<div class="bg-gray-200 dark:bg-gray-700 p-5 rounded-lg">
 	<Heading tag="h1" class="mb-3">{post.metadata.title}</Heading>
 	<Heading tag="h3" class="mb-6">{post.metadata.date}</Heading>
     <svelte:component this={post.default} />

@@ -20,7 +20,7 @@
 </script>
 
 <div class="app">
-  <header class="self-center w-3/6">
+  <header class="self-center xl:w-3/6 lg:w-4/6 w-auto">
     <Navbar let:hidden let:toggle rounded color="form" class="min-w-full dark:bg-gray-900">
       <NavBrand href="/">
         <img src="/charp_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARp Logo"/>
@@ -28,7 +28,7 @@
       </NavBrand>
       <NavHamburger on:click={toggle} />
       <div class="flex md:order-2">
-        <Button size="sm" gradient href="https://github.com/UniStuttgart-VISUS/MolecularVRAR"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
+        <Button size="sm" gradient href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
       </div>
       <NavUl {hidden}>
         <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>
@@ -42,7 +42,7 @@
     <slot />
   </main>
 
-  <Footer class="self-center w-3/6 dark:bg-gray-900">
+  <Footer class="self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900">
     <FooterCopyright href="https://www.itheoc.uni-stuttgart.de/" by="ITheoC" year={2023} />
     <FooterLinkGroup ulClass="max-w-2xl flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
       <FooterLink href="/privacy">Privacy Policy</FooterLink>

@@ -3,6 +3,7 @@
     import { page } from "$app/stores";
     
     let section = $page.data.sections.filter(sec => {return sec.name === $page.params.section})[0];
+
 </script>
 
 <Breadcrumb aria-label="breadcrumb" solid class="mb-3">
@@ -10,6 +11,8 @@
     <BreadcrumbItem href={section.absRoute}>{section.title}</BreadcrumbItem>
 </Breadcrumb>
 <Heading tag="h2" class="mb-4">{section.title}</Heading>
-{#each section.dictionaries as page}
-    <Heading tag="h3" class="ml-6"><a href={page.pageRoute}>{page.metadata.title}</a></Heading><br>
+<ul>
+{#each section.pages as page}
+    <li><Heading tag="h3" class="ml-6"><a href={page.pageRoute}>{page.metadata.title}</a></Heading></li>
 {/each}
+</ul>
