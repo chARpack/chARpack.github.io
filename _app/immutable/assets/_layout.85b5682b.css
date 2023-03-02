@@ -5515,6 +5515,9 @@ pre {
   .md\:w-auto {
     width: auto;
   }
+  .md\:max-w-lg {
+    max-width: 32rem;
+  }
   .md\:max-w-xl {
     max-width: 36rem;
   }
@@ -5638,6 +5641,9 @@ pre {
   }
   .lg\:w-64 {
     width: 16rem;
+  }
+  .lg\:max-w-2xl {
+    max-width: 42rem;
   }
 }
 
