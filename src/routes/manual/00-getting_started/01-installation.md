@@ -38,8 +38,8 @@ The project should now show in the list of projects.
 Since chARp runs on the HoloLens2, we need to reinstall Microsoft's MRTK.
 
 ### MRTK
-Because of their size, MRTK tarballs are not checked into git repository.
-Therefore, the used packages have to be reinstalled by hand.
+Because of their size, MRTK tarballs are not checked into the git repository.
+Therefore, the used MRTK packages have to be reinstalled.
 Download and run the [MixedRealityFeatureTool](https://www.microsoft.com/en-us/download/details.aspx?id=102778) and select chARp's root folder as **Project Path**.
 Click **Discover Features** and activate the following features:
 
@@ -139,5 +139,5 @@ In the main bar, click on **Debug** and run the build + deploy by selecting **St
 > Running this for the first time requires you to pair your HoloLens2 with Visual Studio.<br>
 > Check the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal) for instructions.
 
-Successfully depolying chARp on the HoloLens2 should start it automatically.
+Successfully deploying chARp on the HoloLens2 should start it automatically.
 Now you're ready to use chARp.
