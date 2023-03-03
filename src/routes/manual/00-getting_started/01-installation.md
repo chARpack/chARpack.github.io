@@ -7,9 +7,9 @@ Since chARp is developed using the game engine Unity, we first need to install i
 Go to the [download page of Unity](https://unity.com/download) and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is [2021.3.12f1](unityhub://2021.3.12f1/8af3c3e441b1).
+Here we need to install the correct version of Unity which is [2021.3.20f1](https://unity.com/releases/editor/archive).
 You can also download the newest version of Unity and update the project, but this is **not recommended**.
-Download and install version [2021.3.12f1](unityhub://2021.3.12f1/8af3c3e441b1) of Unity.
+Download and install version [2021.3.20f1](https://unity.com/releases/editor/archive) of Unity.
 Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARp on the HoloLens2.
 
 > Unity also installs **Visual Studio (VS) 2019 Community Edition**  by default.
