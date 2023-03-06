@@ -7,23 +7,23 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../../../_app/immutable/assets/_layout.c573438d.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.ccb42c76.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.2384fed0.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.5f6a81ce.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.bcc4f6a0.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.d7c61086.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.43fdc192.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.svelte.6f3fde71.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.d5de21a5.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.08713ae7.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Heading.39f8c782.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.f72fc2e3.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.94a78d47.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.3e13d20f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.0bc9aed7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.27e0fa96.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.279d0611.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/globToArray.54c2d47d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.577e22d7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.cff8b4ac.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/BreadcrumbItem.74cbd37f.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Hr.1a300591.mjs"><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
       localStorage.getItem('color-theme') === 'dark' ||
@@ -86,6 +86,21 @@
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>Place a QR code</h2>
+<p>In order to have to contents of the scene in a reasonable space in your laboratory, you need to place a QR code on one of the walls.
+We recommend a QR code printed on a at least DIN A4 sized paper.
+To save you some hassle to find or create your own QR code, you can <a href="/qr_dina4.pdf">download this one here</a>.
+A good position for such a QR code is an open spot at your wall at standing height, that is easy to access or get close to.</p>
+<h2>Scanning</h2>
+<p>In case of an in-person scenario where all collaborators are in the same laboratory, each device has to scan the QR code before connecting to the server.
+Start chARp and select <strong>Scan QR</strong> in the login screen.
+Look at the QR code on the wall, you will see a white plane over the code and on the corner of the plane is an axis system with a z-axis pointing away from the wall.
+Usually, the z-axis wiggles a little bit because of scanning inaccuracy.
+Look at the code from different angles and distances and press the button <strong>Stop Scan</strong> that should follow you around when the wiggle is least noticeable.</p>
+<p>In case of a remote collaboration, a similar placement of QR codes is recommended to reflect the scene correctly.
+For example, one client puts the code on the wall and the other puts the code on the ground.
+Any interaction with the scene results in movements in the wrong direction.
+The same is true for a differently oriented QR code.
+We recommend to hang the QR code with the three large squares on the left bottom, left top and right top.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -113,7 +128,7 @@
 			
 			<script>
 				{
-					__sveltekit_7t6mt7 = {
+					__sveltekit_g4qq36 = {
 						env: {},
 						assets: new URL("../../..", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -122,10 +137,10 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.ccb42c76.mjs"),
-						import("../../../_app/immutable/entry/app.bcc4f6a0.mjs")
+						import("../../../_app/immutable/entry/start.2384fed0.mjs"),
+						import("../../../_app/immutable/entry/app.43fdc192.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_7t6mt7.element, {
+						kit.start(app, __sveltekit_g4qq36.element, {
 							node_ids: [0, 2, 8],
 							data,
 							form: null,

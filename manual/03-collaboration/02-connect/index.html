@@ -7,23 +7,23 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../../../_app/immutable/assets/_layout.c573438d.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.ccb42c76.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.2384fed0.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.5f6a81ce.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.bcc4f6a0.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.d7c61086.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.43fdc192.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.svelte.6f3fde71.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.d5de21a5.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.08713ae7.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Heading.39f8c782.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.f72fc2e3.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.94a78d47.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.3e13d20f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.0bc9aed7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.27e0fa96.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.279d0611.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/globToArray.54c2d47d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.577e22d7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.cff8b4ac.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/BreadcrumbItem.74cbd37f.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Hr.1a300591.mjs"><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
       localStorage.getItem('color-theme') === 'dark' ||
@@ -86,6 +86,23 @@
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>Server List</h2>
+<p>After turing on the server, putting up the QR code and scanning it, you’re finally ready to connect.
+In the login screen press the button <strong>Connect</strong>.
+If there is a number in the brackets behind the text <strong>Connect</strong>, the chances are hight that your server is already listed.</p>
+<img src="/images/manual/server_list.png" alt="Debug Log" class="mx-auto max-w-md">
+In the picture you can see an example of the server list.
+Here, two servers are detected in the network.
+If your server does not show up in the list, there is always the option to add the IP manually.
+Click on the **list with a plus** symbol.
+Fill out the fields of the dialog and press **Add**.
+This puts your custom IP in the list and you can click on it.
+Another dialog shows up to double check if you really want to connect to this IP.
+By answering this dialog with OK should put you on your server.
+<p>If the connection to the server is not working, you’ll get another dialog that tells you what is wrong.
+Pressing <strong>OK</strong> on this dialog will put you back to the login screen.</p>
+<p>For developing and testing, you don’t always want to put on your HoloLens2.
+Therefore, you can connect to your machine (127.0.0.1) by pressing the <strong>Home</strong> button in the server list.
+To be able to run two Unity editor instances of chARp, you need to make a copy of the whole project.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -113,7 +130,7 @@
 			
 			<script>
 				{
-					__sveltekit_7t6mt7 = {
+					__sveltekit_g4qq36 = {
 						env: {},
 						assets: new URL("../../..", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -122,10 +139,10 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.ccb42c76.mjs"),
-						import("../../../_app/immutable/entry/app.bcc4f6a0.mjs")
+						import("../../../_app/immutable/entry/start.2384fed0.mjs"),
+						import("../../../_app/immutable/entry/app.43fdc192.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_7t6mt7.element, {
+						kit.start(app, __sveltekit_g4qq36.element, {
 							node_ids: [0, 2, 8],
 							data,
 							form: null,
