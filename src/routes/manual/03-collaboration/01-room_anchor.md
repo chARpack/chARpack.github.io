@@ -5,7 +5,7 @@ title: Room Anchor
 ## Place a QR code
 In order to have to contents of the scene in a reasonable space in your laboratory, you need to place a QR code on one of the walls.
 We recommend a QR code printed on a at least DIN A4 sized paper.
-To save you some hassle to find or create your own QR code, you can [download this one here](/qr_dina4.pdf).
+To save you some hassle to find or create your own QR code, you can <a href="/qr_dina4.pdf" target="_blank">download this one here</a>.
 A good position for such a QR code is an open spot at your wall at standing height, that is easy to access or get close to.
 
 ## Scanning

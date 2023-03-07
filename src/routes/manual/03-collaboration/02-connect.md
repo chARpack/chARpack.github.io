@@ -3,9 +3,9 @@ title: Connect
 ---
 
 ## Server List
-After turing on the server, putting up the QR code and scanning it, you're finally ready to connect.
+After turning on the server, putting up the QR code and scanning it, you're finally ready to connect.
 In the login screen press the button **Connect**.
-If there is a number in the brackets behind the text **Connect**, the chances are hight that your server is already listed.
+If there is a number in the brackets behind the text **Connect**, the chances are high that your server is already listed.
 <img src="/images/manual/server_list.png" alt="Debug Log" class="mx-auto max-w-md" />
 In the picture you can see an example of the server list.
 Here, two servers are detected in the network.

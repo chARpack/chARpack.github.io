@@ -7,9 +7,9 @@ Since chARp is developed using the game engine Unity, we first need to install i
 Go to the [download page of Unity](https://unity.com/download) and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is [2021.3.20f1](https://unity.com/releases/editor/archive).
+Here we need to install the correct version of Unity which is [2021.3.12f1](unityhub://2021.3.12f1/8af3c3e441b1).
 You can also download the newest version of Unity and update the project, but this is **not recommended**.
-Download and install version [2021.3.20f1](https://unity.com/releases/editor/archive) of Unity.
+Download and install version [2021.3.12f1](unityhub://2021.3.12f1/8af3c3e441b1) of Unity.
 Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARp on the HoloLens2.
 
 > Unity also installs **Visual Studio (VS) 2019 Community Edition**  by default.
@@ -17,7 +17,7 @@ Make sure that you add the modules **Universal Windows Platform Build** and **Wi
 > To be able to deploy chARp on the HoloLens2 also install the VS module **Universal Windows Platform development**.
 
 For an already installed Visual Studio, you have to add the modules mentioned above via the **Visual Studio Installer**.
-Open the installer and click on **Modify** at your preferred version of Visal Studio.
+Open the installer and click on **Modify** at your preferred version of Visual Studio.
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
@@ -106,8 +106,12 @@ To interact with the menus you can hold `shift` to simulate the left hand and `s
 The keys `W`, `A`, `S` and `D` can be used to move in the scene.
 `E` will move you up and `Q` will move you down.
 Holding `right click` lets you look around in the scene.
+Another important interaction is the `mouswheel`.
+Scrolling with the mouse wheel moves the currently activated hand forward and backward.
+Using the mouse wheel makes it easy to press buttons in chARp. 
 
 ## Deploy on Device
+The basic steps are also fund on the official Microsoft page [here](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2).
 When the test was successful, you're now ready to deploy chARp to your HoloLens2.
 Again, go to 
 ```
