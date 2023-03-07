@@ -7,23 +7,23 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../../../_app/immutable/assets/_layout.c573438d.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.eb234efa.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.06981418.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.6e2f11cc.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.5962fadf.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.1f21f9b3.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.4ba67a33.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.svelte.6f3fde71.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.51a13bed.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.ce4d390c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Heading.39f8c782.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.b7c70beb.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.0cce7b0a.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.566d7ba8.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.6d7c20af.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.242a5c8f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.41049d71.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/globToArray.54c2d47d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.8b51492d.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.4a659840.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/BreadcrumbItem.74cbd37f.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Hr.1a300591.mjs"><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
       localStorage.getItem('color-theme') === 'dark' ||
@@ -73,6 +73,8 @@
     <span class="ml-3">Room Anchor</span>
     </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/03-collaboration/02-connect">
     <span class="ml-3">Connect</span>
+    </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/03-collaboration/03-server_controls">
+    <span class="ml-3">Server Controls</span>
     </a></li>
       </ul></div></aside>
 
@@ -90,15 +92,15 @@
 Go to the <a href="https://unity.com/download" rel="nofollow">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is <a href="https://unity.com/releases/editor/archive" rel="nofollow">2021.3.20f1</a>.
+Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1">2021.3.12f1</a>.
 You can also download the newest version of Unity and update the project, but this is <strong>not recommended</strong>.
-Download and install version <a href="https://unity.com/releases/editor/archive" rel="nofollow">2021.3.20f1</a> of Unity.
+Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1">2021.3.12f1</a> of Unity.
 Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARp on the HoloLens2.</p>
 <blockquote><p>Unity also installs <strong>Visual Studio (VS) 2019 Community Edition</strong>  by default.
 If you want to develop Unity apps, you’ll need to add the package <strong>Game development with Unity</strong>.
 To be able to deploy chARp on the HoloLens2 also install the VS module <strong>Universal Windows Platform development</strong>.</p></blockquote>
 <p>For an already installed Visual Studio, you have to add the modules mentioned above via the <strong>Visual Studio Installer</strong>.
-Open the installer and click on <strong>Modify</strong> at your preferred version of Visal Studio.
+Open the installer and click on <strong>Modify</strong> at your preferred version of Visual Studio.
 Enable the modules and <strong>Modify</strong> in the bottom right corner to install them.</p>
 <h2>Download</h2>
 <p>To load chARp into Unity you first need to download chARp from our <a href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder" rel="nofollow">GitHub repository</a>.
@@ -161,9 +163,13 @@ Press the play button (top center of the Unity window) for running the test.</p>
 To interact with the menus you can hold <code>shift</code> to simulate the left hand and <code>space bar</code> to simulate the right hand.
 The keys <code>W</code>, <code>A</code>, <code>S</code> and <code>D</code> can be used to move in the scene.
 <code>E</code> will move you up and <code>Q</code> will move you down.
-Holding <code>right click</code> lets you look around in the scene.</p>
+Holding <code>right click</code> lets you look around in the scene.
+Another important interaction is the <code>mouswheel</code>.
+Scrolling with the mouse wheel moves the currently activated hand forward and backward.
+Using the mouse wheel makes it easy to press buttons in chARp. </p>
 <h2>Deploy on Device</h2>
-<p>When the test was successful, you’re now ready to deploy chARp to your HoloLens2.
+<p>The basic steps are also fund on the official Microsoft page <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2" rel="nofollow">here</a>.
+When the test was successful, you’re now ready to deploy chARp to your HoloLens2.
 Again, go to </p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
 <p>This time, click on <strong>Build</strong>, which opens a folder dialog.
@@ -216,7 +222,7 @@ Now you’re ready to use chARp.</p>
 			
 			<script>
 				{
-					__sveltekit_1yxn4vw = {
+					__sveltekit_1rhg5ha = {
 						env: {},
 						assets: new URL("../../..", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -225,10 +231,10 @@ Now you’re ready to use chARp.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.eb234efa.mjs"),
-						import("../../../_app/immutable/entry/app.5962fadf.mjs")
+						import("../../../_app/immutable/entry/start.06981418.mjs"),
+						import("../../../_app/immutable/entry/app.4ba67a33.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1yxn4vw.element, {
+						kit.start(app, __sveltekit_1rhg5ha.element, {
 							node_ids: [0, 2, 8],
 							data,
 							form: null,
