@@ -7,7 +7,7 @@ The package chARp also supports collaboration with multiple client devices.
 Currently, this restricts the list of devices to the HoloLens2.
 However, we're planning on increasing the pool of supported devices and also allow hybrid environments, such as AR and VR in the same scene.
 
-## Server Scene
+## Hosting
 It is recommended to either start the server scene in the Unity editor or run a build of chARp on a normal desktop machine.
 Make sure the machine that operates the server is reachable in the network and from the devices.
 The connection operates on port 9050 and the LAN discovery on port 9051.
