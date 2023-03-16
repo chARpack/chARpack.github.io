@@ -45,13 +45,13 @@ Click **Discover Features** and activate the following features:
 
 ```
 Mixed Reality Toolkit >
-Mixed Reality Toolkit Foundations (v2.8.2)
-Mixed Reality Toolkit Extensions (v2.8.2)
-Mixed Reality Toolkit Examples (v2.8.2)
-Mixed Reality Toolkit Standard Assets (v2.8.2)
+Mixed Reality Toolkit Foundations
+Mixed Reality Toolkit Extensions
+Mixed Reality Toolkit Examples
+Mixed Reality Toolkit Standard Assets
 
 Platform Support >
-Mixed Reality OpenXR Plugin (v1.6.0)
+Mixed Reality OpenXR Plugin
 ```
 All these features should also appear with the tag "Version x.x.x currently installed".
 Click **Get Features** and confirm that step by clicking **Import**.
@@ -64,7 +64,7 @@ Under Windows go to "Edit the system environment variables" under "Environment V
 Under Linux add the OpenBabel install path to your `PATH` variable.
 
 ### NuGet
-Download and install [Nuget for Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest).
+Download and install [NuGet for Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest).
 To do this, download the `.unitypackage` file.
 
 > Now it's time to start chARp in Unity.<br>

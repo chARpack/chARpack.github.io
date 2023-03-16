@@ -12,22 +12,6 @@ Below the main menu of the normal mode is shown.
 Similar to the **Login Menu** you can toggle the follow me mode using the **Pin Button**.
 The button **Exit** brings you back to the login screen.
 
-### Toggle Log
-The **Toggle Log** button shows and hides the debug log.
-Note: changing scenes does not clear the debug log for easier error detection.
-
-#### Toggle Mesh
-This button turns the rendering of the spatial awareness of [OpenXR](https://www.khronos.org/OpenXR/) on and off.
-The real world surroundings are detected by your device in a (usually) 2.5 second interval.
-Toggling the button does not turn on/off the detection of your surroundings, just the rendered wireframe overlay.
-
-### Toggle Force Field
-chARp calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
-The forces are integrated using a simple [Euler integration](https://en.wikipedia.org/wiki/Euler_method).
-The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARp Molecular Builder environment.
-Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
-This mode comes in handy, when creating a bond within a molecule, but the force field makes it difficult to bring these two dummies together.
-
 ### Undo
 Does what you would expect.
 Pressing the **Undo** button once or multiple times will bring the scene back to a state before the last interaction steps.
@@ -48,7 +32,15 @@ These dummies are used to create bonds or to be switched out for Hydrogen atoms.
 
 The number of dummies depends on the hybridization of the atom.
 
-> Currently in development: Change the hybridization of a selected atom.
+### Creation Hybridization
+When pressing the **Create Atom** button, the displayed number (here 1) is as the hybridization for the freshly created atom.
+The numbers correspond to the following hybridizations:
+
+ * 1: sp
+ * 2: sp2
+ * 3: sp3
+
+The Hybridization can also be adjusted after creation.
 
 ### Save/Load
 The **Save/Load** button opens another dialog that shows you all the molecule files on your device.
@@ -58,5 +50,5 @@ The files are stored in chARp's internal molecules/scene format.
 For saving or loading to different file formats, you need to connect your device to a dedicated chARp server.
 Check the later chapters for more information on how to do that.
 
-### Layer Selection
-> Deprecated
+### Settings
+Opens the settings menu.
