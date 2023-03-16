@@ -83,35 +83,41 @@
 <div class="xl:w-full lg:w-4/6 md:w-3/6 flex mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2"><main><nav aria-label="breadcrumb" class="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 mb-3"><ol class="inline-flex items-center space-x-1 md:space-x-3"><li class="inline-flex items-center"><a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="/manual"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
       Manual</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/manual/03-collaboration">Collaboration</a></li>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/manual/02-normal_mode">Normal Mode</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/manual/03-collaboration/02-connect">Connect</a></li></ol></nav>
-<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Connect</h1>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/manual/02-normal_mode/01-settings">Settings</a></li></ol></nav>
+<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Settings</h1>
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<h2>Server List</h2>
-<p>After turning on the server, putting up the QR code and scanning it, you’re finally ready to connect.
-In the login screen press the button <strong>Connect</strong>.
-If there is a number in the brackets behind the text <strong>Connect</strong>, the chances are high that your server is already listed.</p>
-<img src="/images/manual/server_list.png" alt="Debug Log" class="mx-auto max-w-md">
-In the picture you can see an example of the server list.
-Here, two servers are detected in the network.
-If your server does not show up in the list, there is always the option to add the IP manually.
-Click on the **list with a plus** symbol.
-Fill out the fields of the dialog and press **Add**.
-This puts your custom IP in the list and you can click on it.
-Another dialog shows up to double check if you really want to connect to this IP.
-By answering this dialog with OK should put you on your server.
-<p>If the connection to the server is not working, you’ll get another dialog that tells you what is wrong.
-Pressing <strong>OK</strong> on this dialog will put you back to the login screen.</p>
-<p>For developing and testing, you don’t always want to put on your HoloLens2.
-Therefore, you can connect to your machine (127.0.0.1) by pressing the <strong>Home</strong> button in the server list.
-To be able to run two Unity editor instances of chARp, you need to make a copy of the whole project.</p>
+<img src="/images/manual/settings.png" alt="Normal Mode Menu" class="mx-auto max-w-md">
+<h3>Toggle Mesh</h3>
+<p>This button turns the rendering of the spatial awareness of <a href="https://www.khronos.org/OpenXR/" rel="nofollow">OpenXR</a> on and off.
+The real world surroundings are detected by your device in a (usually) 2.5 second interval.
+Toggling the button does not turn on/off the detection of your surroundings, just the rendered wireframe overlay.</p>
+<h3>Toggle Log</h3>
+<p>The <strong>Toggle Log</strong> button shows and hides the debug log.
+Note: changing scenes does not clear the debug log for easier error detection.</p>
+<h3>Toggle Force Field</h3>
+<p>chARp calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
+The forces are integrated using a simple <a href="https://en.wikipedia.org/wiki/Euler_method" rel="nofollow">Euler integration</a>.
+The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARp Molecular Builder environment.
+Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
+This mode comes in handy, when creating a bond within a molecule, but the force field makes it difficult to bring these two dummies together.</p>
+<h3>Hand Toggles</h3>
+<p>The three buttons on the bottom row change the hand visuals.
+You can go have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.</p>
+<h3>Bond Stiffness</h3>
+<p>The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.
+The number of iterations changes how fast the molecule will go into it’s minimal state.
+A lower number makes the molecules feel rubbery, higher numbers will keep the structure intact.</p>
+<blockquote><p>Note: A higher number of iterations means more computational power goes into the force field calculation/iteration.
+If you experience performance issues, please turn this parameter to 0.
+This usually happens for scenes with large molecules.</p></blockquote>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/03-collaboration/01-room_anchor"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
-    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/03-collaboration/03-server_controls"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
+<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/02-normal_mode/00-menu"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
+    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/02-normal_mode/02-interacting_with_molecules"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
 
   <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
   <a href="https://www.itheoc.uni-stuttgart.de/" class="hover:underline">ITheoC</a>
