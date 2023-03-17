@@ -10,7 +10,7 @@ With activated force field, the rest of the molecule follows the dragged atom.
 The currently grabbed atom is highlighted by a blue halo around it.
 While interacting with atoms, you can use both hands to grab two different atoms and, for example, bring them together.
 
-> Picture
+<img src="/images/manual/atom_interaction.png" class="mx-auto max-w-md" />
 
 ## Moving the whole molecule
 When moving your hand close to the molecule, the edges of an enclosing bounding box are showing.
@@ -19,12 +19,16 @@ Grabbing the corner again with two fingers (index and thumb) shows the whole box
 While holding the corner, you can move the whole atom without inducing any forces.
 Additionally, the rotation of the hand can be utilized for easy positioning of the molecule.
 
+<img src="/images/manual/box_interaction.png" class="mx-auto max-w-md" />
+
 ## Create Bonds
 Every atom is created with dummy atoms corresponding to their current hybridization.
 Using the interaction methods explained above, the dummy atoms of two different molecules can be overlapped.
 That should color the two dummies blue.
 When the currently grabbed molecule/atom is released while blue, a bond is created.
 Creating bonds also works within a single molecule.
+
+<img src="/images/manual/merge.gif" class="mx-auto max-w-md" />
 
 ## Selection
 You can select a single or multiple atoms.
@@ -33,3 +37,5 @@ The current threshold for the interaction is set to below 200ms, which should gi
 The selection highlights the atom and spawns a tool tip.
 The tool tip consists of a small frame that shows information and provides the ability for manipulation, and a line that connects the selected atom/object and the tool tip frame.
 To deselect an atom, either click on the atom again or press the close button (X) in the tool tip frame.
+
+<img src="/images/manual/select.gif" class="mx-auto max-w-md" />
