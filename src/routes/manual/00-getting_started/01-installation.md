@@ -2,14 +2,20 @@
 title: Installation
 ---
 
+## Disclaimer
+The here described installation process is for developers.
+Currently, non-dev users have to go through the same installation process.
+However, in the future we're going to offer a binary installation that makes chARp a lot more accessible.
+
+
 ## Unity
 Since chARp is developed using the game engine Unity, we first need to install it.
-Go to the [download page of Unity](https://unity.com/download) and download Unity Hub on your computer.
+Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is [2021.3.12f1](unityhub://2021.3.12f1/8af3c3e441b1).
+Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a>.
 You can also download the newest version of Unity and update the project, but this is **not recommended**.
-Download and install version [2021.3.12f1](unityhub://2021.3.12f1/8af3c3e441b1) of Unity.
+Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a> of Unity.
 Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARp on the HoloLens2.
 
 > Unity also installs **Visual Studio (VS) 2019 Community Edition**  by default.
@@ -21,10 +27,10 @@ Open the installer and click on **Modify** at your preferred version of Visual S
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
-To load chARp into Unity you first need to download chARp from our [GitHub repository](https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder).
+To load chARp into Unity you first need to download chARp from our <a href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder" target="_blank">GitHub repository</a>.
 You click on the green Button **code** and select `Download ZIP` or you use git to clone the project to your disk
 ```bash
-git clone https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder.git
+git clone --depth=1 https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder.git
 ```
 
 ## Prepare the Project
@@ -35,12 +41,12 @@ The project should now show in the list of projects.
 
 > Before we can start the project, we first need to apply some more steps.
 
-Since chARp runs on the HoloLens2, we need to reinstall Microsoft's MRTK.
+Since chARp runs on the HoloLens2, we need to add Microsoft's MRTK tarballs.
 
 ### MRTK
 Because of their size, MRTK tarballs are not checked into the git repository.
 Therefore, the used MRTK packages have to be reinstalled.
-Download and run the [MixedRealityFeatureTool](https://www.microsoft.com/en-us/download/details.aspx?id=102778) and select chARp's root folder as **Project Path**.
+Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" target="_blank">MixedRealityFeatureTool</a> and select chARp's root folder as **Project Path**.
 Click **Discover Features** and activate the following features:
 
 ```
@@ -57,19 +63,21 @@ All these features should also appear with the tag "Version x.x.x currently inst
 Click **Get Features** and confirm that step by clicking **Import**.
 
 ### OpenBabel
-For server support of OpenBabel please install the [latest](https://github.com/openbabel/openbabel/releases/latest) version (x64 exe).
+For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
 Take the `OBDotNet.dll` from the OpenBabel install directory and copy it into `Assets/plugins`.
 If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your `PATH`.
 Under Windows go to "Edit the system environment variables" under "Environment Variables..." add the OpenBabel install path to your "Path" variable in the system variables.
 Under Linux add the OpenBabel install path to your `PATH` variable.
 
 ### NuGet
-Download and install [NuGet for Unity](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest).
-To do this, download the `.unitypackage` file.
+Download the `.unitypackage` from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a>.
+To be able to install the `.unitypackage` file of **NuGetForUnity** you have to start the project for the first time.
 
-> Now it's time to start chARp in Unity.<br>
-> Got to Unity Hub and single click the project to start it.
+> Got to UnityHub and single click the project to start it.
 
+This process can take a while.
+During the startup Unity will show you an error message, since not all components are installed yet.
+For now, you can click **Ignore** and continue with the installation process.
 Drag-and-drop the `.unitypackage` into the **Project** section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click **Import**.
 This should add a **NuGet** option to the standard bar of Unity.
@@ -106,9 +114,9 @@ To interact with the menus you can hold `shift` to simulate the left hand and `s
 The keys `W`, `A`, `S` and `D` can be used to move in the scene.
 `E` will move you up and `Q` will move you down.
 Holding `right click` lets you look around in the scene.
-Another important interaction is the `mouswheel`.
+Another important interaction is the `mousewheel`.
 Scrolling with the mouse wheel moves the currently activated hand forward and backward.
-Using the mouse wheel makes it easy to press buttons in chARp. 
+Using the mouse wheel makes it easy to press buttons in chARp.
 
 ## Deploy on Device
 The basic steps are also fund on the official Microsoft page [here](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2).
