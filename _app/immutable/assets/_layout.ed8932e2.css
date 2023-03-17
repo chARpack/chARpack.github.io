@@ -1099,9 +1099,6 @@ main  p > code,
 .left-1\/2 {
   left: 50%;
 }
-.left-10 {
-  left: 2.5rem;
-}
 .left-2 {
   left: 0.5rem;
 }
@@ -1158,6 +1155,9 @@ main  p > code,
 }
 .z-10 {
   z-index: 10;
+}
+.z-20 {
+  z-index: 20;
 }
 .z-30 {
   z-index: 30;
@@ -5398,10 +5398,6 @@ pre {
   .sm\:w-96 {
     width: 24rem;
   }
-  .sm\:translate-x-0 {
-    --tw-translate-x: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -5506,8 +5502,8 @@ pre {
   .md\:w-2\/3 {
     width: 66.666667%;
   }
-  .md\:w-3\/6 {
-    width: 50%;
+  .md\:w-4\/6 {
+    width: 66.666667%;
   }
   .md\:w-48 {
     width: 12rem;
@@ -5645,6 +5641,10 @@ pre {
   .lg\:max-w-2xl {
     max-width: 42rem;
   }
+  .lg\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }
 
 @media (min-width: 1280px) {
@@ -5654,7 +5654,10 @@ pre {
   .xl\:w-3\/6 {
     width: 50%;
   }
-  .xl\:w-full {
+}
+
+@media (min-width: 1440px) {
+  .min-\[1440px\]\:w-full {
     width: 100%;
   }
 }
@@ -5662,6 +5665,18 @@ pre {
 @media (min-width: 1536px) {
   .\32xl\:h-96 {
     height: 24rem;
+  }
+}
+
+@media (min-width: 1560px) {
+  .min-\[1560px\]\:left-10 {
+    left: 2.5rem;
+  }
+}
+
+@media (min-width: 12600px) {
+  .min-\[12600px\]\:w-5\/6 {
+    width: 83.333333%;
   }
 }/**
  * okaidia theme for JavaScript, CSS and HTML
