@@ -7,23 +7,23 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../../../_app/immutable/assets/_layout.c573438d.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.4f548981.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.717084f0.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.5454c0fe.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.fb982e68.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.a9e03bb6.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.d78368ae.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.svelte.6f3fde71.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.bd0c48c6.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.4e98e198.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Heading.39f8c782.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.1428ca07.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.ad730a49.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.f0f1b605.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.66a5e340.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.c501ece8.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.ab610a10.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/globToArray.54c2d47d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.9d041ea4.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.0083da78.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/BreadcrumbItem.74cbd37f.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Hr.1a300591.mjs"><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
       localStorage.getItem('color-theme') === 'dark' ||
@@ -89,14 +89,18 @@
 <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Installation</h1>
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
+<h2>Disclaimer</h2>
+<p>The here described installation process is for developers.
+Currently, non-dev users have to go through the same installation process.
+However, in the future we’re going to offer a binary installation that makes chARp a lot more accessible.</p>
 <h2>Unity</h2>
 <p>Since chARp is developed using the game engine Unity, we first need to install it.
-Go to the <a href="https://unity.com/download" rel="nofollow">download page of Unity</a> and download Unity Hub on your computer.
+Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1">2021.3.12f1</a>.
+Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a>.
 You can also download the newest version of Unity and update the project, but this is <strong>not recommended</strong>.
-Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1">2021.3.12f1</a> of Unity.
+Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a> of Unity.
 Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARp on the HoloLens2.</p>
 <blockquote><p>Unity also installs <strong>Visual Studio (VS) 2019 Community Edition</strong>  by default.
 If you want to develop Unity apps, you’ll need to add the package <strong>Game development with Unity</strong>.
@@ -105,20 +109,20 @@ To be able to deploy chARp on the HoloLens2 also install the VS module <strong>U
 Open the installer and click on <strong>Modify</strong> at your preferred version of Visual Studio.
 Enable the modules and <strong>Modify</strong> in the bottom right corner to install them.</p>
 <h2>Download</h2>
-<p>To load chARp into Unity you first need to download chARp from our <a href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder" rel="nofollow">GitHub repository</a>.
+<p>To load chARp into Unity you first need to download chARp from our <a href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder" target="_blank">GitHub repository</a>.
 You click on the green Button <strong>code</strong> and select <code>Download ZIP</code> or you use git to clone the project to your disk</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">git</span> clone https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder.git</code><!-- HTML_TAG_END --></pre>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">git</span> clone <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder.git</code><!-- HTML_TAG_END --></pre>
 <h2>Prepare the Project</h2>
 <p>Open Unity Hub and select the <strong>Projects</strong> tab.
 Use the dropdown next to the button <strong>Open</strong> and select <strong>Add project from disk</strong>.
 Put in the location to the root folder of your copy of chARp and confirm the selection.
 The project should now show in the list of projects.</p>
 <blockquote><p>Before we can start the project, we first need to apply some more steps.</p></blockquote>
-<p>Since chARp runs on the HoloLens2, we need to reinstall Microsoft’s MRTK.</p>
+<p>Since chARp runs on the HoloLens2, we need to add Microsoft’s MRTK tarballs.</p>
 <h3>MRTK</h3>
 <p>Because of their size, MRTK tarballs are not checked into the git repository.
 Therefore, the used MRTK packages have to be reinstalled.
-Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" rel="nofollow">MixedRealityFeatureTool</a> and select chARp’s root folder as <strong>Project Path</strong>.
+Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" target="_blank">MixedRealityFeatureTool</a> and select chARp’s root folder as <strong>Project Path</strong>.
 Click <strong>Discover Features</strong> and activate the following features:</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Mixed Reality Toolkit &gt;
 Mixed Reality Toolkit Foundations
@@ -131,17 +135,19 @@ Mixed Reality OpenXR Plugin</code><!-- HTML_TAG_END --></pre>
 <p>All these features should also appear with the tag “Version x.x.x currently installed”.
 Click <strong>Get Features</strong> and confirm that step by clicking <strong>Import</strong>.</p>
 <h3>OpenBabel</h3>
-<p>For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" rel="nofollow">latest</a> version (x64 exe).
+<p>For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
 Take the <code>OBDotNet.dll</code> from the OpenBabel install directory and copy it into <code>Assets/plugins</code>.
 If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your <code>PATH</code>.
 Under Windows go to “Edit the system environment variables” under “Environment Variables…” add the OpenBabel install path to your “Path” variable in the system variables.
 Under Linux add the OpenBabel install path to your <code>PATH</code> variable.</p>
 <h3>NuGet</h3>
-<p>Download and install <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" rel="nofollow">NuGet for Unity</a>.
-To do this, download the <code>.unitypackage</code> file.</p>
-<blockquote><p>Now it’s time to start chARp in Unity.<br>
-Got to Unity Hub and single click the project to start it.</p></blockquote>
-<p>Drag-and-drop the <code>.unitypackage</code> into the <strong>Project</strong> section of your Unity window to install it.
+<p>Download the <code>.unitypackage</code> from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a>.
+To be able to install the <code>.unitypackage</code> file of <strong>NuGetForUnity</strong> you have to start the project for the first time.</p>
+<blockquote><p>Got to UnityHub and single click the project to start it.</p></blockquote>
+<p>This process can take a while.
+During the startup Unity will show you an error message, since not all components are installed yet.
+For now, you can click <strong>Ignore</strong> and continue with the installation process.
+Drag-and-drop the <code>.unitypackage</code> into the <strong>Project</strong> section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click <strong>Import</strong>.
 This should add a <strong>NuGet</strong> option to the standard bar of Unity.
 Click on </p>
@@ -166,9 +172,9 @@ To interact with the menus you can hold <code>shift</code> to simulate the left 
 The keys <code>W</code>, <code>A</code>, <code>S</code> and <code>D</code> can be used to move in the scene.
 <code>E</code> will move you up and <code>Q</code> will move you down.
 Holding <code>right click</code> lets you look around in the scene.
-Another important interaction is the <code>mouswheel</code>.
+Another important interaction is the <code>mousewheel</code>.
 Scrolling with the mouse wheel moves the currently activated hand forward and backward.
-Using the mouse wheel makes it easy to press buttons in chARp. </p>
+Using the mouse wheel makes it easy to press buttons in chARp.</p>
 <h2>Deploy on Device</h2>
 <p>The basic steps are also fund on the official Microsoft page <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2" rel="nofollow">here</a>.
 When the test was successful, you’re now ready to deploy chARp to your HoloLens2.
@@ -224,7 +230,7 @@ Now you’re ready to use chARp.</p>
 			
 			<script>
 				{
-					__sveltekit_1wxgbjl = {
+					__sveltekit_141etq7 = {
 						env: {},
 						assets: new URL("../../..", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -233,10 +239,10 @@ Now you’re ready to use chARp.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.4f548981.mjs"),
-						import("../../../_app/immutable/entry/app.fb982e68.mjs")
+						import("../../../_app/immutable/entry/start.717084f0.mjs"),
+						import("../../../_app/immutable/entry/app.d78368ae.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1wxgbjl.element, {
+						kit.start(app, __sveltekit_141etq7.element, {
 							node_ids: [0, 2, 8],
 							data,
 							form: null,
