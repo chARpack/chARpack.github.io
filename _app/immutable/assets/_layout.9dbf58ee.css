@@ -5502,14 +5502,14 @@ pre {
   .md\:w-2\/3 {
     width: 66.666667%;
   }
-  .md\:w-4\/6 {
-    width: 66.666667%;
-  }
   .md\:w-48 {
     width: 12rem;
   }
   .md\:w-auto {
     width: auto;
+  }
+  .md\:w-full {
+    width: 100%;
   }
   .md\:max-w-lg {
     max-width: 32rem;
@@ -5654,11 +5654,8 @@ pre {
   .xl\:w-3\/6 {
     width: 50%;
   }
-}
-
-@media (min-width: 1440px) {
-  .min-\[1440px\]\:w-full {
-    width: 100%;
+  .xl\:w-5\/6 {
+    width: 83.333333%;
   }
 }
 
@@ -5666,17 +5663,14 @@ pre {
   .\32xl\:h-96 {
     height: 24rem;
   }
+  .\32xl\:w-full {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1560px) {
   .min-\[1560px\]\:left-10 {
     left: 2.5rem;
-  }
-}
-
-@media (min-width: 12600px) {
-  .min-\[12600px\]\:w-5\/6 {
-    width: 83.333333%;
   }
 }/**
  * okaidia theme for JavaScript, CSS and HTML
