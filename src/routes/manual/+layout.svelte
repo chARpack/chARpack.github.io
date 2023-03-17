@@ -13,7 +13,7 @@
 
 </script>
 
-<Sidebar class="fixed top-10 left-10 z-40 lg:w-64 md:w-auto h-screen transition-transform -translate-x-full sm:translate-x-0">
+<Sidebar class="fixed min-[1560px]:left-10 top-10 left-0 z-0 lg:w-64 md:w-auto h-screen transition-transform -translate-x-full lg:translate-x-0">
   <SidebarWrapper class="dark:bg-gray-900">
     <SidebarGroup class="list-none">
       <SidebarBrand class="text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" {site} />
@@ -30,7 +30,7 @@
   </SidebarWrapper>
 </Sidebar>
 
-<div class="xl:w-full lg:w-4/6 md:w-3/6 flex mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2">
+<div class="min-[1440px]:w-full min-[12600px]:w-5/6 md:w-4/6 flex mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2 z-20">
   <main>
     <slot />
   </main>
