@@ -30,7 +30,7 @@
   </SidebarWrapper>
 </Sidebar>
 
-<div class="min-[1440px]:w-full min-[12600px]:w-5/6 md:w-4/6 flex mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2 z-20">
+<div class="2xl:w-full xl:w-5/6 lg:w-4/6 md:w-full mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2 z-20">
   <main>
     <slot />
   </main>
