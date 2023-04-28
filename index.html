@@ -7,16 +7,16 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout.79b6d8f8.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.bf47e1e8.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.05085008.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.c23af7ee.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.9d1bdf7f.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.e08b3a2a.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.ebf4cc4d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.svelte.3939aef2.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_page.svelte.c7f1d5ff.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_page.svelte.bec6004e.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/Heading.39f8c782.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/P.2052fb12.mjs"><title>Home</title><!-- HEAD_svelte-1q7capj_START --><meta name="description" content="chARp Home"><!-- HEAD_svelte-1q7capj_END --><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
@@ -56,10 +56,11 @@
 
 </div>
 
-<div><h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full mb-6">chARp <small class="text-gray-500 dark:text-gray-400 font-semibold">Molecular Builder</small></h1>
-	<p class="text-base text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal">The toolkit chARp Molecular Builder provides an augmented reality (AR) environment for building and simulating of molecules.
-		chARp Molecular Builder was designed to enhance the normal workflow of a computational chemistry researcher with AR immersion, without the drawback of abandoning the real world like in fully virtual environments.
-		In particular, chARp Molecular Builder encourages a hybrid setup of workstation and AR device.
+<div><h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full mb-6">chARp <small class="text-gray-500 dark:text-gray-400 font-semibold">Chemistry in Augmented Reality Package</small></h1>
+	<p class="text-base text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal">The basic purpose of the project is to provide an environment for exploring the prospects of augmented reality (AR) in chemistry and related molecular sciences. We believe that holographic projections are a future technology with tremendous impact in all scientific fields that extensively work with three-dimensional models. In chemistry, the idea of a molecular structure is a fundamental concept since the days of van&#39;t Hoff (organic stereochemistry) and Werner (complex chemistry) and the key to understaning reactivity and properties of chemical compounds. One big advantage of AR is the much better integration into conventional workflows of computational chemistry, as it provides immersive 3D models without the drawback of abandoning the real world like in fully virtual environments. 
+	</p>
+    <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full mb-6">chARp <small class="text-gray-500 dark:text-gray-400 font-semibold">Molecular Builder</small></h1>
+	<p class="text-base text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal">The toolkit chARp Molecular Builder provides an AR environment for building and inspecting (dynamic) models of molecules. A simple force-field provides chemically meaningful structures, but the program also allows you to modify certain structure parameters (e.g. bond lengths or angles) at will. In particular, you can explore the molecule&#39;s conformational space. The program also allows for multiuser environments. 
 	</p>
 	<h3 class="text-3xl font-bold text-gray-900 dark:text-white w-full mt-6 mb-2">About</h3>
 	<p class="text-base text-gray-900 dark:text-white leading-normal font-normal text-left whitespace-normal">This project is part of the <a href="https://www.simtech.uni-stuttgart.de/exc/" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500">Cluster of Excellence EXC 2075 &quot;Data-Integrated Simulation Science (SimTech)&quot;</a> of the <a href="https://www.uni-stuttgart.de/" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500">University of Stuttgart</a>.
@@ -87,7 +88,7 @@
 			
 			<script>
 				{
-					__sveltekit_73c5qs = {
+					__sveltekit_1cqo720 = {
 						env: {},
 						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -96,10 +97,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.bf47e1e8.mjs"),
-						import("./_app/immutable/entry/app.9d1bdf7f.mjs")
+						import("./_app/immutable/entry/start.05085008.mjs"),
+						import("./_app/immutable/entry/app.ebf4cc4d.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_73c5qs.element, {
+						kit.start(app, __sveltekit_1cqo720.element, {
 							node_ids: [0, 3],
 							data,
 							form: null,
