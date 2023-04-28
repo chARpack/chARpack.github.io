@@ -70,10 +70,10 @@ Under Windows go to "Edit the system environment variables" under "Environment V
 Under Linux add the OpenBabel install path to your `PATH` variable.
 
 ### NuGet
-Download the `.unitypackage` from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a>.
+Download the file `NuGetForUnity.*.unitypackage` from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a> (Note: Look for the release page of that project, no need to clone the source tree).
 To be able to install the `.unitypackage` file of **NuGetForUnity** you have to start the project for the first time.
 
-> Got to UnityHub and single click the project to start it.
+> Go to UnityHub and single click the project to start it.
 
 This process can take a while.
 During the startup Unity will show you an error message, since not all components are installed yet.
