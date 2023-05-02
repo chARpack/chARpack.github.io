@@ -7,8 +7,14 @@ export const images = [
 },
 {
     id: 1,
-    name: "Different View",
+    name: "Older Version",
     imgurl: "/images/pic1.png",
+    attribution: "",
+},
+{
+    id: 2,
+    name: "Different View",
+    imgurl: "/images/pic2.png",
     attribution: "",
 }
 ];
