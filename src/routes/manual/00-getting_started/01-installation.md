@@ -81,6 +81,11 @@ For now, you can click **Ignore** and continue with the installation process.
 Drag-and-drop the `.unitypackage` into the **Project** section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click **Import**.
 This should add a **NuGet** option to the menu bar of Unity.
+<img src="/images/manual/nuget_menu_bar.png" class="mx-auto max-w-xl" />
+
+> Note: If the NuGet option is not available right away, simply close and reload the project.
+
+In case Unity still complains about missing packages, please check the NuGet package manager and verify the installation of the following packages.
 Click on 
 ```
 NuGet > Manage NuGet Packages
@@ -97,7 +102,11 @@ Next, go to the menu bar of Unity and click
 ```
 File > Build Settings ...
 ```
+<img src="/images/manual/build_settings.png" class="mx-auto max-w-xl" />
+
 Select the option **Universal Windows Platform** on the left and click on **Switch Platform**.
+
+<img src="/images/manual/switch_platform.png" class="mx-auto max-w-xl" />
 
 ## Test Run
 Now chARp should be set up for the first test run.
@@ -107,13 +116,14 @@ Assets > Scenes
 ```
 and double click **LoginScreenScene**.
 Press the play button (top center of the Unity window) for running the test.
-If the content of the **LoginScreenScene** or the **MainScene** occur in purple, you'll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).
+
+> If the content of the **LoginScreenScene** or the **MainScene** occur in purple, you'll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).
+
 Running
 ```
 Mixed Reality > Toolkit > Utilities > Upgrade MRTK Standard Shader to Universal Render Pipeline
 ```
 should fix the problem, and you will be able to see the GUI when running the program.
-<img src="/images/manual/upgrade_shader.png" class="mx-auto max-w-md" />
 
 ### Interactions inside Unity editor
 Now chARp is running inside Unity editor.
@@ -132,7 +142,11 @@ Again, go to
 ```
 File > Build Settings ...
 ```
+
 This time, click on **Build**, which opens a folder dialog.
+
+<img src="/images/manual/build.png" class="mx-auto max-w-xl" />
+
 Create a folder named **build** inside the chARp project folder and select it using the dialog.
 Unity should start the **Building Player** process.
 When finished, got to the freshly created **build** folder and open the `.sln` file that is located there.
@@ -140,6 +154,19 @@ This will start up Visual Studio.
 In the solution explorer, right click **chARpMolecularBuilder (Universal Windows)** and select **Set as Startup Project**.
 Set **Release** as solution configuration and **ARM64** as solution platforms.
 Choose **Remote Machine** as device.
+
+### Trouble with the Burst Compiler
+Sometimes, Unity has problems finding the correct currently installed VS version/SDK.
+This results in errors during the **Build** process.
+In some cases reinstalling VS helps.
+However, if you do not want to reinstall VS or this simply does not help, you have to deactivate the **Brust** compiler.
+Go to the **Player Settings**
+
+<img src="/images/manual/project_settings.png" class="mx-auto max-w-xl" />
+
+Find the section **Bust AOT Settings** and undo the checkmark on **Enable Burst Compilation**.
+
+<img src="/images/manual/burst.png" class="mx-auto max-w-xl" />
 
 ### IP of your HoloLens2
 To be able to deploy chARp via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
