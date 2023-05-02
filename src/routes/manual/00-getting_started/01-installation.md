@@ -80,7 +80,7 @@ During the startup Unity will show you an error message, since not all component
 For now, you can click **Ignore** and continue with the installation process.
 Drag-and-drop the `.unitypackage` into the **Project** section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click **Import**.
-This should add a **NuGet** option to the standard bar of Unity.
+This should add a **NuGet** option to the menu bar of Unity.
 Click on 
 ```
 NuGet > Manage NuGet Packages
@@ -93,7 +93,7 @@ Microsoft.VCRTForwarders.140
 ```
 
 ### UWP
-Next, go to the standard bar of Unity and click
+Next, go to the menu bar of Unity and click
 ```
 File > Build Settings ...
 ```
@@ -107,6 +107,13 @@ Assets > Scenes
 ```
 and double click **LoginScreenScene**.
 Press the play button (top center of the Unity window) for running the test.
+If the content of the **LoginScreenScene** or the **MainScene** occur in purple, you'll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).
+Running
+```
+Mixed Reality > Toolkit > Utilities > Upgrade MRTK Standard Shader to Universal Render Pipeline
+```
+should fix the problem, and you will be able to see the GUI when running the program.
+<img src="/images/manual/upgrade_shader.png" class="mx-auto max-w-md" />
 
 ### Interactions inside Unity editor
 Now chARp is running inside Unity editor.
