@@ -7,23 +7,23 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../../../_app/immutable/assets/_layout.79b6d8f8.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.4e821c7e.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/start.79af5259.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/index.7e84a433.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.35eb4ac2.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.f5968a2a.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/singletons.a9f48abc.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/app.15deaaf6.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.svelte.3939aef2.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Button.c3b9db9c.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/_layout.js.464e3015.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.79cb23d1.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.012b90bc.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.svelte.ce620714.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/A.6525a407.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Heading.39f8c782.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.1dc2e26a.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.75df3598.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.bbc740b7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/stores.fd517b30.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-layout.js.1d9b5049.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/_layout.dae96ff7.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/globToArray.54c2d47d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.5fa43841.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/entry/manual-_section_-_page_-page.svelte.13543c00.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/BreadcrumbItem.74cbd37f.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="../../../_app/immutable/chunks/Hr.1a300591.mjs"><!-- HEAD_svelte-16q53hu_START --><script>if (window) {
       localStorage.getItem('color-theme') === 'dark' ||
@@ -149,7 +149,10 @@ During the startup Unity will show you an error message, since not all component
 For now, you can click <strong>Ignore</strong> and continue with the installation process.
 Drag-and-drop the <code>.unitypackage</code> into the <strong>Project</strong> section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click <strong>Import</strong>.
-This should add a <strong>NuGet</strong> option to the menu bar of Unity.
+This should add a <strong>NuGet</strong> option to the menu bar of Unity.</p>
+<img src="/images/manual/nuget_menu_bar.png" class="mx-auto max-w-xl">
+<blockquote><p>Note: If the NuGet option is not available right away, simply close and reload the project.</p></blockquote>
+<p>In case Unity still complains about missing packages, please check the NuGet package manager and verify the installation of the following packages.
 Click on </p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">NuGet &gt; Manage NuGet Packages</code><!-- HTML_TAG_END --></pre>
 <p>to open the package manager.
@@ -159,18 +162,19 @@ Microsoft.VCRTForwarders.140</code><!-- HTML_TAG_END --></pre>
 <h3>UWP</h3>
 <p>Next, go to the menu bar of Unity and click</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
+<img src="/images/manual/build_settings.png" class="mx-auto max-w-xl">
 <p>Select the option <strong>Universal Windows Platform</strong> on the left and click on <strong>Switch Platform</strong>.</p>
+<img src="/images/manual/switch_platform.png" class="mx-auto max-w-xl">
 <h2>Test Run</h2>
 <p>Now chARp should be set up for the first test run.
 In the <strong>Project</strong> window of Unity go to</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Assets &gt; Scenes</code><!-- HTML_TAG_END --></pre>
 <p>and double click <strong>LoginScreenScene</strong>.
-Press the play button (top center of the Unity window) for running the test.
-If the content of the <strong>LoginScreenScene</strong> or the <strong>MainScene</strong> occur in purple, you’ll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).
-Running</p>
+Press the play button (top center of the Unity window) for running the test.</p>
+<blockquote><p>If the content of the <strong>LoginScreenScene</strong> or the <strong>MainScene</strong> occur in purple, you’ll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).</p></blockquote>
+<p>Running</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Mixed Reality &gt; Toolkit &gt; Utilities &gt; Upgrade MRTK Standard Shader to Universal Render Pipeline</code><!-- HTML_TAG_END --></pre>
 <p>should fix the problem, and you will be able to see the GUI when running the program.</p>
-<img src="/images/manual/upgrade_shader.png" class="mx-auto max-w-md">
 <h3>Interactions inside Unity editor</h3>
 <p>Now chARp is running inside Unity editor.
 To interact with the menus you can hold <code>shift</code> to simulate the left hand and <code>space bar</code> to simulate the right hand.
@@ -185,14 +189,24 @@ Using the mouse wheel makes it easy to press buttons in chARp.</p>
 When the test was successful, you’re now ready to deploy chARp to your HoloLens2.
 Again, go to </p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
-<p>This time, click on <strong>Build</strong>, which opens a folder dialog.
-Create a folder named <strong>build</strong> inside the chARp project folder and select it using the dialog.
+<p>This time, click on <strong>Build</strong>, which opens a folder dialog.</p>
+<img src="/images/manual/build.png" class="mx-auto max-w-xl">
+<p>Create a folder named <strong>build</strong> inside the chARp project folder and select it using the dialog.
 Unity should start the <strong>Building Player</strong> process.
 When finished, got to the freshly created <strong>build</strong> folder and open the <code>.sln</code> file that is located there.
 This will start up Visual Studio.
 In the solution explorer, right click <strong>chARpMolecularBuilder (Universal Windows)</strong> and select <strong>Set as Startup Project</strong>.
 Set <strong>Release</strong> as solution configuration and <strong>ARM64</strong> as solution platforms.
 Choose <strong>Remote Machine</strong> as device.</p>
+<h3>Trouble with the Burst Compiler</h3>
+<p>Sometimes, Unity has problems finding the correct currently installed VS version/SDK.
+This results in errors during the <strong>Build</strong> process.
+In some cases reinstalling VS helps.
+However, if you do not want to reinstall VS or this simply does not help, you have to deactivate the <strong>Brust</strong> compiler.
+Go to the <strong>Player Settings</strong></p>
+<img src="/images/manual/project_settings.png" class="mx-auto max-w-xl">
+<p>Find the section <strong>Bust AOT Settings</strong> and undo the checkmark on <strong>Enable Burst Compilation</strong>.</p>
+<img src="/images/manual/burst.png" class="mx-auto max-w-xl">
 <h3>IP of your HoloLens2</h3>
 <p>To be able to deploy chARp via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
 Open the WiFi options on the HoloLens2 and click on <strong>Adaptor Settings</strong>.
@@ -235,7 +249,7 @@ Now you’re ready to use chARp.</p>
 			
 			<script>
 				{
-					__sveltekit_1i7i65v = {
+					__sveltekit_erqb2u = {
 						env: {},
 						assets: new URL("../../..", location.href).pathname.replace(/^\/$/, ''),
 						element: document.currentScript.parentElement
@@ -244,10 +258,10 @@ Now you’re ready to use chARp.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.4e821c7e.mjs"),
-						import("../../../_app/immutable/entry/app.f5968a2a.mjs")
+						import("../../../_app/immutable/entry/start.79af5259.mjs"),
+						import("../../../_app/immutable/entry/app.15deaaf6.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1i7i65v.element, {
+						kit.start(app, __sveltekit_erqb2u.element, {
 							node_ids: [0, 2, 8],
 							data,
 							form: null,
