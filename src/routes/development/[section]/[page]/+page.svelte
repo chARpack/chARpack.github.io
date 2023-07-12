@@ -10,7 +10,7 @@
 	$: next = pageList[index + 1];
 </script>
 
-<Breadcrumb aria-label="breadcrumb" solid class="mb-3 bg-[#e5e7eb] dark:bg-[#374151]">
+<Breadcrumb aria-label="development breadcrumb" solid class="mb-3" solidClass="bg-[#e5e7eb] dark:bg-[#374151] rounded">
     <BreadcrumbItem href="/development" home>Development</BreadcrumbItem>
     <BreadcrumbItem href={pageContent.absSectionRoute}>{pageContent.sectionTitle}</BreadcrumbItem>
     <BreadcrumbItem href={pageContent.absRoute}>{pageContent.metadata.title}</BreadcrumbItem>

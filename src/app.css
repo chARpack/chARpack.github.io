@@ -70,13 +70,13 @@ pre {
         @apply h-auto rounded-lg my-4;
     }
 
-    /* main ol {
-        @apply space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400;
+    main ol {
+        @apply mx-4 my-4 my-2 space-y-1 text-gray-600 list-decimal list-inside dark:text-gray-300;
     }
 
     main ul {
-        @apply space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400;
-    } */
+        @apply mx-4 my-2 space-y-1 text-gray-600 list-inside dark:text-gray-300;
+    } 
 
     /* main code {
         @apply text-gray-800 dark:text-gray-600 break-all font-mono text-sm;
