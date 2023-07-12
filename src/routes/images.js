@@ -1,20 +1,32 @@
 export const images = [
 {
     id: 0,
-    name: "Bond Manipulation",
-    imgurl: "/images/pic0.png",
+    name: "Collaboration",
+    imgurl: "/images/collab1.gif",
     attribution: "",
 },
 {
     id: 1,
-    name: "Older Version",
-    imgurl: "/images/pic1.png",
+    name: "Building Molecules",
+    imgurl: "/images/collab2.gif",
     attribution: "",
 },
 {
     id: 2,
-    name: "Different View",
-    imgurl: "/images/pic2.png",
+    name: "More Building",
+    imgurl: "/images/collab3.gif",
     attribution: "",
-}
+},
+{
+    id: 3,
+    name: "Special Interaction Mode",
+    imgurl: "/images/collab4.gif",
+    attribution: "",
+},
+{
+    id: 4,
+    name: "Delete a Molecule",
+    imgurl: "/images/collab5.gif",
+    attribution: "",
+},
 ];

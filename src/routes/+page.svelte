@@ -11,7 +11,7 @@
 </script>
 
 <div class="self-center mb-12 mt-4 lg:max-w-2xl md:max-w-lg">
-	<Carousel {images} loop {showCaptions} {showThumbs} duration="5000"/>
+	<Carousel {images} loop {showCaptions} {showThumbs} duration="8000"/>
 </div>
 
 <div>
