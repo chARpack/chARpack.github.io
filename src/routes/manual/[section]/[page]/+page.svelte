@@ -1,4 +1,10 @@
 <script>
+    // Languages must be imported individually,
+    // to support syntax highlighting
+    import Prism from 'prismjs';
+    import 'prismjs/components/prism-bash';
+    import 'prismjs/components/prism-csharp';
+
     import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem, Button } from 'flowbite-svelte'
     import { page } from "$app/stores";
 
