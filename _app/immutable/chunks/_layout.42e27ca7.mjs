@@ -1,0 +1,1 @@
+import{l as o}from"./loadmd.e208f730.mjs";function r(){try{return{sections:o()}}catch(e){return console.error(e),{sections:[]}}}const l=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{l as _,r as l};
