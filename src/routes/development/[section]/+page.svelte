@@ -6,8 +6,8 @@
 
 </script>
 
-<Breadcrumb aria-label="manual breadcrumb" solid class="mb-3">
-    <BreadcrumbItem href="/manual" home>Manual</BreadcrumbItem>
+<Breadcrumb aria-label="development breadcrumb" solid class="mb-3 bg-[#e5e7eb] dark:bg-[#374151]">
+    <BreadcrumbItem href="/development" home>Development</BreadcrumbItem>
     <BreadcrumbItem href={section.absRoute}>{section.title}</BreadcrumbItem>
 </Breadcrumb>
 <Heading tag="h2" class="mb-4">{section.title}</Heading>
