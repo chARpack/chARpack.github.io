@@ -2,7 +2,7 @@
 title: Settings
 ---
 
-<img src="/images/manual/settings.png" alt="Normal Mode Menu" class="mx-auto max-w-md" />
+<img src="/images/manual/settings.png" alt="Settings Menu" class="mx-auto max-w-md" />
 
 ### Toggle Mesh
 This button turns the rendering of the spatial awareness of [OpenXR](https://www.khronos.org/OpenXR/) on and off.
