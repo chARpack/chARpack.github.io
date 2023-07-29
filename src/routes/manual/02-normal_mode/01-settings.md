@@ -10,7 +10,7 @@ The real world surroundings are detected by your device in a (usually) 2.5 secon
 Toggling the button does not turn on/off the detection of your surroundings, just the rendered wireframe overlay.
 
 ### Toggle Log
-The **Toggle Log** button shows and hides the debug log.
+The **Debug Log** button shows and hides the debug log.
 Note: changing scenes does not clear the debug log for easier error detection.
 
 ### Toggle Force Field
@@ -21,8 +21,15 @@ Toggling the force field off, stops any calculations in the background and lets 
 This mode comes in handy, when creating a bond within a molecule, but the force field makes it difficult to bring these two dummies together.
 
 ### Hand Toggles
-The three buttons on the bottom row change the hand visuals.
-You can go have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.
+The three buttons on the second row change the hand visuals.
+You can have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.
+
+### Toggle Hand Menu
+This button enables or disables use of the hand menu. By default, the menu is enabled for user comfort; if you prefer not using it, you can turn it off using this button.
+However, this will also disable the **Chain mode** button since it is part of the hand menu functionality.
+
+### Switch language
+This button switches the application's language between German and English.
 
 ### Bond Stiffness
 The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.
