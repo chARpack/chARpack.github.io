@@ -20,16 +20,14 @@ Pressing the **Undo** button once or multiple times will bring the scene back to
 Triggering the **Clear All Molecules** button empties the scene completely.
 All atoms and molecules are deleted.
 
-### Replace Dummies
-Each spawned atom is created with bonded dummy atoms.
-These dummy atoms can be switched to Hydrogen atoms with the **Replace Dummies** button.
-
 ### Create Atom
+Pressing the **Create Atom** Button spawns a scrollable atom menu at a fixed position within your current view.
+This menu can be navigated using the up and down arrows to the right; pressing a button within this menu creates a new atom of the chosen type.
+
+<img src="/images/manual/atom_menu.png" alt="Atom Menu" class="mx-auto max-w-md" />
+
 As already mentioned, atoms are created with dummies attached.
 These dummies are used to create bonds or to be switched out for Hydrogen atoms.
-
-> Currently in development: Create any atom you want, not only carbon.
-
 The number of dummies depends on the hybridization of the atom.
 
 ### Creation Hybridization
