@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.736dd61e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.92d0e9bb.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.c1cd27cf.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.41df2fe1.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.cea96c63.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.91fb209e.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.36c6171b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.864023a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.e370c679.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.0bd591b9.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.87bcbf7b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.b1edcbb5.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.90768e23.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.c3bf0d28.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -73,7 +73,9 @@ Check the boxes next to all locales you wish to add and select <em>Generate Loca
 Locales are saved in <code>Assets/Locales</code>.
 Now you need to add translations for the new locale in all string tables and asset tables.
 Also, edit the <em>switchLanguage</em> method in <code>Assets/scripts/appSettings.cs</code> since the current implementation only uses two languages.</p>
-<blockquote><p>How to switch the default language?</p></blockquote>
+<h3>Changing the default locale</h3>
+<p>The default locale can be changed in <code>Edit &gt; Project Settings &gt; Localization</code>. Select the <em>Specific Locale Selector</em> field and enter the locale you want to set as default.
+You should also set the project locale to the default locale in the <em>Project Locale Identifier</em> field.</p>
 <h2>Adding translations</h2>
 <p>In the current version of chARp , two string tables contain all translations for the project.
 In the localization table editor labels and their translations can be added or existing labels can be edited.
@@ -91,7 +93,10 @@ Choose a table type, while the options are <em>String Table Collection</em> to l
 After that, give the table a name and select <strong>Create</strong>.
 Localization tables are also saved in <code>Assets/Locales</code>.
 You can now access and edit the new table as described above.
-For easier access of the new string table from a script, you can create a new helper method like <code>GlobalCtrl.GetLocalizedString(text)</code> that uses your new table instead of <em>My Strings</em>.</p>
+For easier access of the new string table from a script, you can create a new helper method like <code>GlobalCtrl.Singleton.GetLocalizedString(text)</code> that uses your new table instead of <em>My Strings</em>. If you are writing this method in a script other than GlobalCtrl, you will need to add the lines </p>
+<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">UnityEngine<span class="token punctuation">.</span>Localization</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token namespace">UnityEngine<span class="token punctuation">.</span>Localization<span class="token punctuation">.</span>Settings</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>to the beginning of your script.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -117,7 +122,7 @@ For easier access of the new string table from a script, you can create a new he
 			
 			<script>
 				{
-					__sveltekit_gkhwes = {
+					__sveltekit_6dplob = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -127,8 +132,8 @@ For easier access of the new string table from a script, you can create a new he
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.736dd61e.js"),
-						import("../../../_app/immutable/entry/app.41df2fe1.js")
+						import("../../../_app/immutable/entry/start.92d0e9bb.js"),
+						import("../../../_app/immutable/entry/app.91fb209e.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 8],

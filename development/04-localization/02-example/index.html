@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.736dd61e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.92d0e9bb.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.c1cd27cf.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.41df2fe1.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.cea96c63.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.91fb209e.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.36c6171b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.864023a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.e370c679.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.0bd591b9.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.87bcbf7b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.b1edcbb5.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.90768e23.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.c3bf0d28.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -113,19 +113,15 @@ Translations are saved in a string table (e.g. <code>Assets/Locales/My Strings</
 <p>Open the <em>My Strings</em> table in <code>Window &gt; Asset Management &gt; Localization Tables</code> and add new entries for any required text and enter both, the English, and the German translations in the corresponding fields.
 Assign a unique key for each field.
 If using only single words without special characters, it is sufficient to use the English version in the key field as well.
-Add the lines</p>
-<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">UnityEngine<span class="token punctuation">.</span>Localization</span><span class="token punctuation">;</span>
-<span class="token keyword">using</span> <span class="token namespace">UnityEngine<span class="token punctuation">.</span>Localization<span class="token punctuation">.</span>Settings</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<p>to the beginning of your script.
-In any method within the script, you can now assign the value of <code>GlobalCtrl.GetLocalizedString(*KEY*)</code> to a string and use it as you would with the English word, for example to set it as the main label of the button using the <em>ButtonConfigHelper</em> component.</p>
+In any method within the script, you can now assign the value of <code>GlobalCtrl.Singleton.GetLocalizedString(*KEY*)</code> to a string and use it as you would with the English word, for example to set it as the main label of the button using the <em>ButtonConfigHelper</em> component.</p>
 <p>Example:</p>
 <pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token comment">// Helper methods to generate localized tool tip text</span>
 <span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">getToolTipText</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> mass<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> radius<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> bondNum<span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> rad <span class="token operator">=</span> m_molecule<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"RADIUS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> numBonds <span class="token operator">=</span> m_molecule<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NUM_BONDS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token class-name"><span class="token keyword">string</span></span> massStr <span class="token operator">=</span> m_molecule<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"MASS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> nameStr <span class="token operator">=</span> m_molecule<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NAME"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">string</span></span> rad <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"RADIUS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">string</span></span> numBonds <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NUM_BONDS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token class-name"><span class="token keyword">string</span></span> massStr <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"MASS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">string</span></span> nameStr <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NAME"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     name <span class="token operator">=</span> <span class="token function">GetLocalizedElementName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token class-name"><span class="token keyword">string</span></span> toolTipText <span class="token operator">=</span> <span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">nameStr</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">name</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">massStr</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">mass</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">rad</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">radius</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">numBonds</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">bondNum</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> toolTipText<span class="token punctuation">;</span>
@@ -155,7 +151,7 @@ In any method within the script, you can now assign the value of <code>GlobalCtr
 			
 			<script>
 				{
-					__sveltekit_gkhwes = {
+					__sveltekit_6dplob = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -165,8 +161,8 @@ In any method within the script, you can now assign the value of <code>GlobalCtr
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.736dd61e.js"),
-						import("../../../_app/immutable/entry/app.41df2fe1.js")
+						import("../../../_app/immutable/entry/start.92d0e9bb.js"),
+						import("../../../_app/immutable/entry/app.91fb209e.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 8],

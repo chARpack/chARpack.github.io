@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.736dd61e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.92d0e9bb.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.c1cd27cf.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.41df2fe1.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.cea96c63.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.91fb209e.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.3d2561e0.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.864023a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.2155731d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.0bd591b9.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.87bcbf7b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.3941bd0f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.90768e23.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.5fbc2f34.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -95,14 +95,13 @@ Pressing the <strong>Undo</strong> button once or multiple times will bring the 
 <h3>Clear All Molecules</h3>
 <p>Triggering the <strong>Clear All Molecules</strong> button empties the scene completely.
 All atoms and molecules are deleted.</p>
-<h3>Replace Dummies</h3>
-<p>Each spawned atom is created with bonded dummy atoms.
-These dummy atoms can be switched to Hydrogen atoms with the <strong>Replace Dummies</strong> button.</p>
 <h3>Create Atom</h3>
+<p>Pressing the <strong>Create Atom</strong> Button spawns a scrollable atom menu at a fixed position within your current view.
+This menu can be navigated using the up and down arrows to the right; pressing a button within this menu creates a new atom of the chosen type.</p>
+<img src="/images/manual/atom_menu.png" alt="Atom Menu" class="mx-auto max-w-md">
 <p>As already mentioned, atoms are created with dummies attached.
-These dummies are used to create bonds or to be switched out for Hydrogen atoms.</p>
-<blockquote><p>Currently in development: Create any atom you want, not only carbon.</p></blockquote>
-<p>The number of dummies depends on the hybridization of the atom.</p>
+These dummies are used to create bonds or to be switched out for Hydrogen atoms.
+The number of dummies depends on the hybridization of the atom.</p>
 <h3>Creation Hybridization</h3>
 <p>When pressing the <strong>Create Atom</strong> button, the displayed number (here 1) is as the hybridization for the freshly created atom.
 The numbers correspond to the following hybridizations:</p>
@@ -144,7 +143,7 @@ Check the later chapters for more information on how to do that.</p>
 			
 			<script>
 				{
-					__sveltekit_gkhwes = {
+					__sveltekit_6dplob = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -154,8 +153,8 @@ Check the later chapters for more information on how to do that.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.736dd61e.js"),
-						import("../../../_app/immutable/entry/app.41df2fe1.js")
+						import("../../../_app/immutable/entry/start.92d0e9bb.js"),
+						import("../../../_app/immutable/entry/app.91fb209e.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 12],
