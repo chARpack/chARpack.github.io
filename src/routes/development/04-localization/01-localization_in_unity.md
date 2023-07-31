@@ -16,7 +16,8 @@ Now you need to add translations for the new locale in all string tables and ass
 Also, edit the *switchLanguage* method in `Assets/scripts/appSettings.cs` since the current implementation only uses two languages.
 
 ### Changing the default locale
-The default locale can be changed in `Edit > Project Settings > Localization`. Select the *Specific Locale Selector* field and enter the locale you want to set as default.
+The default locale can be changed in `Edit > Project Settings > Localization`.
+Select the *Specific Locale Selector* field and enter the locale you want to set as default.
 You should also set the project locale to the default locale in the *Project Locale Identifier* field.
 
 ## Adding translations
@@ -39,7 +40,8 @@ Choose a table type, while the options are *String Table Collection* to localize
 After that, give the table a name and select **Create**.
 Localization tables are also saved in `Assets/Locales`.
 You can now access and edit the new table as described above.
-For easier access of the new string table from a script, you can create a new helper method like `GlobalCtrl.Singleton.GetLocalizedString(text)` that uses your new table instead of *My Strings*. If you are writing this method in a script other than GlobalCtrl, you will need to add the lines 
+For easier access of the new string table from a script, you can create a new helper method like `GlobalCtrl.Singleton.GetLocalizedString(text)` that uses your new table instead of *My Strings*.
+If you are writing this method in a script other than GlobalCtrl, you will need to add the lines 
 ```csharp
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
