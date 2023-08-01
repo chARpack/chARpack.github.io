@@ -44,3 +44,5 @@ To deselect an atom, either click on the atom again or press the close button (X
 For ease of use, a chain selection functionality has been implemented: When active, a blue line is shown in your finger direction.
 Grabbing an atom in this mode will automatically select the entire chain of atoms in this direction. You can therefore move all its atoms at once.
 By default, this interaction mode is inactive. You can toggle the behaviour by pressing the **Chain mode** button in your left palm.
+
+<img src="/images/manual/chain_mode.gif" alt="Chain Mode" class="mx-auto max-w-md" />
