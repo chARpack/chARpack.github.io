@@ -81,7 +81,7 @@ For now, you can click **Ignore** and continue with the installation process.
 Drag-and-drop the `.unitypackage` into the **Project** section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click **Import**.
 This should add a **NuGet** option to the menu bar of Unity.
-<img src="/images/manual/nuget_menu_bar.png" class="mx-auto max-w-xl" />
+<img src="/images/manual/nuget_menu_bar.png" alt="NuGet Menu Bar" class="mx-auto max-w-xl" />
 
 > Note: If the NuGet option is not available right away, simply close and reload the project.
 
@@ -102,11 +102,11 @@ Next, go to the menu bar of Unity and click
 ```
 File > Build Settings ...
 ```
-<img src="/images/manual/build_settings.png" class="mx-auto max-w-xl" />
+<img src="/images/manual/build_settings.png" alt="Build Settings" class="mx-auto max-w-xl" />
 
 Select the option **Universal Windows Platform** on the left and click on **Switch Platform**.
 
-<img src="/images/manual/switch_platform.png" class="mx-auto max-w-xl" />
+<img src="/images/manual/switch_platform.png" alt="Switch Platform" class="mx-auto max-w-xl" />
 
 ## Test Run
 Now chARp should be set up for the first test run.
@@ -145,7 +145,7 @@ File > Build Settings ...
 
 This time, click on **Build**, which opens a folder dialog.
 
-<img src="/images/manual/build.png" class="mx-auto max-w-xl" />
+<img src="/images/manual/build.png" alt="Build" class="mx-auto max-w-xl" />
 
 Create a folder named **build** inside the chARp project folder and select it using the dialog.
 Unity should start the **Building Player** process.
@@ -162,11 +162,11 @@ In some cases reinstalling VS helps.
 However, if you do not want to reinstall VS or this simply does not help, you have to deactivate the **Brust** compiler.
 Go to the **Player Settings**
 
-<img src="/images/manual/project_settings.png" class="mx-auto max-w-xl" />
+<img src="/images/manual/project_settings.png" alt="Project Settings" class="mx-auto max-w-xl" />
 
 Find the section **Bust AOT Settings** and undo the checkmark on **Enable Burst Compilation**.
 
-<img src="/images/manual/burst.png" class="mx-auto max-w-xl" />
+<img src="/images/manual/burst.png" alt="Burst" class="mx-auto max-w-xl" />
 
 ### IP of your HoloLens2
 To be able to deploy chARp via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
