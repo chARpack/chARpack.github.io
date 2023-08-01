@@ -39,3 +39,8 @@ The tool tip consists of a small frame that shows information and provides the a
 To deselect an atom, either click on the atom again or press the close button (X) in the tool tip frame.
 
 <img src="/images/manual/select.gif" alt="Select" class="mx-auto max-w-md" />
+
+## Interaction mode
+For ease of use, a chain selection functionality has been implemented: When active, a blue line is shown in your finger direction.
+Grabbing an atom in this mode will automatically select the entire chain of atoms in this direction. You can therefore move all its atoms at once.
+By default, this interaction mode is inactive. You can toggle the behaviour by pressing the **Chain mode** button in your left palm.
