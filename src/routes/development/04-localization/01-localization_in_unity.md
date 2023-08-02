@@ -28,7 +28,7 @@ Under the tab *Edit Table Collection* you can find the already existing tables.
 With the drop-down menu *Selected Table Collection* you switch between the tables.
 *Elements* contains the names of all atoms that can be instantiated, *My Strings* contains everything else.
 
-<img src="/images/development/locale_tables.png" class="mx-auto max-w-xl" />
+<img src="/images/development/locale_tables.png" alt="Locale Tables" class="mx-auto max-w-xl" />
 
 To add content, select **Add new entry** and enter translations for each locale as well as a unique key.
 In most cases, e.g. if you are only translating a single word, the simplest way is to use the English word as the key.
