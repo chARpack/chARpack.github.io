@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.a2c0900e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.e147f4c0.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.649acb28.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.86f27bd3.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1fcad68c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9d59fb72.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.f088d46d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.0437e796.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.eb9ddbec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.5e042d7e.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.0513ea31.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.ca7a8337.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.2e4b3d5c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.1c82cade.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -64,6 +64,27 @@
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>How to develop in chARp?</h2>
 <p>In this development guide we explain the fundamental implementation details about chARp.</p>
+<h2>Overview</h2>
+<h3>Important scripts</h3>
+<p>chARp is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
+However, there are some larger and more important scripts:</p>
+<ul><li><strong>GlobalCtrl</strong>: This script controls and coordinates most functionalities in the <strong>MainScene</strong>.
+It provides the implementation for molecule creation and manipulation, core computations and features like the <em>Undo</em> functionality.</li>
+<li><strong>Molecule</strong>,<strong>Atom</strong> and <strong>Bond</strong>: These scripts contain the characteristic data of molecules, atoms and chemical bonds.
+This includes things like a list of connected atoms, a list of bonds in the molecule, methods for spawning tooltips (when selecting a molecule/atom/bond),
+the way molecules respond when grabbed or clicked and their interactions with the force field.</li>
+<li><strong>Login</strong>: Provides the functionality of the <strong>Login</strong> menu (connecting to a server, establishing a common coordinate system by scanning a QR code etc.)</li>
+<li><strong>ForceField</strong>: Contains different ways to compute and apply the force field to molecules in the scene so they behave realistically.</li></ul>
+<p>The folder <em>HoloLens</em> contains scripts specifically for the use case of the HoloLens 2.
+Most notably, the <strong>myScrollObject</strong> script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.</p>
+<h3>Prefabs</h3>
+<p>The <em>prefabs</em> folder contains a few useful prefabs. Besides the basics like <strong>Atom</strong> and <strong>Bond</strong>, there are also some that are more generally useful.
+If you intend to make a new menu, for example, you may find the <strong>CloseMeButton</strong> prefab to be of interest. Other buttons include a <strong>DeleteMeButton</strong> and a <strong>CopyMeButton</strong>.
+They contain the HoloLens’ <strong>PressableButton</strong> functionality (e.g. touch interactability and the visualizations for pressing the button) as well as icons corresponding
+to their respective use cases and a localized main label (text in German and English).
+A <strong>SettingsButton</strong> prefab in the specific format used by the settings menu is also provided.</p>
+<p>To use them, you only need to instantiate them and assign a method (see the example button creation for more details).</p>
+<p>There are also prefabs for the different types of menus, tooltips and more.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -89,7 +110,7 @@
 			
 			<script>
 				{
-					__sveltekit_sv41v5 = {
+					__sveltekit_15voqoo = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -99,8 +120,8 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.a2c0900e.js"),
-						import("../../../_app/immutable/entry/app.86f27bd3.js")
+						import("../../../_app/immutable/entry/start.e147f4c0.js"),
+						import("../../../_app/immutable/entry/app.9d59fb72.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 8],
