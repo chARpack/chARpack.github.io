@@ -159,18 +159,18 @@ Choose **Remote Machine** as device.
 Sometimes, Unity has problems finding the correct currently installed VS version/SDK.
 This results in errors during the **Build** process.
 In some cases reinstalling VS helps.
-However, if you do not want to reinstall VS or this simply does not help, you have to deactivate the **Brust** compiler.
+However, if you do not want to reinstall VS or this simply does not help, you have to deactivate the **Burst** compiler.
 Go to the **Player Settings**
 
 <img src="/images/manual/project_settings.png" alt="Project Settings" class="mx-auto max-w-xl" />
 
-Find the section **Bust AOT Settings** and undo the checkmark on **Enable Burst Compilation**.
+Find the section **Burst AOT Settings** and undo the checkmark on **Enable Burst Compilation**.
 
 <img src="/images/manual/burst.png" alt="Burst" class="mx-auto max-w-xl" />
 
 ### IP of your HoloLens2
 To be able to deploy chARp via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
-Open the WiFi options on the HoloLens2 and click on **Adaptor Settings**.
+Open the WiFi options on the HoloLens2 and click on **Adapter Settings**.
 Scroll down until you can find the devices IP address.
 
 > Make sure that your HoloLens2 is in [Developer Mode](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal).
