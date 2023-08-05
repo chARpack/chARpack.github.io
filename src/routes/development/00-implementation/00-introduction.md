@@ -7,6 +7,9 @@ title: Introduction
 In this development guide we explain the fundamental implementation details about chARp.
 
 ## Overview
+
+For a short introduction to the Unity functionalities most used in this project, see *Using Unity*.
+
 ### Important scripts
 chARp is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
 However, there are some larger and more important scripts:
@@ -22,7 +25,11 @@ The folder *HoloLens* contains scripts specifically for the use case of the Holo
 Most notably, the **myScrollObject** script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.
 
 ### Prefabs
-The *prefabs* folder contains a few useful prefabs. Besides the basics like **Atom** and **Bond**, there are also some that are more generally useful.
+The *prefabs* folder contains a few useful prefabs. 
+
+<img src="/images/development/prefabs.png" alt="Prefabs" class="mx-auto max-w-xl" />
+
+Besides the basics like **Atom** and **Bond**, there are also some that are more generally useful.
 If you intend to make a new menu, for example, you may find the **CloseMeButton** prefab to be of interest. Other buttons include a **DeleteMeButton** and a **CopyMeButton**.
 They contain the HoloLens' **PressableButton** functionality (e.g. touch interactability and the visualizations for pressing the button) as well as icons corresponding
 to their respective use cases and a localized main label (text in German and English).
