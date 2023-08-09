@@ -5,6 +5,7 @@ title: Using Unity
 ## General
 Unity is a well-known game development engine. 
 chARp uses it as a development basis since it provides many useful functionalities.
+This is only intended as a short introduction; for more detailed explanations, see the [Unity documentation](https://docs.unity.com/).
 
 Unity has two basic modes: editor mode and game mode.
 Editor mode is where you develop, make permanent changes and spend most of your time.

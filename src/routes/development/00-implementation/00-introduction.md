@@ -8,7 +8,7 @@ In this development guide we explain the fundamental implementation details abou
 
 ## Overview
 
-For a short introduction to the Unity functionalities most used in this project, see *Using Unity*.
+For a short introduction to the Unity functionalities most used in this project, see [Using Unity](/development/00-implementation/01-unity).
 
 ### Important scripts
 chARp is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
@@ -35,6 +35,6 @@ They contain the HoloLens' **PressableButton** functionality (e.g. touch interac
 to their respective use cases and a localized main label (text in German and English).
 A **SettingsButton** prefab in the specific format used by the settings menu is also provided.
 
-To use them, you only need to instantiate them and assign a method (see the example button creation for more details).
+To use them, you only need to instantiate them and assign a method (see the [button creation example](/development/04-localization/02-example) for more details).
 
 There are also prefabs for the different types of menus, tooltips and more.
