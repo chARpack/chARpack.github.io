@@ -38,3 +38,26 @@ A **SettingsButton** prefab in the specific format used by the settings menu is 
 To use them, you only need to instantiate them and assign a method (see the [button creation example](/development/04-localization/02-example) for more details).
 
 There are also prefabs for the different types of menus, tooltips and more.
+
+### Scenes
+The project currently contains three different scenes for separate purposes.
+
+#### Main Scene
+<img src="/images/development/main_scene.png" alt="Main Scene" class="mx-auto max-w-xl" width="600"/>
+
+This scene contains the **Normal** mode, meaning it runs most of the functionality that users will experience on the HoloLens.
+It provides the environment for molecules, menus and other objects users interacts with.
+
+If you are currently editing something that happens during runtime, you will most likely test it by running the **Main Scene**.
+
+#### Login Scene
+<img src="/images/development/login_scene.png" alt="Login Scene" class="mx-auto max-w-xl" width="600"/>
+
+The **Login Scene** is normally only used for a short time during runtime: when starting chARp.
+It provides the necessary functionalities for connecting to a server for collaboration, accessing the debug log, scanning a QR code and entering the **Main Scene**.
+
+#### Server Scene
+<img src="/images/development/server_scene.png" alt="Server Scene" class="mx-auto max-w-xl" width="600"/>
+
+The **Server Scene** contains the framework for collaboration: it manages network connections, tracks interactions in the atom world and broadcasts them to other users 
+to keep collaborators synchronized and also provides the ability to interact with molecules/menus using mouse and keyboard.
