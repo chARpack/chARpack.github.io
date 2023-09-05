@@ -40,6 +40,7 @@ A lower number makes the molecules feel rubbery, higher numbers will keep the st
  > This usually happens for scenes with large molecules.
 
 ### Repulsion scale
-The repulsion scale parameter changes the Van der Waals radius for the hard sphere potential in force field computations.
-A low repulsion scale may make some changes possible that aren't with a higher number; 
-however, too low a repulsion scale may cause molecules to get tangled.
+The repulsion scale parameter changes the weighting of the Van der Waals radius for the hard sphere potential in force field computations.
+For a high repulsion scale, atoms easily start to move by the proximity of close atoms.
+A low repulsion scale may make some changes possible that aren't with a higher number.
+However, too low a repulsion scale may cause molecules to get tangled.

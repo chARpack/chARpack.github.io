@@ -25,7 +25,7 @@ In case you want a different icon, manually update it.
 In addition, chARp provides a custom icon collection, which is located in `Assets/Icons`.
 
 > By default, MRTK buttons do not respond to mouse clicks in Unity.
-> If you want this functionality (for developer comfort), you need to add the *buttonMouseClick* script to the button.
+> If you want this functionality (for developer comfort), you need to add the *buttonMouseClick* script (provided in the scripts of chARp) to the button.
 
 ### Predefined content
 All MRTK button prefabs have a *ButtonConfigHelper* component for easily changing icon, text, and associated methods.
