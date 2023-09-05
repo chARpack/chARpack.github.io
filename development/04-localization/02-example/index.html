@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.e147f4c0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.53c97fa4.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1fcad68c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9d59fb72.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.b58b80cb.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9dd59284.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.eb9ddbec.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.5e042d7e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.86955a0a.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9f4ee091.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.2e4b3d5c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.1c82cade.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.717c809d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.f347e902.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -44,6 +44,8 @@
     <ul class="space-y-2 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-800 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-implementation">Implementation</a></h4>
       <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline " href="/development/00-implementation/00-introduction">
     <span class="ml-3">Introduction</span>
+    </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline " href="/development/00-implementation/01-unity">
+    <span class="ml-3">Using Unity</span>
     </a></li>
       </ul><ul class="space-y-2 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-800 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization">Localization</a></h4>
       <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline " href="/development/04-localization/01-localization_in_unity">
@@ -80,6 +82,8 @@ If you are instantiating it as a child of a <em>ButtonCollection</em> (e.g. in t
 <p>Some of the prefabs already have icons that correspond to their purpose.
 In case you want a different icon, manually update it.
 In addition, chARp provides a custom icon collection, which is located in <code>Assets/Icons</code>.</p>
+<blockquote><p>By default, MRTK buttons do not respond to mouse clicks in Unity.
+If you want this functionality (for developer comfort), you need to add the <em>buttonMouseClick</em> script (provided in the scripts of chARp) to the button.</p></blockquote>
 <h3>Predefined content</h3>
 <p>All MRTK button prefabs have a <em>ButtonConfigHelper</em> component for easily changing icon, text, and associated methods.
 In the field <em>Main label text</em> the label of the button can be changed.
@@ -151,7 +155,7 @@ In any method within the script, you can now assign the value of <code>GlobalCtr
 			
 			<script>
 				{
-					__sveltekit_15voqoo = {
+					__sveltekit_8zme8q = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -161,8 +165,8 @@ In any method within the script, you can now assign the value of <code>GlobalCtr
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.e147f4c0.js"),
-						import("../../../_app/immutable/entry/app.9d59fb72.js")
+						import("../../../_app/immutable/entry/start.53c97fa4.js"),
+						import("../../../_app/immutable/entry/app.9dd59284.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 8],

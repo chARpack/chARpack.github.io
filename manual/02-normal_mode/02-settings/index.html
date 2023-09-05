@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.e147f4c0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.53c97fa4.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1fcad68c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9d59fb72.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.b58b80cb.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9dd59284.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.c762a350.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.5e042d7e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.6469d581.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9f4ee091.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.2e4b3d5c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.74efb59e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.717c809d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.e435106d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -113,6 +113,11 @@ A lower number makes the molecules feel rubbery, higher numbers will keep the st
 <blockquote><p>Note: A higher number of iterations means more computational power goes into the force field calculation/iteration.
 If you experience performance issues, please turn this parameter to 0.
 This usually happens for scenes with large molecules.</p></blockquote>
+<h3>Repulsion scale</h3>
+<p>The repulsion scale parameter changes the weighting of the Van der Waals radius for the hard sphere potential in force field computations.
+For a high repulsion scale, atoms easily start to move by the proximity of close atoms.
+A low repulsion scale may make some changes possible that aren’t with a higher number.
+However, too low a repulsion scale may cause molecules to get tangled.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -138,7 +143,7 @@ This usually happens for scenes with large molecules.</p></blockquote>
 			
 			<script>
 				{
-					__sveltekit_15voqoo = {
+					__sveltekit_8zme8q = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -148,8 +153,8 @@ This usually happens for scenes with large molecules.</p></blockquote>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.e147f4c0.js"),
-						import("../../../_app/immutable/entry/app.9d59fb72.js")
+						import("../../../_app/immutable/entry/start.53c97fa4.js"),
+						import("../../../_app/immutable/entry/app.9dd59284.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 12],

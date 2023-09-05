@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.e147f4c0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.53c97fa4.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1fcad68c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9d59fb72.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.b58b80cb.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9dd59284.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.eb9ddbec.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.5e042d7e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/2.86955a0a.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9f4ee091.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.2e4b3d5c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.1c82cade.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.717c809d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/8.f347e902.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -44,6 +44,8 @@
     <ul class="space-y-2 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-800 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-implementation">Implementation</a></h4>
       <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline " href="/development/00-implementation/00-introduction">
     <span class="ml-3">Introduction</span>
+    </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline " href="/development/00-implementation/01-unity">
+    <span class="ml-3">Using Unity</span>
     </a></li>
       </ul><ul class="space-y-2 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-800 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization">Localization</a></h4>
       <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline " href="/development/04-localization/01-localization_in_unity">
@@ -65,6 +67,7 @@
 <h2>How to develop in chARp?</h2>
 <p>In this development guide we explain the fundamental implementation details about chARp.</p>
 <h2>Overview</h2>
+<p>For a short introduction to the Unity functionalities most commonly used in this project, have a look at our small introduction <a data-sveltekit-reload href="/development/00-implementation/01-unity">Using Unity</a>.</p>
 <h3>Important scripts</h3>
 <p>chARp is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
 However, there are some larger and more important scripts:</p>
@@ -78,18 +81,36 @@ the way molecules respond when grabbed or clicked and their interactions with th
 <p>The folder <em>HoloLens</em> contains scripts specifically for the use case of the HoloLens 2.
 Most notably, the <strong>myScrollObject</strong> script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.</p>
 <h3>Prefabs</h3>
-<p>The <em>prefabs</em> folder contains a few useful prefabs. Besides the basics like <strong>Atom</strong> and <strong>Bond</strong>, there are also some that are more generally useful.
+<p>The <em>prefabs</em> folder contains a few useful prefabs. </p>
+<img src="/images/development/prefabs.png" alt="Prefabs" class="mx-auto max-w-xl">
+<p>Besides the basics like <strong>Atom</strong> and <strong>Bond</strong>, there are also some that are more generally useful.
 If you intend to make a new menu, for example, you may find the <strong>CloseMeButton</strong> prefab to be of interest. Other buttons include a <strong>DeleteMeButton</strong> and a <strong>CopyMeButton</strong>.
 They contain the HoloLens’ <strong>PressableButton</strong> functionality (e.g. touch interactability and the visualizations for pressing the button) as well as icons corresponding
 to their respective use cases and a localized main label (text in German and English).
 A <strong>SettingsButton</strong> prefab in the specific format used by the settings menu is also provided.</p>
-<p>To use them, you only need to instantiate them and assign a method (see the example button creation for more details).</p>
+<p>To use a prefab, you only need to instantiate it and assign a method (see the <a data-sveltekit-reload href="/development/04-localization/02-example">button creation example</a> for more details).</p>
 <p>There are also prefabs for the different types of menus, tooltips and more.</p>
+<h3>Scenes</h3>
+<p>The project currently contains three different scenes for separate purposes.</p>
+<h4>Main Scene</h4>
+<img src="/images/development/main_scene.png" alt="Main Scene" class="mx-auto max-w-xl" width="600">
+<p>This scene provides all the features that are available on the AR device.
+However, some functions are only featured on the server.</p>
+<p>If you are currently editing something that happens during runtime, you will most likely test it by running the <strong>Main Scene</strong>.</p>
+<h4>Login Scene</h4>
+<img src="/images/development/login_scene.png" alt="Login Scene" class="mx-auto max-w-xl" width="600">
+<p>The <strong>Login Scene</strong> is normally only used for a short time during runtime: when starting chARp.
+It provides the interface for connecting to a server for collaboration, accessing the debug log, or scanning a QR code and entering the <strong>Main Scene</strong>.</p>
+<h4>Server Scene</h4>
+<img src="/images/development/server_scene.png" alt="Server Scene" class="mx-auto max-w-xl" width="600">
+<p>The <strong>Server Scene</strong> contains the framework for collaboration and is the central node for any network traffic.
+In addition, it manages network connections, tracks interactions in the atom world and broadcasts them to other users to keep collaborators synchronized.
+Also, the <strong>Server Scene</strong>  provides the ability to interact with molecules/menus using mouse and keyboard.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <div class="flex justify-between"><div><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg pointer-events-none opacity-40">previous</button></div>
-    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/01-localization_in_unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
+    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-implementation/01-unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
 
   <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
   <a href="https://www.itheoc.uni-stuttgart.de/" class="hover:underline">ITheoC</a>
@@ -110,7 +131,7 @@ A <strong>SettingsButton</strong> prefab in the specific format used by the sett
 			
 			<script>
 				{
-					__sveltekit_15voqoo = {
+					__sveltekit_8zme8q = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -120,8 +141,8 @@ A <strong>SettingsButton</strong> prefab in the specific format used by the sett
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.e147f4c0.js"),
-						import("../../../_app/immutable/entry/app.9d59fb72.js")
+						import("../../../_app/immutable/entry/start.53c97fa4.js"),
+						import("../../../_app/immutable/entry/app.9dd59284.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2, 8],

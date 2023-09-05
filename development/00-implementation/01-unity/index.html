@@ -58,54 +58,84 @@
 <div class="dark:bg-[#4b5563] bg-[#d1d5db] 2xl:w-full xl:w-5/6 lg:w-4/6 md:w-full mx-auto px-6 rounded-lg pb-10 pt-2 z-20"><main><nav aria-label="development breadcrumb" class="bg-[#e5e7eb] dark:bg-[#374151] rounded mb-3"><ol class="inline-flex items-center space-x-1 md:space-x-3"><li class="inline-flex items-center"><a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="/development"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
       Development</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/04-localization">Localization</a></li>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/00-implementation">Implementation</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/04-localization/01-localization_in_unity">Unity's localization features</a></li></ol></nav>
-<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Unity's localization features</h1>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/00-implementation/01-unity">Using Unity</a></li></ol></nav>
+<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Using Unity</h1>
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>General</h2>
-<p>Unity offers built-in support for multi language interfaces.
-For further information and guides, check the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/Installation.html" target="_blank">official documentation</a>.
-In this localization section of the development guide we discuss the implementation of localization into chARp.</p>
-<h2>Adding locales</h2>
-<p>The molecular builder currently supports English and German languages, while English is the default locale.
-To implement further locale support, go to <code>Edit &gt; Project Settings &gt; Localization</code> and select <em>Locale generator</em>.
-Check the boxes next to all locales you wish to add and select <em>Generate Locales</em>.
-Locales are saved in <code>Assets/Locales</code>.
-Now you need to add translations for the new locale in all string tables and asset tables.
-Also, edit the <em>switchLanguage</em> method in <code>Assets/scripts/appSettings.cs</code> since the current implementation only uses two languages.</p>
-<h3>Changing the default locale</h3>
-<p>The default locale can be changed in <code>Edit &gt; Project Settings &gt; Localization</code>.
-Select the <em>Specific Locale Selector</em> field and enter the locale you want to set as default.
-You should also set the project locale to the default locale in the <em>Project Locale Identifier</em> field.</p>
-<h2>Adding translations</h2>
-<p>In the current version of chARp , two string tables contain all translations for the project.
-In the localization table editor labels and their translations can be added or existing labels can be edited.
-The editor is accessed via <code>Window &gt; Asset Management &gt; Localization Tables</code>.
-Under the tab <em>Edit Table Collection</em> you can find the already existing tables.
-With the drop-down menu <em>Selected Table Collection</em> you switch between the tables.
-<em>Elements</em> contains the names of all atoms that can be instantiated, <em>My Strings</em> contains everything else.</p>
-<img src="/images/development/locale_tables.png" alt="Locale Tables" class="mx-auto max-w-xl">
-<p>To add content, select <strong>Add new entry</strong> and enter translations for each locale as well as a unique key.
-In most cases, e.g. if you are only translating a single word, the simplest way is to use the English word as the key.</p>
-<h2>Adding tables</h2>
-<p>The project uses only two tables at the moment, with <em>My Strings</em> storing most of the data.
-If you need a new table for a specific purpose, go to <code>Window &gt; Asset Management &gt; Localization Tables</code> and select the <em>New Table Collection</em> tab.
-Choose a table type, while the options are <em>String Table Collection</em> to localize text, <em>Asset Table collection</em> to localize other things like textures.
-After that, give the table a name and select <strong>Create</strong>.
-Localization tables are also saved in <code>Assets/Locales</code>.
-You can now access and edit the new table as described above.
-For easier access of the new string table from a script, you can create a new helper method like <code>GlobalCtrl.Singleton.GetLocalizedString(text)</code> that uses your new table instead of <em>My Strings</em>.
-If you are writing this method in a script other than GlobalCtrl, you will need to add the lines </p>
-<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">UnityEngine<span class="token punctuation">.</span>Localization</span><span class="token punctuation">;</span>
-<span class="token keyword">using</span> <span class="token namespace">UnityEngine<span class="token punctuation">.</span>Localization<span class="token punctuation">.</span>Settings</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
-<p>to the beginning of your script.</p>
+<p><strong>Unity</strong> is a well-known game development engine and provides a basic framework for distribution of chARp on different devices.
+The list of features and things you can do using <strong>Unity</strong> exceeds the scope of this development guide.
+Therefore, this is only intended as a short introduction.
+For detailed explanations, see the <a href="https://docs.unity.com/" rel="nofollow">Unity documentation</a>.</p>
+<p>Unity has two basic modes: <strong>editor mode</strong> and <strong>game mode</strong>.
+<strong>Editor mode</strong> is where you develop, make permanent changes and spend most of your time.
+<strong>Game mode</strong> is for testing your implementation and provides a simulation of how chARp would run in its current configuration.</p>
+<h2>The Unity editor</h2>
+<p>The layout of the Unity editor can be confusing at first, so a short overview might be useful:</p>
+<img src="/images/development/unity_editor.png" alt="Unity Editor" class="mx-auto max-w-xl">
+<ol><li><strong>Command bar</strong>
+You can find project settings and build options, create game objects, define preferences and much more from this bar.</li>
+<li><strong>Toolbar</strong>
+This bar provides some basic settings for the game and most importantly the <strong>Play</strong>, <strong>Pause</strong> and <strong>Stop</strong> buttons for controlling game mode.</li>
+<li><strong>Scene view</strong>
+You can navigate the current scene in this view. It shows a lot more detail than game mode, e.g. the local coordinate systems of selected objects or <strong>box colliders</strong>.
+<strong>Box colliders</strong> are used to detect when an object “collides” with something else, for example when the player touches it.
+Also, you can directly change the position, scale and rotation of objects in this view.</li></ol>
+<img src="/images/development/scene_view.png" alt="Scene View" class="mx-auto max-w-xl">
+<ol start="4"><li><strong>Game view</strong>
+In editor mode, this window does basically nothing, however in game mode, this is where the game runs and you can test user input.</li>
+<li><strong>Hierarchy</strong>
+The hierarchy shows the objects in the current scene, hierarchically ordered by parent-child-relations or the structure (child objects) of the currently selected object.</li>
+<li><strong>Inspector</strong>
+The Inspector allows you to view the properties of any object, prefab, texture etc.
+This includes Transforms (where the object is located), components (scripts that describe its behavior), child objects and more.</li>
+<li><strong>Console</strong>
+The console gives you important background information: If there are any errors (during compilation or at runtime), they will appear here.
+If you have decided to log certain actions with messages, they will also be shown here.
+As well as any warnings triggered by your code or external libraries.</li>
+<li><strong>Project view</strong>
+This gives you an overview over all the files and folders included in the project.
+Clicking any file will open it in the Inspector so you can view its properties.</li></ol>
+<p>Of course you can customize the appearance of the editor to your liking.
+Simply click and drag the title of a window to relocate it or drag on its borders to resize it.
+Additionally, you can click the dropdown menu in the far top right labeled <strong>Layout</strong> and test out some pre-defined layouts.</p>
+<h2>Scripting</h2>
+<p>With scripts every thing comes to live in your application.
+While there are scripts that can provide features on their own, usually scripts are attached to game objects to get used when running the application.
+Each created script is initialized as a child of a <strong>Unity</strong> specific class called <code>MonoBehaviour</code>.
+For details on the components of this class see the <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" rel="nofollow"><code>MonoBehaviour</code></a> in the official documentation.</p>
+<p>Unity uses C# (C Sharp) as a programming language.
+If you followed the described installation process, <strong>Visual Studio 2019 Community Edition</strong> should already be installed on your computer, as well as the modules <strong>Game development with Unity</strong> and <strong>Universal Windows Platform development</strong>. We recommend using it as your code editor.
+Double click on a script in the Project view to open it in your editor.</p>
+<p>Any script intended to work with Unity needs the line </p>
+<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token keyword">using</span> <span class="token namespace">UnityEngine</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>at the top. This is already included by default if you create a new script by right clicking in the project view (in the folder your script should be placed in), then selecting <code>Create &gt; C# Script</code>.</p>
+<p>The object a script is attached to can be accessed from within the script under the name <code>gameObject</code>.</p>
+<h3>Components</h3>
+<p>The scripts, renderers, colliders, etc. attached to a GameObject (any object in any scene) are referred to as components.
+You access a method from a specific component of the GameObject you are currently working with:</p>
+<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp">currentObject<span class="token punctuation">.</span><span class="token generic-method"><span class="token function">GetComponent</span><span class="token generic class-name"><span class="token punctuation">&lt;</span>UsefulComponent<span class="token punctuation">></span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>However, this only works if the object actually has the component you’re trying to access attached to it.</p>
+<h2>Prefabs</h2>
+<p>Prefabs are “prefabricated” objects and you can interpret them as a recipe for making a specific kind of object.
+Any time you need an object made from this recipe, you <strong>Instantiate</strong> the prefab.</p>
+<p>If you want an instance of a prefab permanently in a scene, you can simply drag it into the Hierarchy of the selected scene.
+You can then edit it, add or remove components etc.
+Some changes require “unpacking” the prefab first, which means removing the objects connection to its prefab.
+Removing this connection means, that changes to the prefab in your <strong>Project</strong> are not automatically applied to the instance of the prefab in your <strong>Scene</strong>.
+Some prefabs already contain custom scripts and methods that will be called on specific events (e.g. a button being clicked).
+However, remember to only use methods from the scripts that are attached to the prefab itself or add the component in your script first.</p>
+<p>Prefabs can be instantiated within scripts:</p>
+<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token class-name">GameObject</span> myPrefab <span class="token operator">=</span> <span class="token punctuation">(</span>GameObject<span class="token punctuation">)</span>Resources<span class="token punctuation">.</span><span class="token function">Load</span><span class="token punctuation">(</span><span class="token string">"path/to/prefab"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">Instantiate</span><span class="token punctuation">(</span>myPrefab<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>The <strong>Instantiate</strong> command also accepts intended position, rotation, and a parent for the prefab instance as optional arguments.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-implementation/01-unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
-    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/02-example"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
+<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-implementation/00-introduction"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
+    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/01-localization_in_unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
 
   <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
   <a href="https://www.itheoc.uni-stuttgart.de/" class="hover:underline">ITheoC</a>
