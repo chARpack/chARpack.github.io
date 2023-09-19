@@ -17,4 +17,6 @@ However, be aware that this also deactivates the **Chain mode** button, meaning 
 - **Atom buttons**: The main content of the menu; pressing one of them creates an atom of the corresponding type.
 - **Scroll buttons**: The arrows on the right are used to scroll up and down to find different atom types.
 - **Chain mode button**: This button appears in the palm of the user. 
-Pressing it toggles the interaction mode between normal selection and chain selection.
+Pressing it toggles the interaction mode that enables chain selection.
+- **Measurement mode button**: This button appears below the **Chain mode** button. 
+It is used to activate/deactivate the interaction mode used for measuring angles and distances.
