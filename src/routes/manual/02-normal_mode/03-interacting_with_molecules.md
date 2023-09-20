@@ -46,3 +46,12 @@ Grabbing an atom in this mode will automatically select the entire chain of atom
 By default, this interaction mode is inactive. You can toggle the behaviour by pressing the **Chain mode** button in your left palm.
 
 <img src="/images/manual/chain_mode.gif" alt="Chain Mode" class="mx-auto max-w-md" />
+
+## Measurement mode
+You might be interested in the distance or angle between specific atoms and how they change when manipulated.
+Measurement mode freezes the entire atom world so it is in a constant state; you can then select the atoms you are interested in one after the other.
+Selecting two atoms will draw a dashed line between them labelled with their current distance in Angstrom.
+Selecting three atoms show the angle between their respective distance lines.
+
+<img src="/images/manual/measurement.gif" alt="Measurment Mode" class="mx-auto max-w-md" />
+
