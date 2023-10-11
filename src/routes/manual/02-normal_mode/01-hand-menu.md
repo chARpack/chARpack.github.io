@@ -11,7 +11,7 @@ The hand menu provides a fast and comfortable way to create atoms by attaching a
 The hand menu can be opened by turning the flat palm of your left hand towards your face.
 It automatically closes upon turning or closing your hand.
 If you would prefer not to use the hand menu functionality, it can be deactivated in the Settings menu.
-However, be aware that this also deactivates the **Chain mode** button, meaning you can no longer switch between interaction modes.
+However, be aware that this also deactivates the **Chain mode** and **Measurement mode** button, meaning you can no longer switch between interaction modes.
 
 ### Buttons
 - **Atom buttons**: The main content of the menu; pressing one of them creates an atom of the corresponding type.

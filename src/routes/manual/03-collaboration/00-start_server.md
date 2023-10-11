@@ -23,4 +23,4 @@ When everything is set up to start the server either start the server scene dire
 ```
 Assets > Scenes > ServerScene
 ```
-in Unity editor directly, or press the **Host** button in the login screen.
+in Unity editor, or press the **Host** button in the login screen.

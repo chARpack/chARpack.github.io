@@ -24,4 +24,4 @@ The improper torsion describes any other combination of four atoms that are conn
 
 ## Selection on Force Field
 If your selection has a bond term in the force field, this bond term is highlighted and made available for manipulation.
-In case your for example four atom selection is not highlighted as torsion, there is also no torsion term for these four atoms in the force field.
+In case your, for example, four atom selection is not highlighted as torsion, there is also no torsion term for these four atoms in the force field.

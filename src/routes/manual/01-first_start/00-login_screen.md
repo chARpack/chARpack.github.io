@@ -3,14 +3,14 @@ title: Login Screen
 ---
 
 ## Pressing Buttons
-Pressing a button on the HoloLens2, feels maybe a bit off the first time you're using it.
+Pressing a button on the HoloLens2 may feel a bit off the first time you're using it.
 The best way is to pretend it's a real button and try to press it all the way through.
 When your finger gets close to the button, you should see some visual feedback.
-When the button got pressed successfully you'll be notified by kind of a clicking sound.
+When the button got pressed successfully you'll be notified by a kind of clicking sound.
 
 
 ## Menus
-Entering chARp you're put into a menu environment, where you basically can choose the mode of operation.
+Entering chARp you're put into a menu environment, where you can choose the mode of operation.
 
 <img src="/images/manual/login_screen.png" alt="Login Screen Menu" class="mx-auto max-w-md" />
 
@@ -41,8 +41,8 @@ Additionally, running a server on the HoloLens2 can only work by starting chARp 
 The button **Scan QR** lets you scan room anchors for collaboration in the same room.
 
 #### Debug Log
-Pressing the **Debug Log** button, opens the debug window (see below).
-Similar to the functions of the **Login Menu** the debug log has a follow me function and can be place by grabbing the top bar.
+Pressing the **Debug Log** button opens the debug window (see below).
+Similar to the functions of the **Login Menu** the debug log has a follow me function and can be placed by grabbing the top bar.
 
 <img src="/images/manual/debug_log.png" alt="Debug Log" class="mx-auto max-w-sm" />
 

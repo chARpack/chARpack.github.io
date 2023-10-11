@@ -48,7 +48,7 @@ Simply click and drag the title of a window to relocate it or drag on its border
 Additionally, you can click the dropdown menu in the far top right labeled **Layout** and test out some pre-defined layouts.
 
 ## Scripting
-With scripts every thing comes to live in your application.
+With scripts everything comes to life in your application.
 While there are scripts that can provide features on their own, usually scripts are attached to game objects to get used when running the application.
 Each created script is initialized as a child of a **Unity** specific class called `MonoBehaviour`.
 For details on the components of this class see the [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) in the official documentation.
