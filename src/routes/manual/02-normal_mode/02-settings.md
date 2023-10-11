@@ -4,6 +4,8 @@ title: Settings
 
 <img src="/images/manual/settings.png" alt="Settings Menu" class="mx-auto max-w-md" />
 
+All toggle buttons in the settings are equipped with a colored square indicating whether they are currently set to "on" or "off".
+
 ### Toggle Mesh
 This button turns the rendering of the spatial awareness of [OpenXR](https://www.khronos.org/OpenXR/) on and off.
 The real world surroundings are detected by your device in a (usually) 2.5 second interval.
@@ -30,6 +32,9 @@ However, this will also disable the **Chain mode** and **Measurement mode** butt
 
 ### Switch language
 This button switches the application's language between German and English.
+
+### Gaze highlighting
+Eye tracking is used by chARp to highlight the atom the user is currently looking at. This behaviour is, however, optional and can be toggled using this button.
 
 ### Bond Stiffness
 The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.
