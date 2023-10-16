@@ -3,7 +3,7 @@ title: Unity's localization features
 ---
 
 ## General
-Unity offers built-in support for multi language interfaces.
+Unity offers built-in support for multi-language interfaces.
 For further information and guides, check the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/Installation.html" target="_blank">official documentation</a>.
 In this localization section of the development guide we discuss the implementation of localization into chARp.
 
@@ -36,7 +36,7 @@ In most cases, e.g. if you are only translating a single word, the simplest way 
 ## Adding tables
 The project uses only two tables at the moment, with *My Strings* storing most of the data.
 If you need a new table for a specific purpose, go to `Window > Asset Management > Localization Tables` and select the *New Table Collection* tab.
-Choose a table type, while the options are *String Table Collection* to localize text, *Asset Table collection* to localize other things like textures.
+Choose a table type, the options being *String Table Collection* to localize text and *Asset Table collection* to localize other things like textures.
 After that, give the table a name and select **Create**.
 Localization tables are also saved in `Assets/Locales`.
 You can now access and edit the new table as described above.

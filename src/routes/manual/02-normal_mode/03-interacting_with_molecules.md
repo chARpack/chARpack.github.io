@@ -4,7 +4,7 @@ title: Interacting with Molecules
 
 ## Moving Atoms
 There are two basic ways of interaction with the molecule and atom data in the scene.
-The fist and probably most intuitive way is to grab an atom with two fingers (the index finger and the thumb) and move it as if you're holding it with your hand.
+The first and probably most intuitive way is to grab an atom with two fingers (the index finger and the thumb) and move it as if you're holding it with your hand.
 Here you can completely close the gap between the fingers or leave it a little open (up to 10 mm).
 With activated force field, the rest of the molecule follows the dragged atom.
 The currently grabbed atom is highlighted by a blue halo around it.
@@ -14,9 +14,9 @@ While interacting with atoms, you can use both hands to grab two different atoms
 
 ## Moving the whole molecule
 When moving your hand close to the molecule, the edges of an enclosing bounding box are showing.
-The corners of this bounding box are a bit larger, what emphasizes their ability to be interacted with.
+The corners of this bounding box are a bit larger, which emphasizes their ability to be interacted with.
 Grabbing the corner again with two fingers (index and thumb) shows the whole box around the molecule and changes its color to blue;
-While holding the corner, you can move the whole atom without inducing any forces.
+While holding the corner, you can move the whole molecule without inducing any forces.
 Additionally, the rotation of the hand can be utilized for easy positioning of the molecule.
 
 <img src="/images/manual/box_interaction.png" alt="Box interaction" class="mx-auto max-w-md" />
@@ -46,3 +46,12 @@ Grabbing an atom in this mode will automatically select the entire chain of atom
 By default, this interaction mode is inactive. You can toggle the behaviour by pressing the **Chain mode** button in your left palm.
 
 <img src="/images/manual/chain_mode.gif" alt="Chain Mode" class="mx-auto max-w-md" />
+
+## Measurement mode
+You might be interested in the distance or angle between specific atoms and how they change when manipulated.
+Measurement mode freezes the entire atom world so it is in a constant state; you can then select the atoms you are interested in one after the other.
+Selecting two atoms will draw a dashed line between them labelled with their current distance in Angstrom.
+Selecting three atoms show the angle between their respective distance lines.
+
+<img src="/images/manual/measurement.gif" alt="Measurment Mode" class="mx-auto max-w-md" />
+
