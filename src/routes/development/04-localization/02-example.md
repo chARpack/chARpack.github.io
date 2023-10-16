@@ -7,7 +7,7 @@ First, instantiate an MRTK button.
 Basic button prefabs are available in the MRTK in different sizes.
 To find the basic MRTK button prefabs go in the *Project* section in the Unity editor and follow this path: `Packages/Mixed Reality Toolkit Foundation/SDK/Features/UX/Interactable/Prefabs/PressableButtonHoloLens2*`.
 Alternatively, you can use the search field in the *Project* section and for example type *button* in the search field.
-Make sure, the is executed search in the whole project and not only in *Assets*.
+Make sure the search is executed in the whole project and not only in *Assets*.
 Also, there are specific button prefabs that are already used in chARp available in `Assets/Resources/prefabs`.
 The most common button prefabs provided by chARp are listed here:
 
@@ -37,7 +37,7 @@ Add the game object with the associated script to the object field and choose th
 For more information see the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a>.
 
 ### Scripting
-To set an icon style or a specific icon from within a script, call the *ButtonConfigHelper* component's corresponding methods.\
+To set an icon style or a specific icon from within a script, call the *ButtonConfigHelper* component's corresponding methods.
 Refer to the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a> for more detailed explanations.
 Adding a method listener can be done after instantiating the button.
 Use `GetComponent<ButtonConfigHelper>()` on the instantiated button and add listener `OnClick.AddListener(delegate{GameObject.Method(params)})`.
