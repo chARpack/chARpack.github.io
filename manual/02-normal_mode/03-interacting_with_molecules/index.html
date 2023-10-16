@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.73cb9f3c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2eccadaf.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.319fae34.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.69ef2309.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.2057580c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.2e0dddd2.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.d7093674.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.5caa7a65.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.7ecd15b4.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.41caaf53.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.94d2b622.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.6356f570.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.7879f270.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.503965cd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -86,7 +86,7 @@
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>Moving Atoms</h2>
 <p>There are two basic ways of interaction with the molecule and atom data in the scene.
-The fist and probably most intuitive way is to grab an atom with two fingers (the index finger and the thumb) and move it as if you’re holding it with your hand.
+The first and probably most intuitive way is to grab an atom with two fingers (the index finger and the thumb) and move it as if you’re holding it with your hand.
 Here you can completely close the gap between the fingers or leave it a little open (up to 10 mm).
 With activated force field, the rest of the molecule follows the dragged atom.
 The currently grabbed atom is highlighted by a blue halo around it.
@@ -94,9 +94,9 @@ While interacting with atoms, you can use both hands to grab two different atoms
 <img src="/images/manual/atom_interaction.png" alt="Atom interaction" class="mx-auto max-w-md">
 <h2>Moving the whole molecule</h2>
 <p>When moving your hand close to the molecule, the edges of an enclosing bounding box are showing.
-The corners of this bounding box are a bit larger, what emphasizes their ability to be interacted with.
+The corners of this bounding box are a bit larger, which emphasizes their ability to be interacted with.
 Grabbing the corner again with two fingers (index and thumb) shows the whole box around the molecule and changes its color to blue;
-While holding the corner, you can move the whole atom without inducing any forces.
+While holding the corner, you can move the whole molecule without inducing any forces.
 Additionally, the rotation of the hand can be utilized for easy positioning of the molecule.</p>
 <img src="/images/manual/box_interaction.png" alt="Box interaction" class="mx-auto max-w-md">
 <h2>Create Bonds</h2>
@@ -119,6 +119,16 @@ To deselect an atom, either click on the atom again or press the close button (X
 Grabbing an atom in this mode will automatically select the entire chain of atoms in this direction. You can therefore move all its atoms at once.
 By default, this interaction mode is inactive. You can toggle the behaviour by pressing the <strong>Chain mode</strong> button in your left palm.</p>
 <img src="/images/manual/chain_mode.gif" alt="Chain Mode" class="mx-auto max-w-md">
+<h2>Measurement mode</h2>
+<p>In <strong>Measurement mode</strong> you can measure the distance or the angle between specific atoms that can also be from two different molecules.
+This feature can help you to analyze the structure of a molecule or position molecules and atoms in the scene relative to each other.
+Measurement mode freezes the entire scene so input can not accidentally change any position or rotation of atoms an molecules anymore.</p>
+<p>By applying a selection gesture on an atom, a measurement will be initialized.
+At first, the measurement will be attached to the tip of your index finger until you select another atom and thereby fix the measurement.
+A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom.
+Adding another measurement to an atom that already is part of a measurement, shows the angle between their respective distance lines.
+The applied measurements are updated live when manipulating atoms or molecules again when outside of the Measurement mode.</p>
+<img src="/images/manual/measurement.gif" alt="Measurment Mode" class="mx-auto max-w-md">
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -144,7 +154,7 @@ By default, this interaction mode is inactive. You can toggle the behaviour by p
 			
 			<script>
 				{
-					__sveltekit_155fdb3 = {
+					__sveltekit_7j9sr8 = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -154,8 +164,8 @@ By default, this interaction mode is inactive. You can toggle the behaviour by p
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.73cb9f3c.js"),
-						import("../../../_app/immutable/entry/app.69ef2309.js")
+						import("../../../_app/immutable/entry/start.2eccadaf.js"),
+						import("../../../_app/immutable/entry/app.2e0dddd2.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 12],
