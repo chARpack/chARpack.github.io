@@ -48,10 +48,15 @@ By default, this interaction mode is inactive. You can toggle the behaviour by p
 <img src="/images/manual/chain_mode.gif" alt="Chain Mode" class="mx-auto max-w-md" />
 
 ## Measurement mode
-You might be interested in the distance or angle between specific atoms and how they change when manipulated.
-Measurement mode freezes the entire atom world so it is in a constant state; you can then select the atoms you are interested in one after the other.
-Selecting two atoms will draw a dashed line between them labelled with their current distance in Angstrom.
-Selecting three atoms show the angle between their respective distance lines.
+In **Measurement mode** you can measure the distance or the angle between specific atoms that can also be from two different molecules.
+This feature can help you to analyze the structure of a molecule or position molecules and atoms in the scene relative to each other.
+Measurement mode freezes the entire scene so input can not accidentally change any position or rotation of atoms an molecules anymore.
+
+By applying a selection gesture on an atom, a measurement will be initialized.
+At first, the measurement will be attached to the tip of your index finger until you select another atom and thereby fix the measurement.
+A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom.
+Adding another measurement to an atom that already is part of a measurement, shows the angle between their respective distance lines.
+The applied measurements are updated live when manipulating atoms or molecules again when outside of the Measurement mode.
 
 <img src="/images/manual/measurement.gif" alt="Measurment Mode" class="mx-auto max-w-md" />
 

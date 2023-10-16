@@ -2,15 +2,15 @@
 title: Testing Changes
 ---
 
-In order to ensure the program functions as expected, it is advisable that after every major change or new functionality implemented,
-you test whether the following still work:
+In order to ensure the program functions as expected, test whether the following functions and features still work after every major change:
 
 ## Creating, moving and merging molecules
-ChARps most fundamental functions are interactions with atoms and molecules. 
+chARps most fundamental functions are interactions with atoms and molecules. 
 They should be unaffected by most changes, but always test the basic actions like creating, merging, deleting, moving and splitting.
 
 ## Selecting and deselecting
-Atoms, bonds and molecules are outlined in different colors when selected. This also spawns different types of tool tips.
+The selection of Atoms and molecules is outlined differently to selecting bonds.
+Also, each type of selection spawns a different types of tool tip.
 
 ## Networking
 When implementing a new feature, consider whether it will need to be broadcast to other collaborators and if so, test whether the communication works correctly.
@@ -39,5 +39,9 @@ When pressed, this button should close the tool tip.
 
 Only the **Delete** and the **Close** button should cause the tool tip to disappear.
 
-## Working with scaled molecules
-Molecules having a different scale than the default can sometimes cause problems. Make sure they can be manipulated just like their unscaled versions.
+## Working with scaled and rotated molecules
+Molecules having a different scale than the default can sometimes cause problems.
+Make sure they can be manipulated just like their unscaled versions.
+Testing changes in the Unity editor usually spawns molecules without any rotation applied.
+However, moving molecules on the HoloLens will always apply a rotation.
+Therefore, make sure your implementation is independent of the current molecule rotation.
