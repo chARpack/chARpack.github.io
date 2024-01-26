@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2eccadaf.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.bb87f389.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.2057580c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.2e0dddd2.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.70ee74c6.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.1618f75b.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.a37fd238.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.7ecd15b4.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.41caaf53.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.1d8e275f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.eb06276d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.7879f270.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.503965cd.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.af784567.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/12.5f43c5dd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -86,37 +86,64 @@
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <img src="/images/manual/settings.png" alt="Settings Menu" class="mx-auto max-w-md">
 <p>All toggle buttons in the settings are equipped with a colored square indicating whether they are currently set to “on” or “off”.</p>
-<h3>Toggle Mesh</h3>
+<h2>Toggle Mesh</h2>
 <p>This button turns the rendering of the spatial awareness of <a href="https://www.khronos.org/OpenXR/" rel="nofollow">OpenXR</a> on and off.
 The real world surroundings are detected by your device in a (usually) 2.5 second interval.
 Toggling the button does not turn on/off the detection of your surroundings, just the rendered wireframe overlay.</p>
-<h3>Toggle Log</h3>
+<h2>Toggle Log</h2>
 <p>The <strong>Debug Log</strong> button shows and hides the debug log.
 Note: changing scenes does not clear the debug log for easier error detection.</p>
-<h3>Toggle Force Field</h3>
+<h2>Toggle Force Field</h2>
 <p>chARp calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
 The forces are integrated using a simple <a href="https://en.wikipedia.org/wiki/Euler_method" rel="nofollow">Euler integration</a>.
 The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARp Molecular Builder environment.
 Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
 This mode comes in handy, when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.</p>
-<h3>Hand Toggles</h3>
-<p>The three buttons on the second row change the hand visuals.
+<h2>Hand Settings</h2>
+<p>The <strong>Hand Settings</strong> button opens (or closes) a submenu containing settings related to the user’s hands.</p>
+<img src="/images/manual/hand_settings.png" alt="Hand Settings Menu" class="mx-auto max-w-md">
+<h3>Hand Visual Toggles</h3>
+<p>The two buttons on the first row change the hand visuals.
 You can have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.</p>
+<h3>Toggle Hand Ray</h3>
+<p>By default, a dashed ray is rendered from the tip of your index finger in the direction you’re pointing.
+You can toggle this behaviour on or off.</p>
 <h3>Toggle Hand Menu</h3>
-<p>This button enables or disables use of the hand menu. By default, the menu is enabled for user comfort; if you prefer not using it, you can turn it off using this button.
-However, this will also disable the <strong>Chain mode</strong> and <strong>Measurement mode</strong> button since they are part of the hand menu functionality.</p>
-<h3>Switch language</h3>
+<p>This button enables or disables use of the <a data-sveltekit-reload href="/manual/02-normal_mode/01-hand-menu">hand menu</a>.
+By default, the menu is enabled for user comfort; if you prefer not using it, you can turn it off using this button.
+However, this will also disable the <strong>Fragment Rotation Mode</strong> and <strong>Measurement Mode</strong> button since they are part of the hand menu functionality.</p>
+<h3>Toggle Menu Handedness</h3>
+<p>The hand menu is rendered next to a user’s left hand by default (since this is most comfortable for most right-handed people).
+If you are left-handed or would simply prefer using the hand menu with your left hand, this button changes its positioning so it only shows up next to your right hand.</p>
+<h2>Switch language</h2>
 <p>This button switches the application’s language between German and English.</p>
-<h3>Gaze highlighting</h3>
-<p>Eye tracking is used by chARp to highlight the atom the user is currently looking at. This behaviour is, however, optional and can be toggled using this button.</p>
-<h3>Bond Stiffness</h3>
+<h2>Cooperation settings and integration method</h2>
+<img src="/images/manual/coop_and_integration.png" alt="Cooperation Menu and Integration Method" class="mx-auto max-w-md">
+<p>In cooperation mode, a box and a ray are rendered around the head of every user to indicate where they are and where they are looking.
+If you find this behaviour distracting, you can turn each of the functionalities off.</p>
+<p>The integration method is the method used for numerical integration in force field computations.
+You can choose between:</p>
+<ul><li><a href="https://en.wikipedia.org/wiki/Midpoint_method" rel="nofollow">Midpoint integration</a> (default)</li>
+<li><a href="https://en.wikipedia.org/wiki/Euler_method" rel="nofollow">Euler method</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Verlet_integration" rel="nofollow">Verlet method</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods" rel="nofollow">Runge-Kutta integration</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Heun%27s_method" rel="nofollow">Heun method</a></li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Ralston%27s_method" rel="nofollow">Ralston method</a></li></ul>
+<h2>Gaze highlighting</h2>
+<p>chARp utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
+This behaviour is optional and can be toggled using this button.</p>
+<h2>Pointer highlighting</h2>
+<p>As with gaze highlighting, atoms are highlighted when a pointer (a user’s index finger) gets close to it.
+This behaviour can be useful in cooperation scenarios to point to specific atoms without causing misunderstandings.
+It can be toggled using this button.</p>
+<h2>Bond Stiffness</h2>
 <p>The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.
 The number of iterations changes how fast the molecule will go into its minimal state.
 A lower number makes the molecules feel rubbery, higher numbers will keep the structure intact.</p>
 <blockquote><p>Note: A higher number of iterations means more computational power goes into the force field calculation/iteration.
 If you experience performance issues, please turn this parameter to 0.
 This usually happens for scenes with large molecules.</p></blockquote>
-<h3>Repulsion scale</h3>
+<h2>Repulsion scale</h2>
 <p>The repulsion scale parameter changes the weighting of the Van der Waals radius for the hard sphere potential in force field computations.
 For a high repulsion scale, atoms easily start to move by the proximity of close atoms.
 A low repulsion scale may make some changes possible that aren’t with a higher number.
@@ -146,7 +173,7 @@ However, too low a repulsion scale may cause molecules to get tangled.</p>
 			
 			<script>
 				{
-					__sveltekit_7j9sr8 = {
+					__sveltekit_al2q5y = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -156,8 +183,8 @@ However, too low a repulsion scale may cause molecules to get tangled.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.2eccadaf.js"),
-						import("../../../_app/immutable/entry/app.2e0dddd2.js")
+						import("../../../_app/immutable/entry/start.bb87f389.js"),
+						import("../../../_app/immutable/entry/app.1618f75b.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 12],
