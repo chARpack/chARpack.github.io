@@ -37,7 +37,7 @@ You can toggle this behaviour on or off.
 
 ### Toggle Hand Menu
 This button enables or disables use of the <a data-sveltekit-reload href="/manual/02-normal_mode/01-hand-menu">hand menu</a>. By default, the menu is enabled for user comfort; if you prefer not using it, you can turn it off using this button.
-However, this will also disable the **Chain mode** and **Measurement mode** button since they are part of the hand menu functionality.
+However, this will also disable the **Fragment rotation mode** and **Measurement mode** button since they are part of the hand menu functionality.
 
 ### Toggle Menu Handedness
 The hand menu is rendered next to a user's left hand by default (since this is most comfortable for most right-handed people).
