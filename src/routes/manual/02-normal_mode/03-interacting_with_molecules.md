@@ -12,7 +12,7 @@ While interacting with atoms, you can use both hands to grab two different atoms
 
 <img src="/images/manual/atom_interaction.png" alt = "Atom interaction" class="mx-auto max-w-md" />
 
-## Moving the whole molecule
+## Moving the Molecule
 When moving your hand close to the molecule, the edges of an enclosing bounding box are showing.
 The corners of this bounding box are a bit larger, which emphasizes their ability to be interacted with.
 Grabbing the corner again with two fingers (index and thumb) shows the whole box around the molecule and changes its color to blue;
@@ -40,15 +40,17 @@ To deselect an atom, either click on the atom again or press the close button (X
 
 <img src="/images/manual/select.gif" alt="Select" class="mx-auto max-w-md" />
 
-## Interaction mode
-For ease of use, a fragment rotation functionality has been implemented: When active, a blue line is shown in your finger direction.
-Grabbing an atom in this mode will automatically select the entire chain of atoms in this direction. You can therefore move all its atoms at once.
-By default, this interaction mode is inactive. You can toggle the behaviour by pressing the **Fragment rotation mode** button in your left palm.
+## Fragment Rotation Mode
+For ease of use, a fragment rotation functionality has been implemented: When active, a blue bar is rendered from your index finger knuckle to you index finger tip, indicating the direction this interaction will happen.
+Grabbing an atom in this mode will automatically select the entire connected fragment in this direction.
+The atom you're grabbing will be fixed in place and you can rotate the fragment around it.
+By default, this interaction mode is inactive.
+You can toggle the behaviour by pressing the **Fragment Rotation Mode** button in your left palm.
 
 <img src="/images/manual/fragment_rotation.gif" alt="Fragment Rotation Mode" class="mx-auto max-w-md" />
 
-## Measurement mode
-In **Measurement mode** you can measure the distance or the angle between specific atoms that can also be from two different molecules.
+## Measurement Mode
+In **Measurement Mode** you can measure the distance or the angle between specific atoms that can also be from two different molecules.
 This feature can help you to analyze the structure of a molecule or position molecules and atoms in the scene relative to each other.
 Measurement mode freezes the entire scene so input can not accidentally change any position or rotation of atoms an molecules anymore.
 

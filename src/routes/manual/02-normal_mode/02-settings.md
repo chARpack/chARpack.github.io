@@ -23,7 +23,7 @@ Toggling the force field off, stops any calculations in the background and lets 
 This mode comes in handy, when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
 
 ## Hand Settings
-The **Hand Settings** button opens (or closes) a submenu to the settings menu containing settings related to the user's hands.
+The **Hand Settings** button opens (or closes) a submenu containing settings related to the user's hands.
 
 <img src="/images/manual/hand_settings.png" alt="Hand Settings Menu" class="mx-auto max-w-md" />
 
@@ -32,12 +32,13 @@ The two buttons on the first row change the hand visuals.
 You can have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.
 
 ### Toggle Hand Ray
-By default, a dashed ray is rendered from the tip of your index finger in the direction it is pointing.
+By default, a dashed ray is rendered from the tip of your index finger in the direction you're pointing.
 You can toggle this behaviour on or off.
 
 ### Toggle Hand Menu
-This button enables or disables use of the <a data-sveltekit-reload href="/manual/02-normal_mode/01-hand-menu">hand menu</a>. By default, the menu is enabled for user comfort; if you prefer not using it, you can turn it off using this button.
-However, this will also disable the **Fragment rotation mode** and **Measurement mode** button since they are part of the hand menu functionality.
+This button enables or disables use of the <a data-sveltekit-reload href="/manual/02-normal_mode/01-hand-menu">hand menu</a>.
+By default, the menu is enabled for user comfort; if you prefer not using it, you can turn it off using this button.
+However, this will also disable the **Fragment Rotation Mode** and **Measurement Mode** button since they are part of the hand menu functionality.
 
 ### Toggle Menu Handedness
 The hand menu is rendered next to a user's left hand by default (since this is most comfortable for most right-handed people).
@@ -50,7 +51,7 @@ This button switches the application's language between German and English.
 
 <img src="/images/manual/coop_and_integration.png" alt="Cooperation Menu and Integration Method" class="mx-auto max-w-md" />
 
-In cooperation mode, a box and a ray are rendered the head of every user to indicate where they are and where they are looking.
+In cooperation mode, a box and a ray are rendered around the head of every user to indicate where they are and where they are looking.
 If you find this behaviour distracting, you can turn each of the functionalities off.
 
 The integration method is the method used for numerical integration in force field computations.
@@ -63,7 +64,8 @@ You can choose between:
 * [Ralston method](https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Ralston%27s_method)
 
 ## Gaze highlighting
-Eye tracking is used by chARp to highlight the atom the user is currently looking at. This behaviour is, however, optional and can be toggled using this button.
+chARp utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
+This behaviour is optional and can be toggled using this button.
 
 ## Pointer highlighting
 As with gaze highlighting, atoms are highlighted when a pointer (a user's index finger) gets close to it.
