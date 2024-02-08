@@ -28,7 +28,7 @@
       </NavBrand>
       <NavHamburger on:click={toggle} />
       <div class="flex md:order-2">
-        <Button size="sm" gradient href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
+        <Button size="sm" gradient href="https://github.com/KoehnLab/chARpMolecularBuilder"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
       </div>
       <NavUl {hidden}>
         <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>

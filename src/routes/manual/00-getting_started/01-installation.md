@@ -27,10 +27,10 @@ Open the installer and click on **Modify** at your preferred version of Visual S
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
-To load chARp into Unity you first need to download chARp from our <a href="https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder" target="_blank">GitHub repository</a>.
+To load chARp into Unity you first need to download chARp from our <a href="https://github.com/KoehnLab/chARpMolecularBuilder" target="_blank">GitHub repository</a>.
 You click on the green Button **code** and select `Download ZIP` or you use git to clone the project to your disk
 ```bash
-git clone --depth=1 https://github.com/UniStuttgart-VISUS/chARpMolecularBuilder.git
+git clone --depth=1 https://github.com/KoehnLab/chARpMolecularBuilder.git
 ```
 
 ## Prepare the Project
