@@ -3,7 +3,7 @@ title: Menu
 ---
 
 ## Overview
-The **Normal Mode** is the standard working environment of chARp.
+The **Normal Mode** is the standard working environment of chARpack.
 Here you can build and change molecules, inspect and manipulate structures and load and save data.
 Below the main menu of the normal mode is shown.
 
@@ -44,8 +44,8 @@ The Hybridization can also be adjusted after creation.
 The **Save/Load** button opens another dialog that shows you all the molecule files on your device.
 Loading a file adds its contents, which consists of one or multiple molecules, to the scene.
 Saving to a file saves the whole content of the current scene.
-The files are stored in chARp's internal molecules/scene format.
-For saving or loading to different file formats, you need to connect your device to a dedicated chARp server.
+The files are stored in chARpack's internal molecules/scene format.
+For saving or loading to different file formats, you need to connect your device to a dedicated chARpack server.
 Check the later chapters for more information on how to do that.
 
 ### Settings

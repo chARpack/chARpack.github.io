@@ -23,12 +23,12 @@
   <header class="self-center xl:w-3/6 lg:w-4/6 w-auto z-10">
     <Navbar let:hidden let:toggle rounded color="form" class="min-w-full dark:bg-gray-900">
       <NavBrand href="/">
-        <img src="/charp_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARp Logo"/>
-        <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">chARp</span>
+        <img src="/charp_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARpack Logo"/>
+        <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">chARpack</span>
       </NavBrand>
       <NavHamburger on:click={toggle} />
       <div class="flex md:order-2">
-        <Button size="sm" gradient href="https://github.com/KoehnLab/chARpMolecularBuilder"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
+        <Button size="sm" gradient href="https://github.com/KoehnLab/chARpack"><img src="/github-mark-white.svg" class="mr-3 h-6 sm:h-9" alt="GitHub Logo"/>Go to GitHub</Button>
       </div>
       <NavUl {hidden}>
         <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>

@@ -4,7 +4,7 @@
   let spanClass = 'flex-1 ml-3 whitespace-nowrap';
 
   let site = {
-    name: 'chARp',
+    name: 'chARpack',
     href: '/',
     img: '/charp_logo.svg'
   };

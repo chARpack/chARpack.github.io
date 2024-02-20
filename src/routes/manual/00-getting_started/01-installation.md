@@ -5,48 +5,48 @@ title: Installation
 ## Disclaimer
 The here described installation process is for developers.
 Currently, non-dev users have to go through the same installation process.
-However, in the future we're going to offer a binary installation that makes chARp a lot more accessible.
+However, in the future we're going to offer a binary installation that makes chARpack a lot more accessible.
 
 
 ## Unity
-Since chARp is developed using the game engine Unity, we first need to install it.
+Since chARpack is developed using the game engine Unity, we first need to install it.
 Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
 Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a>.
 You can also download the newest version of Unity and update the project, but this is **not recommended**.
 Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a> of Unity.
-Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARp on the HoloLens2.
+Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARpack on the HoloLens2.
 
 > Unity also installs **Visual Studio (VS) 2019 Community Edition**  by default.
 > If you want to develop Unity apps, you'll need to add the package **Game development with Unity**.
-> To be able to deploy chARp on the HoloLens2 also install the VS module **Universal Windows Platform development**.
+> To be able to deploy chARpack on the HoloLens2 also install the VS module **Universal Windows Platform development**.
 
 For an already installed Visual Studio, you have to add the modules mentioned above via the **Visual Studio Installer**.
 Open the installer and click on **Modify** at your preferred version of Visual Studio.
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
-To load chARp into Unity you first need to download chARp from our <a href="https://github.com/KoehnLab/chARpMolecularBuilder" target="_blank">GitHub repository</a>.
+To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
 You click on the green Button **code** and select `Download ZIP` or you use git to clone the project to your disk
 ```bash
-git clone --depth=1 https://github.com/KoehnLab/chARpMolecularBuilder.git
+git clone --depth=1 https://github.com/KoehnLab/chARpack.git
 ```
 
 ## Prepare the Project
 Open Unity Hub and select the **Projects** tab.
 Use the dropdown next to the button **Open** and select **Add project from disk**.
-Put in the location to the root folder of your copy of chARp and confirm the selection.
+Put in the location to the root folder of your copy of chARpack and confirm the selection.
 The project should now show in the list of projects.
 
 > Before we can start the project, we first need to apply some more steps.
 
-Since chARp runs on the HoloLens2, we need to add Microsoft's MRTK tarballs.
+Since chARpack runs on the HoloLens2, we need to add Microsoft's MRTK tarballs.
 
 ### MRTK
 Because of their size, MRTK tarballs are not checked into the git repository.
 Therefore, the used MRTK packages have to be reinstalled.
-Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" target="_blank">MixedRealityFeatureTool</a> and select chARp's root folder as **Project Path**.
+Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" target="_blank">MixedRealityFeatureTool</a> and select chARpack's root folder as **Project Path**.
 Click **Discover Features** and activate the following features:
 
 ```
@@ -109,7 +109,7 @@ Select the option **Universal Windows Platform** on the left and click on **Swit
 <img src="/images/manual/switch_platform.png" alt="Switch Platform" class="mx-auto max-w-xl" />
 
 ## Test Run
-Now chARp should be set up for the first test run.
+Now chARpack should be set up for the first test run.
 In the **Project** window of Unity go to
 ```
 Assets > Scenes
@@ -126,18 +126,18 @@ Mixed Reality > Toolkit > Utilities > Upgrade MRTK Standard Shader to Universal 
 should fix the problem, and you will be able to see the GUI when running the program.
 
 ### Interactions inside Unity editor
-Now chARp is running inside Unity editor.
+Now chARpack is running inside Unity editor.
 To interact with the menus you can hold `shift` to simulate the left hand and `space bar` to simulate the right hand.
 The keys `W`, `A`, `S` and `D` can be used to move in the scene.
 `E` will move you up and `Q` will move you down.
 Holding `right click` lets you look around in the scene.
 Another important interaction is the `mousewheel`.
 Scrolling with the mouse wheel moves the currently activated hand forward and backward.
-Using the mouse wheel makes it easy to press buttons in chARp.
+Using the mouse wheel makes it easy to press buttons in chARpack.
 
 ## Deploy on Device
 The basic steps are also fund on the official Microsoft page [here](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2).
-When the test was successful, you're now ready to deploy chARp to your HoloLens2.
+When the test was successful, you're now ready to deploy chARpack to your HoloLens2.
 Again, go to 
 ```
 File > Build Settings ...
@@ -147,11 +147,11 @@ This time, click on **Build**, which opens a folder dialog.
 
 <img src="/images/manual/build.png" alt="Build" class="mx-auto max-w-xl" />
 
-Create a folder named **build** inside the chARp project folder and select it using the dialog.
+Create a folder named **build** inside the chARpack project folder and select it using the dialog.
 Unity should start the **Building Player** process.
 When finished, got to the freshly created **build** folder and open the `.sln` file that is located there.
 This will start up Visual Studio.
-In the solution explorer, right click **chARpMolecularBuilder (Universal Windows)** and select **Set as Startup Project**.
+In the solution explorer, right click **chARpack (Universal Windows)** and select **Set as Startup Project**.
 Set **Release** as solution configuration and **ARM64** as solution platforms.
 Choose **Remote Machine** as device.
 
@@ -169,14 +169,14 @@ Find the section **Burst AOT Settings** and undo the checkmark on **Enable Burst
 <img src="/images/manual/burst.png" alt="Burst" class="mx-auto max-w-xl" />
 
 ### IP of your HoloLens2
-To be able to deploy chARp via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
+To be able to deploy chARpack via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
 Open the WiFi options on the HoloLens2 and click on **Adapter Settings**.
 Scroll down until you can find the devices IP address.
 
 > Make sure that your HoloLens2 is in [Developer Mode](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal).
 
 ### Back to VS
-Right click **chARpMolecularBuilder (Universal Windows)** in the solution explorer again and go to **Properties**.
+Right click **chARpack (Universal Windows)** in the solution explorer again and go to **Properties**.
 Make sure you're on the same configuration and platform as set earlier.
 Go to the section **Debugging** and put your devices IP address into the field **Machine Name**.
 Confirm these settings by clicking **OK**.
@@ -185,5 +185,5 @@ In the main bar, click on **Debug** and run the build + deploy by selecting **St
 > Running this for the first time requires you to pair your HoloLens2 with Visual Studio.<br>
 > Check the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal) for instructions.
 
-Successfully deploying chARp on the HoloLens2 should start it automatically.
-Now you're ready to use chARp.
+Successfully deploying chARpack on the HoloLens2 should start it automatically.
+Now you're ready to use chARpack.

@@ -2,16 +2,16 @@
 title: Introduction
 ---
 
-## How to develop in chARp?
+## How to develop in chARpack?
 
-In this development guide we explain the fundamental implementation details about chARp.
+In this development guide we explain the fundamental implementation details about chARpack.
 
 ## Overview
 
 For a short introduction to the Unity functionalities most commonly used in this project, have a look at our small introduction <a data-sveltekit-reload href="/development/00-implementation/01-unity">Using Unity</a>.
 
 ### Important scripts
-chARp is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
+chARpack is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
 However, there are some larger and more important scripts:
 - **GlobalCtrl**: This script controls and coordinates most functionalities in the **MainScene**.
 It provides the implementation for molecule creation and manipulation, core computations and features like the *Undo* functionality.
@@ -53,7 +53,7 @@ If you are currently editing something that happens during runtime, you will mos
 #### Login Scene
 <img src="/images/development/login_scene.png" alt="Login Scene" class="mx-auto max-w-xl" width="600"/>
 
-The **Login Scene** is normally only used for a short time during runtime: when starting chARp.
+The **Login Scene** is normally only used for a short time during runtime: when starting chARpack.
 It provides the interface for connecting to a server for collaboration, accessing the debug log, or scanning a QR code and entering the **Main Scene**.
 
 #### Server Scene

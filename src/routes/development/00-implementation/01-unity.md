@@ -3,14 +3,14 @@ title: Using Unity
 ---
 
 ## General
-**Unity** is a well-known game development engine and provides a basic framework for distribution of chARp on different devices.
+**Unity** is a well-known game development engine and provides a basic framework for distribution of chARpack on different devices.
 The list of features and things you can do using **Unity** exceeds the scope of this development guide.
 Therefore, this is only intended as a short introduction.
 For detailed explanations, see the [Unity documentation](https://docs.unity.com/).
 
 Unity has two basic modes: **editor mode** and **game mode**.
 **Editor mode** is where you develop, make permanent changes and spend most of your time.
-**Game mode** is for testing your implementation and provides a simulation of how chARp would run in its current configuration.
+**Game mode** is for testing your implementation and provides a simulation of how chARpack would run in its current configuration.
 
 ## The Unity editor
 The layout of the Unity editor can be confusing at first, so a short overview might be useful:
