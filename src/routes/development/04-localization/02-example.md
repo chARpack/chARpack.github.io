@@ -8,8 +8,8 @@ Basic button prefabs are available in the MRTK in different sizes.
 To find the basic MRTK button prefabs go in the *Project* section in the Unity editor and follow this path: `Packages/Mixed Reality Toolkit Foundation/SDK/Features/UX/Interactable/Prefabs/PressableButtonHoloLens2*`.
 Alternatively, you can use the search field in the *Project* section and for example type *button* in the search field.
 Make sure the search is executed in the whole project and not only in *Assets*.
-Also, there are specific button prefabs that are already used in chARp available in `Assets/Resources/prefabs`.
-The most common button prefabs provided by chARp are listed here:
+Also, there are specific button prefabs that are already used in chARpack available in `Assets/Resources/prefabs`.
+The most common button prefabs provided by chARpack are listed here:
 
 - **SettingsButton**: a button in the fitting size for the Settings menu
 - **CloseMeButton**: a button with a "Close" icon 
@@ -22,10 +22,10 @@ If you are instantiating it as a child of a *ButtonCollection* (e.g. in the Sett
 ## Adding method listeners and icons
 Some of the prefabs already have icons that correspond to their purpose.
 In case you want a different icon, manually update it.
-In addition, chARp provides a custom icon collection, which is located in `Assets/Icons`.
+In addition, chARpack provides a custom icon collection, which is located in `Assets/Icons`.
 
 > By default, MRTK buttons do not respond to mouse clicks in Unity.
-> If you want this functionality (for developer comfort), you need to add the *buttonMouseClick* script (provided in the scripts of chARp) to the button.
+> If you want this functionality (for developer comfort), you need to add the *buttonMouseClick* script (provided in the scripts of chARpack) to the button.
 
 ### Predefined content
 All MRTK button prefabs have a *ButtonConfigHelper* component for easily changing icon, text, and associated methods.

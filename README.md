@@ -1,11 +1,11 @@
-# chARp Molecular Builder Webpage
-This is the webpage repository of the software package chARp (add link later). The implementation of the webpage is based on [SevelteKit](https://kit.svelte.dev/). Instructions for adding content are presented below. For more information please refer to the [documentation of SvelteKit](https://kit.svelte.dev/docs).
+# chARpack Webpage
+This is the webpage repository of the software package chARpack (add link later). The implementation of the webpage is based on [SevelteKit](https://kit.svelte.dev/). Instructions for adding content are presented below. For more information please refer to the [documentation of SvelteKit](https://kit.svelte.dev/docs).
 
 ## Getting started
 As the first step, clone this repository to work with the source code locally
 ```bash
-git clone git@github.com:chARpMolecularBuilder/chARpMolecularBuilder.github.io.git chARp_page
-cd chARp_page
+git clone git@github.com:chARpack/chARpack.github.io.git chARpack_page
+cd chARpack_page
 git branch
 ```
 and make sure you're on the `master` branch.

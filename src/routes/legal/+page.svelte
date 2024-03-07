@@ -44,7 +44,7 @@
     </tr>
     <tr>
         <td>E-Mail</td>
-        <td>charp(at)theochem.uni-stuttgart.de</td>
+        <td>charpack(at)theochem.uni-stuttgart.de</td>
     </tr>
     <tr>
         <td>Internet</td>

@@ -10,7 +10,7 @@ When the button got pressed successfully you'll be notified by a kind of clickin
 
 
 ## Menus
-Entering chARp you're put into a menu environment, where you can choose the mode of operation.
+Entering chARpack you're put into a menu environment, where you can choose the mode of operation.
 
 <img src="/images/manual/login_screen.png" alt="Login Screen Menu" class="mx-auto max-w-md" />
 
@@ -19,23 +19,23 @@ To stop that behavior press the **Follow Me** button.
 This lets the menu stay in the same position in the room.
 By grabbing the Login Menu on top or the boarders, you can place it somewhere else in the room.
 Pressing the **Follow Me** button again lets the menu follow you around again.
-The button **Quit** obviously closes chARp.
+The button **Quit** obviously closes chARpack.
 
 #### Normal
 Pressing the button **Normal** puts you into the main building environment.
 For more details on this mode see the section [Normal Mode](/manual/02-normal_mode) of the manual.
 
 #### Connect
-The button **Connect** lets you connect to a chARp server that is hosted in your network.
+The button **Connect** lets you connect to a chARpack server that is hosted in your network.
 The number in brackets behind the text gives an indication of how many servers are visible at the moment in the network.
 
 #### Host
-**Host** will start a dedicated server on the device or an instance of chARp on your workstation.
+**Host** will start a dedicated server on the device or an instance of chARpack on your workstation.
 
 > It is recommended to start the server via Unity on your workstation and not on the device.
 
 This is because not all features of the server are supported on the HoloLens2.
-Additionally, running a server on the HoloLens2 can only work by starting chARp twice, once as dedicated server and once to connect as a client.
+Additionally, running a server on the HoloLens2 can only work by starting chARpack twice, once as dedicated server and once to connect as a client.
 
 #### Scan QR
 The button **Scan QR** lets you scan room anchors for collaboration in the same room.

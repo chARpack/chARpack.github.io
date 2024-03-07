@@ -27,7 +27,7 @@ Email: datenschutz(at)uni-stuttgart.de<br>
 </P>
 <Heading tag="h3"  class="mb-3">3. Introductory notice</Heading>
 <P class="mb-6">
-This information concerning data protection / this data protection declaration relates to the website <A href="https://charpmolecularbuilder.github.io/">chARp</A>, which is hosted by <A href="https://pages.github.com">GitHub Pages</A>.
+This information concerning data protection / this data protection declaration relates to the website <A href="https://chARpack.github.io/">chARpack</A>, which is hosted by <A href="https://pages.github.com">GitHub Pages</A>.
 </P>
 <Heading tag="h3" class="mb-3">4. Gathering of personal data</Heading>
 <P class="mb-6">

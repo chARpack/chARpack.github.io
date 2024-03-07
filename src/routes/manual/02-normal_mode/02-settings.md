@@ -16,9 +16,9 @@ The **Debug Log** button shows and hides the debug log.
 Note: changing scenes does not clear the debug log for easier error detection.
 
 ## Toggle Force Field
-chARp calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
+chARpack calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
 The forces are integrated using a simple [Euler integration](https://en.wikipedia.org/wiki/Euler_method).
-The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARp Molecular Builder environment.
+The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARpack Molecular Builder environment.
 Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
 This mode comes in handy, when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
 
@@ -64,7 +64,7 @@ You can choose between:
 * [Ralston method](https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Ralston%27s_method)
 
 ## Gaze highlighting
-chARp utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
+chARpack utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
 This behaviour is optional and can be toggled using this button.
 
 ## Pointer highlighting

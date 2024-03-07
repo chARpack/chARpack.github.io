@@ -10,7 +10,7 @@ A good position for such a QR code is an open spot at your wall at standing heig
 
 ## Scanning
 In case of an in-person scenario where all collaborators are in the same laboratory, each device has to scan the QR code before connecting to the server.
-Start chARp and select **Scan QR** in the login screen.
+Start chARpack and select **Scan QR** in the login screen.
 Look at the QR code on the wall, you will see a white plane over the code and an axis system on the corner of the plane with a z-axis pointing away from the wall.
 Usually, the z-axis wiggles a little bit because of scanning inaccuracy.
 Look at the code from different angles and distances and press the button **Stop Scan** that should follow you around when the wiggle is least noticeable.

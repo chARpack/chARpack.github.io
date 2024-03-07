@@ -5,7 +5,7 @@ title: Unity's localization features
 ## General
 Unity offers built-in support for multi-language interfaces.
 For further information and guides, check the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/Installation.html" target="_blank">official documentation</a>.
-In this localization section of the development guide we discuss the implementation of localization into chARp.
+In this localization section of the development guide we discuss the implementation of localization into chARpack.
 
 ## Adding locales
 The molecular builder currently supports English and German languages, while English is the default locale.
@@ -21,7 +21,7 @@ Select the *Specific Locale Selector* field and enter the locale you want to set
 You should also set the project locale to the default locale in the *Project Locale Identifier* field.
 
 ## Adding translations
-In the current version of chARp , two string tables contain all translations for the project.
+In the current version of chARpack , two string tables contain all translations for the project.
 In the localization table editor labels and their translations can be added or existing labels can be edited.
 The editor is accessed via `Window > Asset Management > Localization Tables`.
 Under the tab *Edit Table Collection* you can find the already existing tables.
