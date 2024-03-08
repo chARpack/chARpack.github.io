@@ -6,7 +6,7 @@
   let site = {
     name: 'chARpack',
     href: '/',
-    img: '/charp_logo.svg'
+    img: '/charpack_logo.svg'
   };
 
   let sections = $page.data.sections;

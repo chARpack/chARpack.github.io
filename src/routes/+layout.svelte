@@ -23,7 +23,7 @@
   <header class="self-center xl:w-3/6 lg:w-4/6 w-auto z-10">
     <Navbar let:hidden let:toggle rounded color="form" class="min-w-full dark:bg-gray-900">
       <NavBrand href="/">
-        <img src="/charp_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARpack Logo"/>
+        <img src="/charpack_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARpack Logo"/>
         <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">chARpack</span>
       </NavBrand>
       <NavHamburger on:click={toggle} />
