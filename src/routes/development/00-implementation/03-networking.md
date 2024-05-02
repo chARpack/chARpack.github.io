@@ -3,7 +3,9 @@ title: Implementing Network Messages
 ---
 
 # General
-In chARpack, collaborative building is enabled by sending network messages from the client to the server and the server to the clients whenever a relevant change happens, such as moving or merging a molecule. Specific network messages are implemented for each use case, such as **bcastMoveMolecule** on the server and the corresponding **getMoleculeMoved** on the client side. The events causing a network message to be sent are handled by the *EventManager* script.
+In chARpack, collaborative building is enabled by sending network messages from the client to the server and the server to the clients whenever a relevant change happens, such as moving or merging a molecule.
+Specific network messages are implemented for each use case, such as **bcastMoveMolecule** on the server and the corresponding **getMoleculeMoved** on the client side.
+The events causing a network message to be sent are handled by the *EventManager* script.
 
 ## Event Manager
 In most use cases, if you have an entirely new type of interaction that needs to be synchronized between clients, you will need to start by editing the **EventManager** script.
@@ -20,8 +22,9 @@ The arguments for these methods are going to be things that describe all relevan
 In order for your new event to get called, add a call to ```EventManager.Singleton.DoNewAction(...)``` to wherever your interaction happens (e.g. the call to ```EventManager.ChangeMolData(molecule)``` is placed at the end of the **MergeMolecule** method in *GlobalCtrl*).
 
 ## Message Enums
-The enums in *MessageEnums.cs* contain the short descriptions of all events that can be networked (usually the same as the method names on the server and client, respectively).
-Add an entry ```newEventHappened``` to **ClientToServerID** and an entry ```bcastNewEventHappened``` to **ServerToClientID**. These entries are used by message handlers to correctly identify the type of message that was received.
+The enums in *MessageEnums.cs* contain short descriptions of all events that can be networked (usually the same as the method names on the server and client, respectively).
+Add an entry ```newEventHappened``` to **ClientToServerID** and an entry ```bcastNewEventHappened``` to **ServerToClientID**.
+These entries are used by message handlers to correctly identify the type of message that was received.
 
 ## Client Side
 Next, you will need to implement the actual network messages. On the client side, this includes listeners and often also send methods.\\
@@ -35,10 +38,13 @@ public void sendNewAction(.../*some arguments*/)
     Client.Send(message);
 }
 ```
-The arguments for the method are going to be the same you used in the *EventManager* method. The **AddXYZ** method is a placeholder for things such as **AddUShort** and **AddVector3** (these are implemented for all the most common types of data you may need to send). Use as many *Add* methods as you need for your arguments; note that the order in which you add the arguments will later be important for interpretation on the server side.\\
+The arguments for the method are going to be the same as you used in the *EventManager* method.
+The **AddXYZ** method is a placeholder for things such as **AddUShort** and **AddVector3** (these are implemented for all the most common types of data you may need to send).
+Use as many *Add* methods as you need for your arguments; note that the order in which you add the arguments will later be important for interpretation on the server side.\\
 In order for your new network message to be sent when an event happens, add the line <code>EventManager.Singleton.OnNewEventHappened += sendNewAction;</code> to the **Start** method.
 
-You also need to implement a corresponding listener so the client can interpret a message from the server correctly. Add a new method to the *Listen* section:
+You also need to implement a corresponding listener so the client can interpret a message from the server correctly.
+Add a new method to the *Listen* section:
 ```csharp
     [MessageHandler((ushort)ServerToClientID.bcastNewEventHappened)]
     private static void getNewEvent(Message message)
