@@ -6,14 +6,14 @@ title: Interacting with Molecules
 There are two basic ways of interaction with the molecule and atom data in the scene.
 The first and probably most intuitive way is to grab an atom with two fingers (the index finger and the thumb) and move it as if you're holding it with your hand.
 Here you can completely close the gap between the fingers or leave it a little open (up to 10 mm).
-With activated force field, the rest of the molecule follows the dragged atom.
+With the force field activated, the rest of the molecule follows the dragged atom.
 The currently grabbed atom is highlighted by a blue halo around it.
 While interacting with atoms, you can use both hands to grab two different atoms and, for example, bring them together.
 
 <img src="/images/manual/atom_interaction.png" alt = "Atom interaction" class="mx-auto max-w-md" />
 
 ## Moving the Molecule
-When moving your hand close to the molecule, the edges of an enclosing bounding box are showing.
+When moving your hand close to the molecule, the edges of an enclosing bounding box are shown.
 The corners of this bounding box are a bit larger, which emphasizes their ability to be interacted with.
 Grabbing the corner again with two fingers (index and thumb) shows the whole box around the molecule and changes its color to blue;
 While holding the corner, you can move the whole molecule without inducing any forces.
@@ -22,7 +22,7 @@ Additionally, the rotation of the hand can be utilized for easy positioning of t
 <img src="/images/manual/box_interaction.png" alt="Box interaction" class="mx-auto max-w-md" />
 
 ## Create Bonds
-Every atom is created with dummy atoms corresponding to their current hybridization.
+Every atom is created with dummy atoms corresponding to its current hybridization.
 Using the interaction methods explained above, the dummy atoms of two different molecules can be overlapped.
 That should color the two dummies blue.
 When the currently grabbed molecule/atom is released while blue, a bond is created.
@@ -56,7 +56,7 @@ Measurement mode freezes the entire scene so input can not accidentally change a
 
 By applying a selection gesture on an atom, a measurement will be initialized.
 At first, the measurement will be attached to the tip of your index finger until you select another atom and thereby fix the measurement.
-A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom.
+A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom (you can change the unit of measurement to picometers in the <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">Settings</a> menu).
 Adding another measurement to an atom that already is part of a measurement, shows the angle between their respective distance lines.
 The applied measurements are updated live when manipulating atoms or molecules again when outside of the Measurement mode.
 

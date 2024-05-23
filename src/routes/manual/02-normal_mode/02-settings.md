@@ -19,8 +19,8 @@ Note: changing scenes does not clear the debug log for easier error detection.
 chARpack calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
 The forces are integrated using a simple [Euler integration](https://en.wikipedia.org/wiki/Euler_method).
 The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARpack Molecular Builder environment.
-Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
-This mode comes in handy, when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
+Toggling the force field off stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
+This mode comes in handy when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
 
 ## Hand Settings
 The **Hand Settings** button opens (or closes) a submenu containing settings related to the user's hands.

@@ -33,7 +33,7 @@ In the field *Main label text* the label of the button can be changed.
 For changes of the icons and icon styles use the available interface functions in the *Icon* section.
 Either go to the *PressableButtonHololens2* component or to the *ButtonConfigHelper* component to assign a call to a method.
 Add an entry to the *ButtonPressed* or *OnClick* list, respectively.
-Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu net to it.
+Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu next to it.
 For more information see the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a>.
 
 ### Scripting
