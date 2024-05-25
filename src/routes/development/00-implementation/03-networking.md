@@ -18,7 +18,8 @@ public void DoNewAction(.../*some arguments*/)
         OnNewEventHappened?.Invoke(.../*some arguments*/);
     }
 ```
-The arguments for these methods are going to be things that describe all relevant parts of your interaction: in many cases, this might include molecule or atom IDs.\\
+The arguments for these methods are going to be things that describe all relevant parts of your interaction: in many cases, this might include molecule or atom IDs.
+
 In order for your new event to get called, add a call to ```EventManager.Singleton.DoNewAction(...)``` to wherever your interaction happens (e.g. the call to ```EventManager.ChangeMolData(molecule)``` is placed at the end of the **MergeMolecule** method in *GlobalCtrl*).
 
 ## Message Enums
@@ -27,7 +28,8 @@ Add an entry ```newEventHappened``` to **ClientToServerID** and an entry ```bcas
 These entries are used by message handlers to correctly identify the type of message that was received.
 
 ## Client Side
-Next, you will need to implement the actual network messages. On the client side, this includes listeners and often also send methods.\\
+Next, you will need to implement the actual network messages. On the client side, this includes listeners and often also send methods.
+
 Edit the *NetworkManagerClient* script.
 If your change is intended to be sent to all clients (which is most often the case), implement a method in the *Sends* section:
 ```csharp
@@ -40,7 +42,8 @@ public void sendNewAction(.../*some arguments*/)
 ```
 The arguments for the method are going to be the same as you used in the *EventManager* method.
 The **AddXYZ** method is a placeholder for things such as **AddUShort** and **AddVector3** (these are implemented for all the most common types of data you may need to send).
-Use as many *Add* methods as you need for your arguments; note that the order in which you add the arguments will later be important for interpretation on the server side.\\
+Use as many *Add* methods as you need for your arguments; note that the order in which you add the arguments will later be important for interpretation on the server side.
+
 In order for your new network message to be sent when an event happens, add the line <code>EventManager.Singleton.OnNewEventHappened += sendNewAction;</code> to the **Start** method.
 
 You also need to implement a corresponding listener so the client can interpret a message from the server correctly.

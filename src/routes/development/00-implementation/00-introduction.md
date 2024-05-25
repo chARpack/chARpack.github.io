@@ -27,7 +27,7 @@ Most notably, the **myScrollObject** script provides the functionality of a scro
 ### Prefabs
 The *prefabs* folder contains a few useful prefabs. 
 
-<img src="/images/development/prefabs.png" alt="Prefabs" class="mx-auto max-w-xl" />
+<img src="/images/development/prefab.png" alt="Prefabs" class="mx-auto max-w-xl" />
 
 Besides the basics like **Atom** and **Bond**, there are also some that are more generally useful.
 If you intend to make a new menu, for example, you may find the **CloseMeButton** prefab to be of interest. Other buttons include a **DeleteMeButton** and a **CopyMeButton**.

@@ -2,7 +2,7 @@
 title: Settings
 ---
 
-<img src="/images/manual/settings.png" alt="Settings Menu" class="mx-auto max-w-md" />
+<img src="/images/manual/settings_menu.png" alt="Settings Menu" class="mx-auto max-w-md" />
 
 All toggle buttons in the settings are equipped with a colored square indicating whether they are currently set to "on" or "off".
 
@@ -19,16 +19,16 @@ Note: changing scenes does not clear the debug log for easier error detection.
 chARpack calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
 The forces are integrated using a simple [Euler integration](https://en.wikipedia.org/wiki/Euler_method).
 The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARpack Molecular Builder environment.
-Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
-This mode comes in handy, when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
+Toggling the force field off stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
+This mode comes in handy when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
 
 ## Hand Settings
 The **Hand Settings** button opens (or closes) a submenu containing settings related to the user's hands.
 
-<img src="/images/manual/hand_settings.png" alt="Hand Settings Menu" class="mx-auto max-w-md" />
+<img src="/images/manual/hand_settings_menu.png" alt="Hand Settings Menu" class="mx-auto max-w-md" />
 
 ### Hand Visual Toggles
-The two buttons on the first row change the hand visuals.
+The first two buttons change the hand visuals.
 You can have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.
 
 ### Toggle Hand Ray
@@ -47,12 +47,35 @@ If you are left-handed or would simply prefer using the hand menu with your left
 ## Switch language
 This button switches the application's language between German and English.
 
-## Cooperation settings and integration method
+## Cooperation settings
 
-<img src="/images/manual/coop_and_integration.png" alt="Cooperation Menu and Integration Method" class="mx-auto max-w-md" />
+<img src="/images/manual/coop_settings.png" alt="Cooperation Settings Menu" class="mx-auto max-w-md" />
 
 In cooperation mode, a box and a ray are rendered around the head of every user to indicate where they are and where they are looking.
 If you find this behaviour distracting, you can turn each of the functionalities off.
+
+You may also decide whether measurements made on your device should be transmitted to the server via the network; by default, this behaviour is active.
+
+## Visual Settings
+
+<img src="/images/manual/visual_settings.png" alt="Visual Settings Menu" class="mx-auto max-w-md" />
+
+### Gaze highlighting
+chARpack utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
+This behaviour is optional and can be toggled using this button.
+
+### Pointer highlighting
+As with gaze highlighting, atoms are highlighted when a pointer (a user's index finger) gets close to it.
+This behaviour can be useful in cooperation scenarios to point to specific atoms without causing misunderstandings.
+It can be toggled using this button.
+
+### Interpolate bond colors
+By default, the color of bonds between atoms is interpolated from the atom's color to a neutral grey in the middle to provide a smooth look.
+If you prefer the look of bonds comprised of two solid-colored halves, you can toggle the interpolation off.
+
+## Integration method
+
+<img src="/images/manual/integration_method.png" alt="Integration Method Menu" class="mx-auto max-w-md" />
 
 The integration method is the method used for numerical integration in force field computations.
 You can choose between:
@@ -62,15 +85,13 @@ You can choose between:
 * [Runge-Kutta integration](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)
 * [Heun method](https://en.wikipedia.org/wiki/Heun%27s_method)
 * [Ralston method](https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Ralston%27s_method)
+* [Steepest Descent](https://en.wikipedia.org/wiki/Gradient_descent)
 
-## Gaze highlighting
-chARpack utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
-This behaviour is optional and can be toggled using this button.
+The sliders below influence the time factors used for Euler, Verlet, Runge-Kutta and Midpoint integration methods, respectively.
+Setting any of these time factors to too high a number may cause molecules to become unstable.
 
-## Pointer highlighting
-As with gaze highlighting, atoms are highlighted when a pointer (a user's index finger) gets close to it.
-This behaviour can be useful in cooperation scenarios to point to specific atoms without causing misunderstandings.
-It can be toggled using this button.
+## Length unit
+This button toggles the unit of measurement used in tooltips and on distance measurements between Angstrom and picometers.
 
 ## Bond Stiffness
 The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.

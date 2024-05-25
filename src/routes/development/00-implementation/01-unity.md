@@ -37,8 +37,7 @@ The Inspector allows you to view the properties of any object, prefab, texture e
 This includes Transforms (where the object is located), components (scripts that describe its behavior), child objects and more.
 7. **Console**
 The console gives you important background information: If there are any errors (during compilation or at runtime), they will appear here.
-If you have decided to log certain actions with messages, they will also be shown here.
-As well as any warnings triggered by your code or external libraries.
+If you have decided to log certain actions with messages, they will also be shown here, as well as any warnings triggered by your code or external libraries.
 8. **Project view**
 This gives you an overview over all the files and folders included in the project.
 Clicking any file will open it in the Inspector so you can view its properties.

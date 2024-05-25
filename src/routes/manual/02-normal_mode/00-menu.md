@@ -20,6 +20,9 @@ Pressing the **Undo** button once or multiple times will bring the scene back to
 Triggering the **Clear All Molecules** button empties the scene completely.
 All atoms and molecules are deleted.
 
+### Clear All Measurements
+The **Clear All Measurements** button deletes all distance and angle measurements in the scene.
+
 ### Create Atom
 Pressing the **Create Atom** Button spawns a scrollable atom menu at a fixed position within your current view.
 This menu can be navigated using the up and down arrows to the right; pressing a button within this menu creates a new atom of the chosen type.

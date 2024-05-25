@@ -17,10 +17,10 @@ Again the equilibrium angle and the strength of the angle term in the force fiel
 
 
 ## Torsions
-Selecting a forth atom that is connected to one of the three already selected ones, gives the option to manipulate the torsion term.
+Selecting a fourth atom that is connected to one of the three already selected ones, gives the option to manipulate the torsion term.
 Torsion bonds are characterized by their dihedral angle. 
 (Three atoms define a plane in 3D space, therefore the plane of the first three atoms and the plane of the last three atoms are oriented with an angle in between them.)
-In case of torsions you can modify the barrier heigth, the multiplicity *n* of the torsion (number of minima along a full rotation) and the equilibrium phase angle (which determines the equilibrium dihedral angle; note that after ±360°/*n* the potential has another minimum). 
+In case of torsions you can modify the barrier height, the multiplicity *n* of the torsion (number of minima along a full rotation) and the equilibrium phase angle (which determines the equilibrium dihedral angle; note that after ±360°/*n* the potential has another minimum). 
 The case of four consecutively connected atoms is also known as a proper torsion.
 The improper torsion describes any other combination of four atoms that are connected but not consecutively.
 

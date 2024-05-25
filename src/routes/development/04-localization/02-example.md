@@ -24,16 +24,17 @@ Some of the prefabs already have icons that correspond to their purpose.
 In case you want a different icon, manually update it.
 In addition, chARpack provides a custom icon collection, which is located in `Assets/Icons`.
 
-> By default, MRTK buttons do not respond to mouse clicks in Unity.
-> If you want this functionality (for developer comfort), you need to add the *buttonMouseClick* script (provided in the scripts of chARpack) to the button.
-
 ### Predefined content
 All MRTK button prefabs have a *ButtonConfigHelper* component for easily changing icon, text, and associated methods.
 In the field *Main label text* the label of the button can be changed.
 For changes of the icons and icon styles use the available interface functions in the *Icon* section.
 Either go to the *PressableButtonHololens2* component or to the *ButtonConfigHelper* component to assign a call to a method.
 Add an entry to the *ButtonPressed* or *OnClick* list, respectively.
-Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu net to it.
+
+> MRTK buttons only respond to mouse clicks if the method they call is attached in the *OnClick* event list, not in the *ButtonPressed* list.
+> We recommend using the *OnClick* list in order for all buttons to work the same way.
+
+Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu next to it.
 For more information see the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a>.
 
 ### Scripting
