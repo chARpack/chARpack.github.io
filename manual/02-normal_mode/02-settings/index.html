@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2cd51fb9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.4586a02f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.7225744d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.88132317.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.5f1f1c1c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.09de8a86.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.7f72dc18.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.cb10f65e.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.533818a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.44492ab0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.1064f675.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.828124fa.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.9f3d549d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.341a8617.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.a89ec244.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -84,7 +84,7 @@
 <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Settings</h1>
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<img src="/images/manual/settings.png" alt="Settings Menu" class="mx-auto max-w-md">
+<img src="/images/manual/settings_menu.png" alt="Settings Menu" class="mx-auto max-w-md">
 <p>All toggle buttons in the settings are equipped with a colored square indicating whether they are currently set to “on” or “off”.</p>
 <h2>Toggle Mesh</h2>
 <p>This button turns the rendering of the spatial awareness of <a href="https://www.khronos.org/OpenXR/" rel="nofollow">OpenXR</a> on and off.
@@ -97,13 +97,13 @@ Note: changing scenes does not clear the debug log for easier error detection.</
 <p>chARpack calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
 The forces are integrated using a simple <a href="https://en.wikipedia.org/wiki/Euler_method" rel="nofollow">Euler integration</a>.
 The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARpack Molecular Builder environment.
-Toggling the force field off, stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
-This mode comes in handy, when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.</p>
+Toggling the force field off stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
+This mode comes in handy when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.</p>
 <h2>Hand Settings</h2>
 <p>The <strong>Hand Settings</strong> button opens (or closes) a submenu containing settings related to the user’s hands.</p>
-<img src="/images/manual/hand_settings.png" alt="Hand Settings Menu" class="mx-auto max-w-md">
+<img src="/images/manual/hand_settings_menu.png" alt="Hand Settings Menu" class="mx-auto max-w-md">
 <h3>Hand Visual Toggles</h3>
-<p>The two buttons on the first row change the hand visuals.
+<p>The first two buttons change the hand visuals.
 You can have your hand rendered as a mesh, joint visuals or no rendering of the hand tracking.</p>
 <h3>Toggle Hand Ray</h3>
 <p>By default, a dashed ray is rendered from the tip of your index finger in the direction you’re pointing.
@@ -117,10 +117,25 @@ However, this will also disable the <strong>Fragment Rotation Mode</strong> and 
 If you are left-handed or would simply prefer using the hand menu with your left hand, this button changes its positioning so it only shows up next to your right hand.</p>
 <h2>Switch language</h2>
 <p>This button switches the application’s language between German and English.</p>
-<h2>Cooperation settings and integration method</h2>
-<img src="/images/manual/coop_and_integration.png" alt="Cooperation Menu and Integration Method" class="mx-auto max-w-md">
+<h2>Cooperation settings</h2>
+<img src="/images/manual/coop_settings.png" alt="Cooperation Settings Menu" class="mx-auto max-w-md">
 <p>In cooperation mode, a box and a ray are rendered around the head of every user to indicate where they are and where they are looking.
 If you find this behaviour distracting, you can turn each of the functionalities off.</p>
+<p>You may also decide whether measurements made on your device should be transmitted to the server via the network; by default, this behaviour is active.</p>
+<h2>Visual Settings</h2>
+<img src="/images/manual/visual_settings.png" alt="Visual Settings Menu" class="mx-auto max-w-md">
+<h3>Gaze highlighting</h3>
+<p>chARpack utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
+This behaviour is optional and can be toggled using this button.</p>
+<h3>Pointer highlighting</h3>
+<p>As with gaze highlighting, atoms are highlighted when a pointer (a user’s index finger) gets close to it.
+This behaviour can be useful in cooperation scenarios to point to specific atoms without causing misunderstandings.
+It can be toggled using this button.</p>
+<h3>Interpolate bond colors</h3>
+<p>By default, the color of bonds between atoms is interpolated from the atom’s color to a neutral grey in the middle to provide a smooth look.
+If you prefer the look of bonds comprised of two solid-colored halves, you can toggle the interpolation off.</p>
+<h2>Integration method</h2>
+<img src="/images/manual/integration_method.png" alt="Integration Method Menu" class="mx-auto max-w-md">
 <p>The integration method is the method used for numerical integration in force field computations.
 You can choose between:</p>
 <ul><li><a href="https://en.wikipedia.org/wiki/Midpoint_method" rel="nofollow">Midpoint integration</a> (default)</li>
@@ -128,14 +143,12 @@ You can choose between:</p>
 <li><a href="https://en.wikipedia.org/wiki/Verlet_integration" rel="nofollow">Verlet method</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods" rel="nofollow">Runge-Kutta integration</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Heun%27s_method" rel="nofollow">Heun method</a></li>
-<li><a href="https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Ralston%27s_method" rel="nofollow">Ralston method</a></li></ul>
-<h2>Gaze highlighting</h2>
-<p>chARpack utilizes the eye tracking capabilities of the device to highlight the atom the user is currently looking at.
-This behaviour is optional and can be toggled using this button.</p>
-<h2>Pointer highlighting</h2>
-<p>As with gaze highlighting, atoms are highlighted when a pointer (a user’s index finger) gets close to it.
-This behaviour can be useful in cooperation scenarios to point to specific atoms without causing misunderstandings.
-It can be toggled using this button.</p>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Ralston%27s_method" rel="nofollow">Ralston method</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gradient_descent" rel="nofollow">Steepest Descent</a></li></ul>
+<p>The sliders below influence the time factors used for Euler, Verlet, Runge-Kutta and Midpoint integration methods, respectively.
+Setting any of these time factors to too high a number may cause molecules to become unstable.</p>
+<h2>Length unit</h2>
+<p>This button toggles the unit of measurement used in tooltips and on distance measurements between Angstrom and picometers.</p>
 <h2>Bond Stiffness</h2>
 <p>The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.
 The number of iterations changes how fast the molecule will go into its minimal state.
@@ -173,7 +186,7 @@ However, too low a repulsion scale may cause molecules to get tangled.</p>
 			
 			<script>
 				{
-					__sveltekit_1gkxjtq = {
+					__sveltekit_g9ksan = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -183,8 +196,8 @@ However, too low a repulsion scale may cause molecules to get tangled.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.2cd51fb9.js"),
-						import("../../../_app/immutable/entry/app.88132317.js")
+						import("../../../_app/immutable/entry/start.4586a02f.js"),
+						import("../../../_app/immutable/entry/app.09de8a86.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],

@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2cd51fb9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.4586a02f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.7225744d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.88132317.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.5f1f1c1c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.09de8a86.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.7f72dc18.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.aaa6989f.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.533818a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.7d7923d7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.1064f675.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.828124fa.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.21a49893.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.341a8617.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.c808301d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -83,15 +83,15 @@ In the <em>Delegates</em> section, add some new lines in the form of:</p>
     <span class="token punctuation">&#123;</span>
         OnNewEventHappened<span class="token punctuation">?.</span><span class="token function">Invoke</span><span class="token punctuation">(</span><span class="token range operator">..</span><span class="token punctuation">.</span><span class="token comment">/*some arguments*/</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p>The arguments for these methods are going to be things that describe all relevant parts of your interaction: in many cases, this might include molecule or atom IDs.\
-In order for your new event to get called, add a call to <code>EventManager.Singleton.DoNewAction(...)</code> to wherever your interaction happens (e.g. the call to <code>EventManager.ChangeMolData(molecule)</code> is placed at the end of the <strong>MergeMolecule</strong> method in <em>GlobalCtrl</em>).</p>
+<p>The arguments for these methods are going to be things that describe all relevant parts of your interaction: in many cases, this might include molecule or atom IDs.</p>
+<p>In order for your new event to get called, add a call to <code>EventManager.Singleton.DoNewAction(...)</code> to wherever your interaction happens (e.g. the call to <code>EventManager.ChangeMolData(molecule)</code> is placed at the end of the <strong>MergeMolecule</strong> method in <em>GlobalCtrl</em>).</p>
 <h2>Message Enums</h2>
 <p>The enums in <em>MessageEnums.cs</em> contain short descriptions of all events that can be networked (usually the same as the method names on the server and client, respectively).
 Add an entry <code>newEventHappened</code> to <strong>ClientToServerID</strong> and an entry <code>bcastNewEventHappened</code> to <strong>ServerToClientID</strong>.
 These entries are used by message handlers to correctly identify the type of message that was received.</p>
 <h2>Client Side</h2>
-<p>Next, you will need to implement the actual network messages. On the client side, this includes listeners and often also send methods.\
-Edit the <em>NetworkManagerClient</em> script.
+<p>Next, you will need to implement the actual network messages. On the client side, this includes listeners and often also send methods.</p>
+<p>Edit the <em>NetworkManagerClient</em> script.
 If your change is intended to be sent to all clients (which is most often the case), implement a method in the <em>Sends</em> section:</p>
 <pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">sendNewAction</span><span class="token punctuation">(</span><span class="token range operator">..</span><span class="token punctuation">.</span><span class="token comment">/*some arguments*/</span><span class="token punctuation">)</span>
 <span class="token punctuation">&#123;</span>
@@ -101,8 +101,8 @@ If your change is intended to be sent to all clients (which is most often the ca
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
 <p>The arguments for the method are going to be the same as you used in the <em>EventManager</em> method.
 The <strong>AddXYZ</strong> method is a placeholder for things such as <strong>AddUShort</strong> and <strong>AddVector3</strong> (these are implemented for all the most common types of data you may need to send).
-Use as many <em>Add</em> methods as you need for your arguments; note that the order in which you add the arguments will later be important for interpretation on the server side.\
-In order for your new network message to be sent when an event happens, add the line <code>EventManager.Singleton.OnNewEventHappened += sendNewAction;</code> to the <strong>Start</strong> method.</p>
+Use as many <em>Add</em> methods as you need for your arguments; note that the order in which you add the arguments will later be important for interpretation on the server side.</p>
+<p>In order for your new network message to be sent when an event happens, add the line <code>EventManager.Singleton.OnNewEventHappened += sendNewAction;</code> to the <strong>Start</strong> method.</p>
 <p>You also need to implement a corresponding listener so the client can interpret a message from the server correctly.
 Add a new method to the <em>Listen</em> section:</p>
 <pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp">    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">MessageHandler</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">ushort</span><span class="token punctuation">)</span>ServerToClientID<span class="token punctuation">.</span>bcastNewEventHappened<span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
@@ -181,7 +181,7 @@ Add a new method to the <em>Listen</em> section:</p>
 			
 			<script>
 				{
-					__sveltekit_1gkxjtq = {
+					__sveltekit_g9ksan = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -191,8 +191,8 @@ Add a new method to the <em>Listen</em> section:</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.2cd51fb9.js"),
-						import("../../../_app/immutable/entry/app.88132317.js")
+						import("../../../_app/immutable/entry/start.4586a02f.js"),
+						import("../../../_app/immutable/entry/app.09de8a86.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],

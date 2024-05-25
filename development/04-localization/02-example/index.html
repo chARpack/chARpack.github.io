@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2cd51fb9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.4586a02f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.7225744d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.88132317.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.5f1f1c1c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.09de8a86.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.7f72dc18.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.aaa6989f.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.533818a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.7d7923d7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.1064f675.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.828124fa.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.21a49893.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.341a8617.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.c808301d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -88,15 +88,15 @@ If you are instantiating it as a child of a <em>ButtonCollection</em> (e.g. in t
 <p>Some of the prefabs already have icons that correspond to their purpose.
 In case you want a different icon, manually update it.
 In addition, chARpack provides a custom icon collection, which is located in <code>Assets/Icons</code>.</p>
-<blockquote><p>By default, MRTK buttons do not respond to mouse clicks in Unity.
-If you want this functionality (for developer comfort), you need to add the <em>buttonMouseClick</em> script (provided in the scripts of chARpack) to the button.</p></blockquote>
 <h3>Predefined content</h3>
 <p>All MRTK button prefabs have a <em>ButtonConfigHelper</em> component for easily changing icon, text, and associated methods.
 In the field <em>Main label text</em> the label of the button can be changed.
 For changes of the icons and icon styles use the available interface functions in the <em>Icon</em> section.
 Either go to the <em>PressableButtonHololens2</em> component or to the <em>ButtonConfigHelper</em> component to assign a call to a method.
-Add an entry to the <em>ButtonPressed</em> or <em>OnClick</em> list, respectively.
-Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu net to it.
+Add an entry to the <em>ButtonPressed</em> or <em>OnClick</em> list, respectively.</p>
+<blockquote><p>MRTK buttons only respond to mouse clicks if the method they call is attached in the <em>OnClick</em> event list, not in the <em>ButtonPressed</em> list.
+We recommend using the <em>OnClick</em> list in order for all buttons to work the same way.</p></blockquote>
+<p>Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu next to it.
 For more information see the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a>.</p>
 <h3>Scripting</h3>
 <p>To set an icon style or a specific icon from within a script, call the <em>ButtonConfigHelper</em> component’s corresponding methods.
@@ -161,7 +161,7 @@ In any method within the script, you can now assign the value of <code>GlobalCtr
 			
 			<script>
 				{
-					__sveltekit_1gkxjtq = {
+					__sveltekit_g9ksan = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -171,8 +171,8 @@ In any method within the script, you can now assign the value of <code>GlobalCtr
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.2cd51fb9.js"),
-						import("../../../_app/immutable/entry/app.88132317.js")
+						import("../../../_app/immutable/entry/start.4586a02f.js"),
+						import("../../../_app/immutable/entry/app.09de8a86.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],

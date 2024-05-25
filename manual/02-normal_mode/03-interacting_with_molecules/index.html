@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2cd51fb9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.4586a02f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.7225744d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.88132317.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.5f1f1c1c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.09de8a86.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.7f72dc18.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.cb10f65e.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.533818a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.44492ab0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.1064f675.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.828124fa.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.9f3d549d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.341a8617.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.a89ec244.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -88,19 +88,19 @@
 <p>There are two basic ways of interaction with the molecule and atom data in the scene.
 The first and probably most intuitive way is to grab an atom with two fingers (the index finger and the thumb) and move it as if you’re holding it with your hand.
 Here you can completely close the gap between the fingers or leave it a little open (up to 10 mm).
-With activated force field, the rest of the molecule follows the dragged atom.
+With the force field activated, the rest of the molecule follows the dragged atom.
 The currently grabbed atom is highlighted by a blue halo around it.
 While interacting with atoms, you can use both hands to grab two different atoms and, for example, bring them together.</p>
 <img src="/images/manual/atom_interaction.png" alt="Atom interaction" class="mx-auto max-w-md">
 <h2>Moving the Molecule</h2>
-<p>When moving your hand close to the molecule, the edges of an enclosing bounding box are showing.
+<p>When moving your hand close to the molecule, the edges of an enclosing bounding box are shown.
 The corners of this bounding box are a bit larger, which emphasizes their ability to be interacted with.
 Grabbing the corner again with two fingers (index and thumb) shows the whole box around the molecule and changes its color to blue;
 While holding the corner, you can move the whole molecule without inducing any forces.
 Additionally, the rotation of the hand can be utilized for easy positioning of the molecule.</p>
 <img src="/images/manual/box_interaction.png" alt="Box interaction" class="mx-auto max-w-md">
 <h2>Create Bonds</h2>
-<p>Every atom is created with dummy atoms corresponding to their current hybridization.
+<p>Every atom is created with dummy atoms corresponding to its current hybridization.
 Using the interaction methods explained above, the dummy atoms of two different molecules can be overlapped.
 That should color the two dummies blue.
 When the currently grabbed molecule/atom is released while blue, a bond is created.
@@ -127,7 +127,7 @@ This feature can help you to analyze the structure of a molecule or position mol
 Measurement mode freezes the entire scene so input can not accidentally change any position or rotation of atoms an molecules anymore.</p>
 <p>By applying a selection gesture on an atom, a measurement will be initialized.
 At first, the measurement will be attached to the tip of your index finger until you select another atom and thereby fix the measurement.
-A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom.
+A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom (you can change the unit of measurement to picometers in the <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">Settings</a> menu).
 Adding another measurement to an atom that already is part of a measurement, shows the angle between their respective distance lines.
 The applied measurements are updated live when manipulating atoms or molecules again when outside of the Measurement mode.</p>
 <img src="/images/manual/measurement.gif" alt="Measurment Mode" class="mx-auto max-w-md">
@@ -156,7 +156,7 @@ The applied measurements are updated live when manipulating atoms or molecules a
 			
 			<script>
 				{
-					__sveltekit_1gkxjtq = {
+					__sveltekit_g9ksan = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -166,8 +166,8 @@ The applied measurements are updated live when manipulating atoms or molecules a
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.2cd51fb9.js"),
-						import("../../../_app/immutable/entry/app.88132317.js")
+						import("../../../_app/immutable/entry/start.4586a02f.js"),
+						import("../../../_app/immutable/entry/app.09de8a86.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],

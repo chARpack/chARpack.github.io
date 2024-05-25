@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.2cd51fb9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.4586a02f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.7225744d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.88132317.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.5f1f1c1c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.09de8a86.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.7f72dc18.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.aaa6989f.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.533818a0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.7d7923d7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.1064f675.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.828124fa.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.21a49893.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.341a8617.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.c808301d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -88,7 +88,7 @@ the way molecules respond when grabbed or clicked and their interactions with th
 Most notably, the <strong>myScrollObject</strong> script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.</p>
 <h3>Prefabs</h3>
 <p>The <em>prefabs</em> folder contains a few useful prefabs. </p>
-<img src="/images/development/prefabs.png" alt="Prefabs" class="mx-auto max-w-xl">
+<img src="/images/development/prefab.png" alt="Prefabs" class="mx-auto max-w-xl">
 <p>Besides the basics like <strong>Atom</strong> and <strong>Bond</strong>, there are also some that are more generally useful.
 If you intend to make a new menu, for example, you may find the <strong>CloseMeButton</strong> prefab to be of interest. Other buttons include a <strong>DeleteMeButton</strong> and a <strong>CopyMeButton</strong>.
 They contain the HoloLens’ <strong>PressableButton</strong> functionality (e.g. touch interactability and the visualizations for pressing the button) as well as icons corresponding
@@ -137,7 +137,7 @@ Also, the <strong>Server Scene</strong>  provides the ability to interact with m
 			
 			<script>
 				{
-					__sveltekit_1gkxjtq = {
+					__sveltekit_g9ksan = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -147,8 +147,8 @@ Also, the <strong>Server Scene</strong>  provides the ability to interact with m
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.2cd51fb9.js"),
-						import("../../../_app/immutable/entry/app.88132317.js")
+						import("../../../_app/immutable/entry/start.4586a02f.js"),
+						import("../../../_app/immutable/entry/app.09de8a86.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],
