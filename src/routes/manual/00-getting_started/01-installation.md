@@ -13,12 +13,13 @@ Since chARpack is developed using the game engine Unity, we first need to instal
 Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a>.
+Here we need to install the correct version of Unity which is <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a>.
 You can also download the newest version of Unity and update the project, but this is **not recommended**.
-Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a> of Unity.
+Download and install version <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a> of Unity.
 Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARpack on the HoloLens2.
+To be able to run builds for Andriod devices like the Meta Quest series, add **Andriod Build Support** and the connected modules.
 
-> Unity also installs **Visual Studio (VS) 2019 Community Edition**  by default.
+> Unity also installs **Visual Studio (VS) 2022 Community Edition**  by default.
 > If you want to develop Unity apps, you'll need to add the package **Game development with Unity**.
 > To be able to deploy chARpack on the HoloLens2 also install the VS module **Universal Windows Platform development**.
 
@@ -30,7 +31,7 @@ Enable the modules and **Modify** in the bottom right corner to install them.
 To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
 You click on the green Button **code** and select `Download ZIP` or you use git to clone the project to your disk
 ```bash
-git clone --depth=1 https://github.com/KoehnLab/chARpack.git
+git clone --recursive --depth=1 https://github.com/KoehnLab/chARpack.git
 ```
 
 ## Prepare the Project
@@ -95,6 +96,7 @@ In the search bar type in the following packages one by one and install them
 ```
 Microsoft.MixedReality.QR
 Microsoft.VCRTForwarders.140
+pythonnet
 ```
 
 ### UWP
@@ -187,3 +189,10 @@ In the main bar, click on **Debug** and run the build + deploy by selecting **St
 
 Successfully deploying chARpack on the HoloLens2 should start it automatically.
 Now you're ready to use chARpack.
+
+## Deploy on Meta Quest 2 & 3
+If you want to deploy the app to a Meta Quest device, switch your **Build Platform** to **Andriod** in the Build Settings
+You can either directly build and deploy on to device or build an `.apk` file which you can deploy manually via the <a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-win" target="_blank">Meta Quest Developer Hub</a>.
+In any case you should download the Developer Hub to activate the **Developer Mode** on your device.
+If the Developer Mode is already activated and your device is connected via USB to the PC that runs Unity, then your Meta Quest device should show up in the Build Settings in the **Run Device** list.
+From here you can **Build and Run** to directly upload the software to your device.
