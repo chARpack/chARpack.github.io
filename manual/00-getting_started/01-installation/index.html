@@ -7,20 +7,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.4586a02f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.9e540bdd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.5f1f1c1c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.09de8a86.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.c28ef8dc.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.7b8b19b6.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.7f72dc18.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.44492ab0.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.1064f675.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.81eebe10.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.336b99e2.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.341a8617.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.a89ec244.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.3e84fc2c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.cf1b0ca1.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -93,11 +93,12 @@ However, in the future we’re going to offer a binary installation that makes c
 Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a>.
+Here we need to install the correct version of Unity which is <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a>.
 You can also download the newest version of Unity and update the project, but this is <strong>not recommended</strong>.
-Download and install version <a href="unityhub://2021.3.12f1/8af3c3e441b1" target="_blank">2021.3.12f1</a> of Unity.
-Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARpack on the HoloLens2.</p>
-<blockquote><p>Unity also installs <strong>Visual Studio (VS) 2019 Community Edition</strong>  by default.
+Download and install version <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a> of Unity.
+Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARpack on the HoloLens2.
+To be able to run builds for Andriod devices like the Meta Quest series, add <strong>Andriod Build Support</strong> and the connected modules.</p>
+<blockquote><p>Unity also installs <strong>Visual Studio (VS) 2022 Community Edition</strong>  by default.
 If you want to develop Unity apps, you’ll need to add the package <strong>Game development with Unity</strong>.
 To be able to deploy chARpack on the HoloLens2 also install the VS module <strong>Universal Windows Platform development</strong>.</p></blockquote>
 <p>For an already installed Visual Studio, you have to add the modules mentioned above via the <strong>Visual Studio Installer</strong>.
@@ -106,7 +107,7 @@ Enable the modules and <strong>Modify</strong> in the bottom right corner to ins
 <h2>Download</h2>
 <p>To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
 You click on the green Button <strong>code</strong> and select <code>Download ZIP</code> or you use git to clone the project to your disk</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">git</span> clone <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> https://github.com/KoehnLab/chARpack.git</code><!-- HTML_TAG_END --></pre>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">git</span> clone <span class="token parameter variable">--recursive</span> <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> https://github.com/KoehnLab/chARpack.git</code><!-- HTML_TAG_END --></pre>
 <h2>Prepare the Project</h2>
 <p>Open Unity Hub and select the <strong>Projects</strong> tab.
 Use the dropdown next to the button <strong>Open</strong> and select <strong>Add project from disk</strong>.
@@ -153,7 +154,8 @@ Click on </p>
 <p>to open the package manager.
 In the search bar type in the following packages one by one and install them</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Microsoft.MixedReality.QR
-Microsoft.VCRTForwarders.140</code><!-- HTML_TAG_END --></pre>
+Microsoft.VCRTForwarders.140
+pythonnet</code><!-- HTML_TAG_END --></pre>
 <h3>UWP</h3>
 <p>Next, go to the menu bar of Unity and click</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
@@ -217,6 +219,12 @@ In the main bar, click on <strong>Debug</strong> and run the build + deploy by s
 Check the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal" rel="nofollow">Microsoft documentation</a> for instructions.</p></blockquote>
 <p>Successfully deploying chARpack on the HoloLens2 should start it automatically.
 Now you’re ready to use chARpack.</p>
+<h2>Deploy on Meta Quest 2 &amp; 3</h2>
+<p>If you want to deploy the app to a Meta Quest device, switch your <strong>Build Platform</strong> to <strong>Andriod</strong> in the Build Settings
+You can either directly build and deploy on to device or build an <code>.apk</code> file which you can deploy manually via the <a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-win" target="_blank">Meta Quest Developer Hub</a>.
+In any case you should download the Developer Hub to activate the <strong>Developer Mode</strong> on your device.
+If the Developer Mode is already activated and your device is connected via USB to the PC that runs Unity, then your Meta Quest device should show up in the Build Settings in the <strong>Run Device</strong> list.
+From here you can <strong>Build and Run</strong> to directly upload the software to your device.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -242,7 +250,7 @@ Now you’re ready to use chARpack.</p>
 			
 			<script>
 				{
-					__sveltekit_g9ksan = {
+					__sveltekit_1muanzu = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -252,8 +260,8 @@ Now you’re ready to use chARpack.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.4586a02f.js"),
-						import("../../../_app/immutable/entry/app.09de8a86.js")
+						import("../../../_app/immutable/entry/start.9e540bdd.js"),
+						import("../../../_app/immutable/entry/app.7b8b19b6.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],
