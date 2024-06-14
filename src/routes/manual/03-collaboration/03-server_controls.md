@@ -13,3 +13,7 @@ The **Load** button opens a file dialog and lets you import all file formats sup
 The loaded molecule appears in front of the currently selected client.
 You can select a molecule in the active scene under the section **AtomWorld** and press the **Save** button to store the data in a file.
 Here, you have the option to pick a supported output format (by adding the corresponding file extension) and the data is automatically converted and saved in this format.
+
+## Other interactions
+There are different shortcuts to perform specific actions on the server. 
+Hovering your mouse over the *Info* icon in the top right corner shows you a list of them.
