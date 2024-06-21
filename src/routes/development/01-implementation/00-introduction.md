@@ -8,7 +8,7 @@ In this development guide we explain the fundamental implementation details abou
 
 ## Overview
 
-For a short introduction to the Unity functionalities most commonly used in this project, have a look at our small introduction <a data-sveltekit-reload href="/development/00-implementation/01-unity">Using Unity</a>.
+For a short introduction to the Unity functionalities most commonly used in this project, have a look at our small introduction <a data-sveltekit-reload href="/development/01-implementation/01-unity">Using Unity</a>.
 
 ### Important scripts
 chARpack is built using many scripts for specific purposes (e.g. a settings script for the settings menu).

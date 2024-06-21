@@ -34,7 +34,7 @@
         <NavLi href="/" active={true}><Button color="dark" size="lg" class={headerButtonClass}>Home</Button></NavLi>
         <NavLi href="/news"><Button color="dark" size="lg" class={headerButtonClass}>News</Button></NavLi>
       <NavLi href="/manual/00-getting_started/00-introduction/"><Button color="dark" size="lg" class={headerButtonClass}>Manual</Button></NavLi>
-      <NavLi href="/development/00-implementation/00-introduction/"><Button color="dark" size="lg" class={headerButtonClass}>Development</Button></NavLi>
+      <NavLi href="/development/00-getting_started/01-installation/"><Button color="dark" size="lg" class={headerButtonClass}>Development</Button></NavLi>
       </NavUl>
     </Navbar>
   </header>
