@@ -71,83 +71,59 @@
 <div class="dark:bg-[#4b5563] bg-[#d1d5db] 2xl:w-full xl:w-5/6 lg:w-4/6 md:w-full mx-auto px-6 rounded-lg pb-10 pt-2 z-20"><main><nav aria-label="development breadcrumb" class="bg-[#e5e7eb] dark:bg-[#374151] rounded mb-3"><ol class="inline-flex items-center space-x-1 md:space-x-3"><li class="inline-flex items-center"><a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="/development"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
       Development</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/04-localization">Localization</a></li>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/01-implementation">Implementation</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/04-localization/02-example">Example dual-language button</a></li></ol></nav>
-<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Example dual-language button</h1>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/01-implementation/00-introduction">Introduction</a></li></ol></nav>
+<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Introduction</h1>
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<h2>Creating the button</h2>
-<p>First, instantiate an MRTK button.
-Basic button prefabs are available in the MRTK in different sizes.
-To find the basic MRTK button prefabs go in the <em>Project</em> section in the Unity editor and follow this path: <code>Packages/Mixed Reality Toolkit Foundation/SDK/Features/UX/Interactable/Prefabs/PressableButtonHoloLens2*</code>.
-Alternatively, you can use the search field in the <em>Project</em> section and for example type <em>button</em> in the search field.
-Make sure the search is executed in the whole project and not only in <em>Assets</em>.
-Also, there are specific button prefabs that are already used in chARpack available in <code>Assets/Resources/prefabs</code>.
-The most common button prefabs provided by chARpack are listed here:</p>
-<ul><li><strong>SettingsButton</strong>: a button in the fitting size for the Settings menu</li>
-<li><strong>CloseMeButton</strong>: a button with a “Close” icon </li>
-<li><strong>DeleteMeButton</strong>: a button with a “Trash” icon</li></ul>
-<p>Choose a type of button and instantiate it.
-Either directly in the Scene you are working on or via the <em>Instantiate</em> method within a script.
-If you are instantiating it as a child of a <em>ButtonCollection</em> (e.g. in the Settings menu), you will need to click <em>Update collection</em> on the parent in order to properly integrate the new button into the layout.</p>
-<h2>Adding method listeners and icons</h2>
-<p>Some of the prefabs already have icons that correspond to their purpose.
-In case you want a different icon, manually update it.
-In addition, chARpack provides a custom icon collection, which is located in <code>Assets/Icons</code>.</p>
-<h3>Predefined content</h3>
-<p>All MRTK button prefabs have a <em>ButtonConfigHelper</em> component for easily changing icon, text, and associated methods.
-In the field <em>Main label text</em> the label of the button can be changed.
-For changes of the icons and icon styles use the available interface functions in the <em>Icon</em> section.
-Either go to the <em>PressableButtonHololens2</em> component or to the <em>ButtonConfigHelper</em> component to assign a call to a method.
-Add an entry to the <em>ButtonPressed</em> or <em>OnClick</em> list, respectively.</p>
-<blockquote><p>MRTK buttons only respond to mouse clicks if the method they call is attached in the <em>OnClick</em> event list, not in the <em>ButtonPressed</em> list.
-We recommend using the <em>OnClick</em> list in order for all buttons to work the same way.</p></blockquote>
-<p>Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu next to it.
-For more information see the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a>.</p>
-<h3>Scripting</h3>
-<p>To set an icon style or a specific icon from within a script, call the <em>ButtonConfigHelper</em> component’s corresponding methods.
-Refer to the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a> for more detailed explanations.
-Adding a method listener can be done after instantiating the button.
-Use <code>GetComponent&lt;ButtonConfigHelper&gt;()</code> on the instantiated button and add listener <code>OnClick.AddListener(delegate{GameObject.Method(params)})</code>.
-This will add the corresponding method listener at runtime.</p>
-<h2>Adding translations</h2>
-<p>All items should provide English and German texts and labels.
-The following two sections guide you though text and label generation process.</p>
-<h3>Static text</h3>
-<p>You can enter the English label to the button before using any localization.
-In this case, the item’s functionality can be tested without the need to add translations from the beginning.
-However, a label can also be added later.
-To localize any content within a scene or prefab that will not be generated by a script, go to <code>Window &gt; Asset Management &gt; Localization Scene Controls</code>.
-Select English as the active locale and enable the <em>Track Changes</em> toggle.
-Now, any changes you make will be tracked as part of the selected locale.
-Enter the English text for the item if you haven’t yet.
-Content other than text can also be localized, see the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/QuickStartGuideWithVariants.html" target="_blank">documentation of Localization package</a>.
-After that, change the active locale to German and enter the corresponding translation.
-Tracked changes in text will be marked by a green background.
-Translations are saved in a string table (e.g. <code>Assets/Locales/My Strings</code>), which can also be edited separately in <code>Window &gt; Asset Management &gt; Localization Tables</code>.</p>
-<h3>Scripting</h3>
-<p>Open the <em>My Strings</em> table in <code>Window &gt; Asset Management &gt; Localization Tables</code> and add new entries for any required text and enter both, the English, and the German translations in the corresponding fields.
-Assign a unique key for each field.
-If using only single words without special characters, it is sufficient to use the English version in the key field as well.
-In any method within the script, you can now assign the value of <code>GlobalCtrl.Singleton.GetLocalizedString(*KEY*)</code> to a string and use it as you would with the English word, for example to set it as the main label of the button using the <em>ButtonConfigHelper</em> component.</p>
-<p>Example:</p>
-<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token comment">// Helper methods to generate localized tool tip text</span>
-<span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">getToolTipText</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> mass<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> radius<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> bondNum<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> rad <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"RADIUS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> numBonds <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NUM_BONDS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token class-name"><span class="token keyword">string</span></span> massStr <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"MASS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> nameStr <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NAME"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    name <span class="token operator">=</span> <span class="token function">GetLocalizedElementName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> toolTipText <span class="token operator">=</span> <span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">nameStr</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">name</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">massStr</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">mass</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">rad</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">radius</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">numBonds</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">bondNum</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> toolTipText<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h2>How to develop in chARpack?</h2>
+<p>In this development guide we explain the fundamental implementation details about chARpack.</p>
+<h2>Overview</h2>
+<p>For a short introduction to the Unity functionalities most commonly used in this project, have a look at our small introduction <a data-sveltekit-reload href="/development/01-implementation/01-unity">Using Unity</a>.</p>
+<h3>Important scripts</h3>
+<p>chARpack is built using many scripts for specific purposes (e.g. a settings script for the settings menu).
+However, there are some larger and more important scripts:</p>
+<ul><li><strong>GlobalCtrl</strong>: This script controls and coordinates most functionalities in the <strong>MainScene</strong>.
+It provides the implementation for molecule creation and manipulation, core computations and features like the <em>Undo</em> functionality.</li>
+<li><strong>Molecule</strong>,<strong>Atom</strong> and <strong>Bond</strong>: These scripts contain the characteristic data of molecules, atoms and chemical bonds.
+This includes things like a list of connected atoms, a list of bonds in the molecule, methods for spawning tooltips (when selecting a molecule/atom/bond),
+the way molecules respond when grabbed or clicked and their interactions with the force field.</li>
+<li><strong>Login</strong>: Provides the functionality of the <strong>Login</strong> menu (connecting to a server, establishing a common coordinate system by scanning a QR code etc.)</li>
+<li><strong>ForceField</strong>: Contains different ways to compute and apply the force field to molecules in the scene so they behave realistically.</li></ul>
+<p>The folder <em>HoloLens</em> contains scripts specifically for the use case of the HoloLens 2.
+Most notably, the <strong>myScrollObject</strong> script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.</p>
+<h3>Prefabs</h3>
+<p>The <em>prefabs</em> folder contains a few useful prefabs. </p>
+<img src="/images/development/prefab.png" alt="Prefabs" class="mx-auto max-w-xl">
+<p>Besides the basics like <strong>Atom</strong> and <strong>Bond</strong>, there are also some that are more generally useful.
+If you intend to make a new menu, for example, you may find the <strong>CloseMeButton</strong> prefab to be of interest. Other buttons include a <strong>DeleteMeButton</strong> and a <strong>CopyMeButton</strong>.
+They contain the HoloLens’ <strong>PressableButton</strong> functionality (e.g. touch interactability and the visualizations for pressing the button) as well as icons corresponding
+to their respective use cases and a localized main label (text in German and English).
+A <strong>SettingsButton</strong> prefab in the specific format used by the settings menu is also provided.</p>
+<p>To use a prefab, you only need to instantiate it and assign a method (see the <a data-sveltekit-reload href="/development/04-localization/02-example">button creation example</a> for more details).</p>
+<p>There are also prefabs for the different types of menus, tooltips and more.</p>
+<h3>Scenes</h3>
+<p>The project currently contains three different scenes for separate purposes.</p>
+<h4>Main Scene</h4>
+<img src="/images/development/main_scene.png" alt="Main Scene" class="mx-auto max-w-xl" width="600">
+<p>This scene provides all the features that are available on the AR device.
+However, some functions are only featured on the server.</p>
+<p>If you are currently editing something that happens during runtime, you will most likely test it by running the <strong>Main Scene</strong>.</p>
+<h4>Login Scene</h4>
+<img src="/images/development/login_scene.png" alt="Login Scene" class="mx-auto max-w-xl" width="600">
+<p>The <strong>Login Scene</strong> is normally only used for a short time during runtime: when starting chARpack.
+It provides the interface for connecting to a server for collaboration, accessing the debug log, or scanning a QR code and entering the <strong>Main Scene</strong>.</p>
+<h4>Server Scene</h4>
+<img src="/images/development/server_scene.png" alt="Server Scene" class="mx-auto max-w-xl" width="600">
+<p>The <strong>Server Scene</strong> contains the framework for collaboration and is the central node for any network traffic.
+In addition, it manages network connections, tracks interactions in the atom world and broadcasts them to other users to keep collaborators synchronized.
+Also, the <strong>Server Scene</strong>  provides the ability to interact with molecules/menus using mouse and keyboard.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/01-localization_in_unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
-    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/03-debugging"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
+<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-getting_started/02-deployment"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
+    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/01-implementation/01-unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
 
   <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
   <a href="https://www.itheoc.uni-stuttgart.de/" class="hover:underline">ITheoC</a>

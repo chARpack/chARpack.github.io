@@ -71,83 +71,111 @@
 <div class="dark:bg-[#4b5563] bg-[#d1d5db] 2xl:w-full xl:w-5/6 lg:w-4/6 md:w-full mx-auto px-6 rounded-lg pb-10 pt-2 z-20"><main><nav aria-label="development breadcrumb" class="bg-[#e5e7eb] dark:bg-[#374151] rounded mb-3"><ol class="inline-flex items-center space-x-1 md:space-x-3"><li class="inline-flex items-center"><a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="/development"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
       Development</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/04-localization">Localization</a></li>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/00-getting_started">Getting Started</a></li>
     <li class="inline-flex items-center"><svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/04-localization/02-example">Example dual-language button</a></li></ol></nav>
-<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Example dual-language button</h1>
+    <a class="ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href="/development/00-getting_started/01-installation">Installation</a></li></ol></nav>
+<h1 class="text-5xl font-extrabold text-gray-900 dark:text-white w-full">Installation</h1>
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<h2>Creating the button</h2>
-<p>First, instantiate an MRTK button.
-Basic button prefabs are available in the MRTK in different sizes.
-To find the basic MRTK button prefabs go in the <em>Project</em> section in the Unity editor and follow this path: <code>Packages/Mixed Reality Toolkit Foundation/SDK/Features/UX/Interactable/Prefabs/PressableButtonHoloLens2*</code>.
-Alternatively, you can use the search field in the <em>Project</em> section and for example type <em>button</em> in the search field.
-Make sure the search is executed in the whole project and not only in <em>Assets</em>.
-Also, there are specific button prefabs that are already used in chARpack available in <code>Assets/Resources/prefabs</code>.
-The most common button prefabs provided by chARpack are listed here:</p>
-<ul><li><strong>SettingsButton</strong>: a button in the fitting size for the Settings menu</li>
-<li><strong>CloseMeButton</strong>: a button with a “Close” icon </li>
-<li><strong>DeleteMeButton</strong>: a button with a “Trash” icon</li></ul>
-<p>Choose a type of button and instantiate it.
-Either directly in the Scene you are working on or via the <em>Instantiate</em> method within a script.
-If you are instantiating it as a child of a <em>ButtonCollection</em> (e.g. in the Settings menu), you will need to click <em>Update collection</em> on the parent in order to properly integrate the new button into the layout.</p>
-<h2>Adding method listeners and icons</h2>
-<p>Some of the prefabs already have icons that correspond to their purpose.
-In case you want a different icon, manually update it.
-In addition, chARpack provides a custom icon collection, which is located in <code>Assets/Icons</code>.</p>
-<h3>Predefined content</h3>
-<p>All MRTK button prefabs have a <em>ButtonConfigHelper</em> component for easily changing icon, text, and associated methods.
-In the field <em>Main label text</em> the label of the button can be changed.
-For changes of the icons and icon styles use the available interface functions in the <em>Icon</em> section.
-Either go to the <em>PressableButtonHololens2</em> component or to the <em>ButtonConfigHelper</em> component to assign a call to a method.
-Add an entry to the <em>ButtonPressed</em> or <em>OnClick</em> list, respectively.</p>
-<blockquote><p>MRTK buttons only respond to mouse clicks if the method they call is attached in the <em>OnClick</em> event list, not in the <em>ButtonPressed</em> list.
-We recommend using the <em>OnClick</em> list in order for all buttons to work the same way.</p></blockquote>
-<p>Add the game object with the associated script to the object field and choose the method you wish to call from the dropdown menu next to it.
-For more information see the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a>.</p>
-<h3>Scripting</h3>
-<p>To set an icon style or a specific icon from within a script, call the <em>ButtonConfigHelper</em> component’s corresponding methods.
-Refer to the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/button?view=mrtkunity-2022-05" target="_blank">MRTK documentation</a> for more detailed explanations.
-Adding a method listener can be done after instantiating the button.
-Use <code>GetComponent&lt;ButtonConfigHelper&gt;()</code> on the instantiated button and add listener <code>OnClick.AddListener(delegate{GameObject.Method(params)})</code>.
-This will add the corresponding method listener at runtime.</p>
-<h2>Adding translations</h2>
-<p>All items should provide English and German texts and labels.
-The following two sections guide you though text and label generation process.</p>
-<h3>Static text</h3>
-<p>You can enter the English label to the button before using any localization.
-In this case, the item’s functionality can be tested without the need to add translations from the beginning.
-However, a label can also be added later.
-To localize any content within a scene or prefab that will not be generated by a script, go to <code>Window &gt; Asset Management &gt; Localization Scene Controls</code>.
-Select English as the active locale and enable the <em>Track Changes</em> toggle.
-Now, any changes you make will be tracked as part of the selected locale.
-Enter the English text for the item if you haven’t yet.
-Content other than text can also be localized, see the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/QuickStartGuideWithVariants.html" target="_blank">documentation of Localization package</a>.
-After that, change the active locale to German and enter the corresponding translation.
-Tracked changes in text will be marked by a green background.
-Translations are saved in a string table (e.g. <code>Assets/Locales/My Strings</code>), which can also be edited separately in <code>Window &gt; Asset Management &gt; Localization Tables</code>.</p>
-<h3>Scripting</h3>
-<p>Open the <em>My Strings</em> table in <code>Window &gt; Asset Management &gt; Localization Tables</code> and add new entries for any required text and enter both, the English, and the German translations in the corresponding fields.
-Assign a unique key for each field.
-If using only single words without special characters, it is sufficient to use the English version in the key field as well.
-In any method within the script, you can now assign the value of <code>GlobalCtrl.Singleton.GetLocalizedString(*KEY*)</code> to a string and use it as you would with the English word, for example to set it as the main label of the button using the <em>ButtonConfigHelper</em> component.</p>
-<p>Example:</p>
-<pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp"><span class="token comment">// Helper methods to generate localized tool tip text</span>
-<span class="token keyword">private</span> <span class="token return-type class-name"><span class="token keyword">string</span></span> <span class="token function">getToolTipText</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">string</span></span> name<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> mass<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> radius<span class="token punctuation">,</span> <span class="token class-name"><span class="token keyword">double</span></span> bondNum<span class="token punctuation">)</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> rad <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"RADIUS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> numBonds <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NUM_BONDS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token class-name"><span class="token keyword">string</span></span> massStr <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"MASS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> nameStr <span class="token operator">=</span> GlobalCtrl<span class="token punctuation">.</span>Singleton<span class="token punctuation">.</span><span class="token function">GetLocalizedString</span><span class="token punctuation">(</span><span class="token string">"NAME"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    name <span class="token operator">=</span> <span class="token function">GetLocalizedElementName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name"><span class="token keyword">string</span></span> toolTipText <span class="token operator">=</span> <span class="token interpolation-string"><span class="token string">$"</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">nameStr</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">name</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">massStr</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">mass</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">rad</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">radius</span><span class="token punctuation">&#125;</span></span><span class="token string">&#92;n</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">numBonds</span><span class="token punctuation">&#125;</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token expression language-csharp">bondNum</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> toolTipText<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<h2>Unity</h2>
+<p>Since chARpack is developed using the game engine Unity, we first need to install it.
+Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
+Unity Hub is a management tool that will help you download and install different versions of Unity.
+Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
+Here we need to install the correct version of Unity which is <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a>.
+You can also download the newest version of Unity and update the project, but this is <strong>not recommended</strong>.
+Download and install version <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a> of Unity.
+Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARpack on the HoloLens2.
+To be able to run builds for Andriod devices like the Meta Quest series, add <strong>Andriod Build Support</strong> and the connected modules.</p>
+<blockquote><p>Unity also installs <strong>Visual Studio (VS) 2022 Community Edition</strong>  by default.
+If you want to develop Unity apps, you’ll need to add the package <strong>Game development with Unity</strong>.
+To be able to deploy chARpack on the HoloLens2 also install the VS module <strong>Universal Windows Platform development</strong>.</p></blockquote>
+<p>For an already installed Visual Studio, you have to add the modules mentioned above via the <strong>Visual Studio Installer</strong>.
+Open the installer and click on <strong>Modify</strong> at your preferred version of Visual Studio.
+Enable the modules and <strong>Modify</strong> in the bottom right corner to install them.</p>
+<h2>Download</h2>
+<p>To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
+You click on the green Button <strong>code</strong> and select <code>Download ZIP</code> or you use git to clone the project to your disk</p>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">git</span> clone <span class="token parameter variable">--recursive</span> <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> https://github.com/KoehnLab/chARpack.git</code><!-- HTML_TAG_END --></pre>
+<h2>Prepare the Project</h2>
+<p>Open Unity Hub and select the <strong>Projects</strong> tab.
+Use the dropdown next to the button <strong>Open</strong> and select <strong>Add project from disk</strong>.
+Put in the location to the root folder of your copy of chARpack and confirm the selection.
+The project should now show in the list of projects.</p>
+<blockquote><p>Before we can start the project, we first need to apply some more steps.</p></blockquote>
+<p>Since chARpack runs on the HoloLens2, we need to add Microsoft’s MRTK tarballs.</p>
+<h3>MRTK</h3>
+<p>Because of their size, MRTK tarballs are not checked into the git repository.
+Therefore, the used MRTK packages have to be reinstalled.
+Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" target="_blank">MixedRealityFeatureTool</a> and select chARpack’s root folder as <strong>Project Path</strong>.
+Click <strong>Discover Features</strong> and activate the following features:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Mixed Reality Toolkit &gt;
+Mixed Reality Toolkit Foundations
+Mixed Reality Toolkit Extensions
+Mixed Reality Toolkit Examples
+Mixed Reality Toolkit Standard Assets
+
+Platform Support &gt;
+Mixed Reality OpenXR Plugin</code><!-- HTML_TAG_END --></pre>
+<p>All these features should also appear with the tag “Version x.x.x currently installed”.
+Click <strong>Get Features</strong> and confirm that step by clicking <strong>Import</strong>.</p>
+<h3>OpenBabel</h3>
+<p>For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
+Take the <code>OBDotNet.dll</code> from the OpenBabel install directory and copy it into <code>Assets/plugins</code>.
+If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your <code>PATH</code>.
+Under Windows go to “Edit the system environment variables” under “Environment Variables…” add the OpenBabel install path to your “Path” variable in the system variables.
+Under Linux add the OpenBabel install path to your <code>PATH</code> variable.</p>
+<h3>NuGet</h3>
+<p>Download the file <code>NuGetForUnity.*.unitypackage</code> from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a> (Note: Look for the release page of that project, no need to clone the source tree).
+To be able to install the <code>.unitypackage</code> file of <strong>NuGetForUnity</strong> you have to start the project for the first time.</p>
+<blockquote><p>Go to UnityHub and single click the project to start it.</p></blockquote>
+<p>This process can take a while.
+During the startup Unity will show you an error message, since not all components are installed yet.
+For now, you can click <strong>Ignore</strong> and continue with the installation process.
+Drag-and-drop the <code>.unitypackage</code> into the <strong>Project</strong> section of your Unity window to install it.
+A pop-up should open and shows you the files that will be added to the project, click <strong>Import</strong>.
+This should add a <strong>NuGet</strong> option to the menu bar of Unity.</p>
+<img src="/images/manual/nuget_menu_bar.png" alt="NuGet Menu Bar" class="mx-auto max-w-xl">
+<blockquote><p>Note: If the NuGet option is not available right away, simply close and reload the project.</p></blockquote>
+<p>In case Unity still complains about missing packages, please check the NuGet package manager and verify the installation of the following packages.
+Click on </p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">NuGet &gt; Manage NuGet Packages</code><!-- HTML_TAG_END --></pre>
+<p>to open the package manager.
+In the search bar type in the following packages one by one and install them</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Microsoft.MixedReality.QR
+Microsoft.VCRTForwarders.140
+pythonnet</code><!-- HTML_TAG_END --></pre>
+<h3>UWP</h3>
+<p>Next, go to the menu bar of Unity and click</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
+<img src="/images/manual/build_settings.png" alt="Build Settings" class="mx-auto max-w-xl">
+<p>Select the option <strong>Universal Windows Platform</strong> on the left and click on <strong>Switch Platform</strong>.</p>
+<img src="/images/manual/switch_platform.png" alt="Switch Platform" class="mx-auto max-w-xl">
+<h2>Test Run</h2>
+<p>Now chARpack should be set up for the first test run.
+In the <strong>Project</strong> window of Unity go to</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Assets &gt; Scenes</code><!-- HTML_TAG_END --></pre>
+<p>and double click <strong>LoginScreenScene</strong>.
+Press the play button (top center of the Unity window) for running the test.</p>
+<blockquote><p>If the content of the <strong>LoginScreenScene</strong> or the <strong>MainScene</strong> occur in purple, you’ll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).</p></blockquote>
+<p>Running</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Mixed Reality &gt; Toolkit &gt; Utilities &gt; Upgrade MRTK Standard Shader to Universal Render Pipeline</code><!-- HTML_TAG_END --></pre>
+<p>should fix the problem, and you will be able to see the GUI when running the program.</p>
+<h3>Interactions inside Unity editor</h3>
+<p>Now chARpack is running inside Unity editor.
+To interact with the menus you can hold <code>shift</code> to simulate the left hand and <code>space bar</code> to simulate the right hand.
+The keys <code>W</code>, <code>A</code>, <code>S</code> and <code>D</code> can be used to move in the scene.
+<code>E</code> will move you up and <code>Q</code> will move you down.
+Holding <code>right click</code> lets you look around in the scene.
+Another important interaction is the <code>mousewheel</code>.
+Scrolling with the mouse wheel moves the currently activated hand forward and backward.
+Using the mouse wheel makes it easy to press buttons in chARpack.</p>
+<p>For instructions on deploying chARpack to your device, see the <a data-sveltekit-reload href="/development/00-getting_started/02-deployment">Deployment</a> section.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
-<div class="flex justify-between"><div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/01-localization_in_unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
-    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/03-debugging"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
+<div class="flex justify-between"><div><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg pointer-events-none opacity-40">previous</button></div>
+    <div><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/00-getting_started/02-deployment"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
 
   <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
   <a href="https://www.itheoc.uni-stuttgart.de/" class="hover:underline">ITheoC</a>
