@@ -40,8 +40,8 @@ Choose a table type, the options being *String Table Collection* to localize tex
 After that, give the table a name and select **Create**.
 Localization tables are also saved in `Assets/Locales`.
 You can now access and edit the new table as described above.
-For easier access of the new string table from a script, you can create a new helper method like `GlobalCtrl.Singleton.GetLocalizedString(text)` that uses your new table instead of *My Strings*.
-If you are writing this method in a script other than GlobalCtrl, you will need to add the lines 
+For easier access of the new string table from a script, you can create a new helper method like `LocalizationManager.Singleton.GetLocalizedString(text)` that uses your new table instead of *My Strings*.
+If you are writing this method in a script other than LocalizationManager, you will need to add the lines 
 ```csharp
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;

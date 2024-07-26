@@ -64,18 +64,18 @@ Translations are saved in a string table (e.g. `Assets/Locales/My Strings`), whi
 ### Scripting
 Open the *My Strings* table in `Window > Asset Management > Localization Tables` and add new entries for any required text and enter both, the English, and the German translations in the corresponding fields.
 Assign a unique key for each field.
-If using only single words without special characters, it is sufficient to use the English version in the key field as well.
-In any method within the script, you can now assign the value of `GlobalCtrl.Singleton.GetLocalizedString(*KEY*)` to a string and use it as you would with the English word, for example to set it as the main label of the button using the *ButtonConfigHelper* component.
+If you are using only single words without special characters, it is sufficient to use the English version in the key field as well.
+In any method within the script, you can now assign the value of `LocalizationManager.Singleton.GetLocalizedString(*KEY*)` to a string and use it as you would with the English word, for example to set it as the main label of the button using the *ButtonConfigHelper* component.
 
 Example:
 ```csharp
 // Helper methods to generate localized tool tip text
 private string getToolTipText(string name, double mass, double radius, double bondNum)
 {
-    string rad = GlobalCtrl.Singleton.GetLocalizedString("RADIUS");
-    string numBonds = GlobalCtrl.Singleton.GetLocalizedString("NUM_BONDS"); 
-    string massStr = GlobalCtrl.Singleton.GetLocalizedString("MASS");
-    string nameStr = GlobalCtrl.Singleton.GetLocalizedString("NAME");
+    string rad = LocalizationManager.Singleton.GetLocalizedString("RADIUS");
+    string numBonds = LocalizationManager.Singleton.GetLocalizedString("NUM_BONDS"); 
+    string massStr = LocalizationManager.Singleton.GetLocalizedString("MASS");
+    string nameStr = LocalizationManager.Singleton.GetLocalizedString("NAME");
     name = GetLocalizedElementName(name);
     string toolTipText = $"{nameStr}: {name}\n{massStr}: {mass}\n{rad}: {radius}\n{numBonds}: {bondNum}";
     return toolTipText;

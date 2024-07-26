@@ -5,12 +5,12 @@ title: Testing Changes
 In order to ensure the program functions as expected, test whether the following functions and features still work after every major change:
 
 ## Creating, moving and merging molecules
-chARps most fundamental functions are interactions with atoms and molecules. 
+chARp's most fundamental functions are interactions with atoms and molecules. 
 They should be unaffected by most changes, but always test the basic actions like creating, merging, deleting, moving and splitting.
 
 ## Selecting and deselecting
-The selection of Atoms and molecules is outlined differently to selecting bonds.
-Also, each type of selection spawns a different types of tool tip.
+The selection of atoms and molecules is outlined differently to selecting bonds.
+Also, each type of selection spawns a different type of tool tip.
 
 ## Networking
 When implementing a new feature, consider whether it will need to be broadcast to other collaborators and if so, test whether the communication works correctly.
@@ -18,13 +18,13 @@ When implementing a new feature, consider whether it will need to be broadcast t
 ## Tool tip functionalities
 
 ### Copy
-The copy function should create a duplicate of the current selected molecule slightly above it.
+The copy function should create a duplicate of the currently selected molecule slightly above it.
 
 ### Scale
 Pressing the scale button should create a scaling slider which can be used to scale the molecule up or down.
 
 ### Freeze
-This button should the molecule/atom in a frozen state, meaning it cannot be moved or otherwise manipulated.
+This button should put the molecule/atom in a frozen state, meaning it cannot be moved or otherwise manipulated.
 The indicator on the button should change color when pressed. 
 The atoms in the molecule should also gain a different texture when frozen and return to their normal state when unfrozen.
 

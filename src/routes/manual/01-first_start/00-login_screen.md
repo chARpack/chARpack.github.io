@@ -32,7 +32,7 @@ The number in brackets behind the text gives an indication of how many servers a
 #### Host
 **Host** will start a dedicated server on the device or an instance of chARpack on your workstation.
 
-> It is recommended to start the server via Unity on your workstation and not on the device.
+> It is recommended to start the server on your workstation and not on the device.
 
 This is because not all features of the server are supported on the HoloLens2.
 Additionally, running a server on the HoloLens2 can only work by starting chARpack twice, once as dedicated server and once to connect as a client.
@@ -47,8 +47,8 @@ Similar to the functions of the **Login Menu** the debug log has a follow me fun
 <img src="/images/manual/debug_log.png" alt="Debug Log" class="mx-auto max-w-sm" />
 
 Each entry of the debug log is clickable to get access to the stack trace.
-Using a scroll gesture like on a smart phone lets you scroll through the contents of the debug log.
-Behind some message you will see a number in brackets.
+Using a scroll gesture like on a smart phone or pressing the arrow buttons on the right lets you scroll through the contents of the debug log.
+Behind some messages you will see a number in brackets.
 This number indicates how often this message was written to the log.
 If there is a severe problem, the number behind an error message will rise quickly.
 Normal debug output is displayed in white text, warnings in orange and error messages are displayed in red color.

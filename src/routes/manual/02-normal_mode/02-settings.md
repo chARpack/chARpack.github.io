@@ -73,6 +73,18 @@ It can be toggled using this button.
 By default, the color of bonds between atoms is interpolated from the atom's color to a neutral grey in the middle to provide a smooth look.
 If you prefer the look of bonds comprised of two solid-colored halves, you can toggle the interpolation off.
 
+### Licorice (stick) rendering
+By default, atoms are rendered as spheres with relatively thin cylindrical bonds connecting them. 
+This button activates the "licorice" rendering method where the molecule is rendered as a network of comparatively thick sticks (bonds) in the colors of their 
+respective connected atoms.
+
+### Video pass-through
+This button toggles the optional behaviour of VR devices that pass video footage of their surroundings from their camera to the user.
+This is useful in cases of live collaboration where every participant would like to see the room they are in, but can be toggled off for remote collaboration purposes.
+
+### Color scheme
+chARpack support multiple different color schemes that change the background color of menus and the color of the toggle indicators.
+
 ## Integration method
 
 <img src="/images/manual/integration_method.png" alt="Integration Method Menu" class="mx-auto max-w-md" />

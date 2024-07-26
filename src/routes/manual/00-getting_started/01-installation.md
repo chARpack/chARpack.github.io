@@ -3,7 +3,7 @@ title: Installation
 ---
 
 ## Installing chARpack
-To install chARpack, go on out download page (link TBA) and get the version for your desired platform.
+To install chARpack, go to our download page (link TBA) and get the version for your desired platform.
 We recommend to always install the windows standalone app (link TBA) since chARpack works best in conjunction with a desktop PC.
 
 ### Windows
@@ -18,7 +18,7 @@ Then, navigate to the extracted folder and select the `.appx` file.
 Press the `Install` button to initiate the upload and install of chARpack.
 
 ### Android
-Download chARpack's Andriod build (link TBA) and extract the archive.
+Download chARpack's Android build (link TBA) and extract the archive.
 To be able to install chARpack to your Meta Quest device, you need to download and install the <a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-win" target="_blank">Meta Quest Developer Hub</a>.
 In the developer hub, navigate to `Device Manager` in the side bar.
 Here you can add your device and turn on the **Developer Mode**.

@@ -7,6 +7,8 @@ In the server scene you have several interaction possibilities.
 In the case of multiple connected clients, the buttons on the bottom right labeled **next** and **previous** let you switch your current view between the clients.
 The view then shows what the selected client sees.
 
+You can also change to a specific client's view by clicking on the corresponding entry in the user panel on the left.
+
 ## Loading and Saving
 In the bottom right, there are two additional buttons **Load** and **Save**.
 The **Load** button opens a file dialog and lets you import all file formats supported by **OpenBabel**.
