@@ -47,7 +47,7 @@ Right click **chARpack (Universal Windows)** in the solution explorer again and 
 Make sure you're on the same configuration and platform as set earlier.
 Go to the section **Debugging** and put your device's IP address into the field **Machine Name**.
 Confirm these settings by clicking **OK**.
-In the main bar, click on **Debug** and run the build + deploy by selecting **Start Without Debugging**.
+In the main bar, click on **Debug** and run the build and deploy by selecting **Start Without Debugging**.
 
 > Running this for the first time requires you to pair your HoloLens2 with Visual Studio.<br>
 > Check the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal) for instructions.
@@ -56,7 +56,7 @@ Successfully deploying chARpack on the HoloLens2 should start it automatically.
 Now you're ready to use chARpack.
 
 ## Deploy on Meta Quest 2 & 3
-If you want to deploy the app to a Meta Quest device, switch your **Build Platform** to **Android** in the Build Settings
+If you want to deploy the app to a Meta Quest device, switch your **Build Platform** to **Android** in the Build Settings.
 You can either directly build and deploy on to device or build an `.apk` file which you can deploy manually via the <a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-win" target="_blank">Meta Quest Developer Hub</a>.
 In any case you should download the Developer Hub to activate the **Developer Mode** on your device.
 If the Developer Mode is already activated and your device is connected via USB to the PC that runs Unity, then your Meta Quest device should show up in the Build Settings in the **Run Device** list.
@@ -79,3 +79,11 @@ When everything is set up to start the server either start the server scene dire
 Assets > Scenes > ServerScene
 ```
 in Unity editor, or press the **Host** button in the login screen.
+
+### Deploying the Windows Standalone app
+To deploy the Windows standalone app, switch your **Build Platform** to **Windows, Mac, Linux** in the Build Settings.
+Make sure only the *Server Scene* is selected in **Scenes in Build** and that *Create Visual Studio Solution* is checked.
+Then click on **Build** and select the folder to build to (if necessary, create a new one).
+
+Once Unity has finished the build process, go to your chosen folder and open the `.sln` file located there in Visual Studio.
+Now, you can start the Standalone app by clicking on **Debug** in the main bar and run the build and deploy by selecting **Start Without Debugging**.
