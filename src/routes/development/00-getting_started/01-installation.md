@@ -11,7 +11,7 @@ Here we need to install the correct version of Unity which is <a href="unityhub:
 You can also download the newest version of Unity and update the project, but this is **not recommended**.
 Download and install version <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a> of Unity.
 Make sure that you add the modules **Universal Windows Platform Build** and **Windows Build Support (IL2CPP)** to be able to deploy chARpack on the HoloLens2.
-To be able to run builds for Andriod devices like the Meta Quest series, add **Andriod Build Support** and the connected modules.
+To be able to run builds for Android devices like the Meta Quest series, add **Android Build Support** and the connected modules.
 
 > Unity also installs **Visual Studio (VS) 2022 Community Edition**  by default.
 > If you want to develop Unity apps, you'll need to add the package **Game development with Unity**.
@@ -61,8 +61,8 @@ Click **Get Features** and confirm that step by clicking **Import**.
 For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
 Take the `OBDotNet.dll` from the OpenBabel install directory and copy it into `Assets/plugins`.
 If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your `PATH`.
-Under Windows go to "Edit the system environment variables" under "Environment Variables..." add the OpenBabel install path to your "Path" variable in the system variables.
-Under Linux add the OpenBabel install path to your `PATH` variable.
+On Windows go to "Edit the system environment variables"; under "Environment Variables..." add the OpenBabel install path to your "Path" variable in the system variables.
+On Linux add the OpenBabel install path to your `PATH` variable.
 
 ### NuGet
 Download the file `NuGetForUnity.*.unitypackage` from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a> (Note: Look for the release page of that project, no need to clone the source tree).

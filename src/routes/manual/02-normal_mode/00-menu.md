@@ -34,7 +34,7 @@ These dummies are used to create bonds or to be switched out for Hydrogen atoms.
 The number of dummies depends on the hybridization of the atom.
 
 ### Creation Hybridization
-When pressing the **Create Atom** button, the displayed number (here 1) is as the hybridization for the freshly created atom.
+When pressing the **Create Atom** button, the displayed number (here 1) is used as the hybridization for the freshly created atom.
 The numbers correspond to the following hybridizations:
 
  * 1: sp
@@ -45,7 +45,7 @@ The Hybridization can also be adjusted after creation.
 
 ### Save/Load
 The **Save/Load** button opens another dialog that shows you all the molecule files on your device.
-Loading a file adds its contents, which consists of one or multiple molecules, to the scene.
+Loading a file adds its contents, which consist of one or multiple molecules, to the scene.
 Saving to a file saves the whole content of the current scene.
 The files are stored in chARpack's internal molecules/scene format.
 For saving or loading to different file formats, you need to connect your device to a dedicated chARpack server.

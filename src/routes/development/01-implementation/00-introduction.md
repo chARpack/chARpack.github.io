@@ -21,8 +21,7 @@ the way molecules respond when grabbed or clicked and their interactions with th
 - **Login**: Provides the functionality of the **Login** menu (connecting to a server, establishing a common coordinate system by scanning a QR code etc.)
 - **ForceField**: Contains different ways to compute and apply the force field to molecules in the scene so they behave realistically.
 
-The folder *HoloLens* contains scripts specifically for the use case of the HoloLens 2.
-Most notably, the **myScrollObject** script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.
+The **myScrollObject** script found in the *client_ui/custom_elements* folder provides the functionality of a scrollable menu used in both the atom menu and the hand menu.
 
 ### Prefabs
 The *prefabs* folder contains a few useful prefabs. 

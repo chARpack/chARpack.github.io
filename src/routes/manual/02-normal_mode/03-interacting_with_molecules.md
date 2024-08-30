@@ -33,7 +33,7 @@ Creating bonds also works within a single molecule.
 ## Selection
 You can select a single or multiple atoms.
 For this, you grab the atom just for a brief moment.
-The current threshold for the interaction is set to below 200ms, which should give a similar behavior like a mouse click.
+The current threshold for the interaction is set to below 200ms, which should result in behavior similar to a mouse click.
 The selection highlights the atom and spawns a tool tip.
 The tool tip consists of a small frame that shows information and provides the ability for manipulation, and a line that connects the selected atom/object and the tool tip frame.
 To deselect an atom, either click on the atom again or press the close button (X) in the tool tip frame.
@@ -41,7 +41,7 @@ To deselect an atom, either click on the atom again or press the close button (X
 <img src="/images/manual/select.gif" alt="Select" class="mx-auto max-w-md" />
 
 ## Fragment Rotation Mode
-For ease of use, a fragment rotation functionality has been implemented: When active, a blue bar is rendered from your index finger knuckle to you index finger tip, indicating the direction this interaction will happen.
+For ease of use, a fragment rotation functionality has been implemented: When active, a blue bar is rendered from your index finger knuckle to your index finger tip, indicating the direction this interaction will happen.
 Grabbing an atom in this mode will automatically select the entire connected fragment in this direction.
 The atom you're grabbing will be fixed in place and you can rotate the fragment around it.
 By default, this interaction mode is inactive.

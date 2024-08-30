@@ -12,7 +12,7 @@ When the button got pressed successfully you'll be notified by a kind of clickin
 ## Menus
 Entering chARpack you're put into a menu environment, where you can choose the mode of operation.
 
-<img src="/images/manual/login_screen.png" alt="Login Screen Menu" class="mx-auto max-w-md" />
+<img src="/images/manual/login_menu.png" alt="Login Screen Menu" class="mx-auto max-w-md" />
 
 The **Login Menu** is designed as a so called **Near Menu**, which means by default it will follow you around.
 To stop that behavior press the **Follow Me** button.
@@ -29,26 +29,25 @@ For more details on this mode see the section [Normal Mode](/manual/02-normal_mo
 The button **Connect** lets you connect to a chARpack server that is hosted in your network.
 The number in brackets behind the text gives an indication of how many servers are visible at the moment in the network.
 
-#### Host
-**Host** will start a dedicated server on the device or an instance of chARpack on your workstation.
-
-> It is recommended to start the server via Unity on your workstation and not on the device.
-
-This is because not all features of the server are supported on the HoloLens2.
-Additionally, running a server on the HoloLens2 can only work by starting chARpack twice, once as dedicated server and once to connect as a client.
-
 #### Scan QR
 The button **Scan QR** lets you scan room anchors for collaboration in the same room.
 
-#### Debug Log
-Pressing the **Debug Log** button opens the debug window (see below).
+#### Scan Screen
+The button **Scan Screen** lets you scan your desktop screen to enable <a data-sveltekit-reload href="/manual/04-async_mode/00-general">Async Mode</a> interactions.
+
+#### Settings
+The button **Settings** opens a menu containing different <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">settings</a>; 
+most of them are only useful once in *Normal Mode* or connected to a server.
+However, you can already do things such as changing the color scheme (the background color of the AR windows), switch the active language or
+open a debug log for troubleshooting:
+
 Similar to the functions of the **Login Menu** the debug log has a follow me function and can be placed by grabbing the top bar.
 
 <img src="/images/manual/debug_log.png" alt="Debug Log" class="mx-auto max-w-sm" />
 
 Each entry of the debug log is clickable to get access to the stack trace.
-Using a scroll gesture like on a smart phone lets you scroll through the contents of the debug log.
-Behind some message you will see a number in brackets.
+Using a scroll gesture like on a smart phone or pressing the arrow buttons on the right lets you scroll through the contents of the debug log.
+Behind some messages you will see a number in brackets.
 This number indicates how often this message was written to the log.
 If there is a severe problem, the number behind an error message will rise quickly.
 Normal debug output is displayed in white text, warnings in orange and error messages are displayed in red color.

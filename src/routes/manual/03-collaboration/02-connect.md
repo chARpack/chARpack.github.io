@@ -20,7 +20,3 @@ Answering this dialog with Yes should put you on your server.
 
 If the connection to the server is not working, you'll get another dialog that tells you what is wrong.
 Pressing **OK** on this dialog will put you back in the login screen.
-
-For developing and testing, you don't always want to put on your HoloLens2.
-Therefore, you can connect to your machine (127.0.0.1) by pressing the **Home** button in the server list.
-To be able to run two Unity editor instances of chARpack, you need to make a copy of the whole project.
