@@ -29,16 +29,11 @@ For more details on this mode see the section [Normal Mode](/manual/02-normal_mo
 The button **Connect** lets you connect to a chARpack server that is hosted in your network.
 The number in brackets behind the text gives an indication of how many servers are visible at the moment in the network.
 
-#### Host
-**Host** will start a dedicated server on the device or an instance of chARpack on your workstation.
-
-> It is recommended to start the server on your workstation and not on the device.
-
-This is because not all features of the server are supported on the HoloLens2.
-Additionally, running a server on the HoloLens2 can only work by starting chARpack twice, once as dedicated server and once to connect as a client.
-
 #### Scan QR
 The button **Scan QR** lets you scan room anchors for collaboration in the same room.
+
+#### Scan Screen
+The button **Scan Screen** lets you scan your desktop screen to enable <a data-sveltekit-reload href="/manual/04-async_mode/00-general">Async Mode</a> interactions.
 
 #### Debug Log
 Pressing the **Debug Log** button opens the debug window (see below).
