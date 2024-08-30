@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.22e4d02c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.dfec1183.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.0ebffba0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.acda80ae.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -91,8 +91,7 @@ This includes things like a list of connected atoms, a list of bonds in the mole
 the way molecules respond when grabbed or clicked and their interactions with the force field.</li>
 <li><strong>Login</strong>: Provides the functionality of the <strong>Login</strong> menu (connecting to a server, establishing a common coordinate system by scanning a QR code etc.)</li>
 <li><strong>ForceField</strong>: Contains different ways to compute and apply the force field to molecules in the scene so they behave realistically.</li></ul>
-<p>The folder <em>HoloLens</em> contains scripts specifically for the use case of the HoloLens 2.
-Most notably, the <strong>myScrollObject</strong> script provides the functionality of a scrollable menu used in both the atom menu and the hand menu.</p>
+<p>The <strong>myScrollObject</strong> script found in the <em>client_ui/custom_elements</em> folder provides the functionality of a scrollable menu used in both the atom menu and the hand menu.</p>
 <h3>Prefabs</h3>
 <p>The <em>prefabs</em> folder contains a few useful prefabs. </p>
 <img src="/images/development/prefab.png" alt="Prefabs" class="mx-auto max-w-xl">
@@ -144,7 +143,7 @@ Also, the <strong>Server Scene</strong>  provides the ability to interact with m
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -154,8 +153,8 @@ Also, the <strong>Server Scene</strong>  provides the ability to interact with m
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],

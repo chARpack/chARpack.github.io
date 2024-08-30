@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.22e4d02c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.dfec1183.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.0ebffba0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.acda80ae.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -86,7 +86,7 @@ Here we need to install the correct version of Unity which is <a href="unityhub:
 You can also download the newest version of Unity and update the project, but this is <strong>not recommended</strong>.
 Download and install version <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a> of Unity.
 Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARpack on the HoloLens2.
-To be able to run builds for Andriod devices like the Meta Quest series, add <strong>Andriod Build Support</strong> and the connected modules.</p>
+To be able to run builds for Android devices like the Meta Quest series, add <strong>Android Build Support</strong> and the connected modules.</p>
 <blockquote><p>Unity also installs <strong>Visual Studio (VS) 2022 Community Edition</strong>  by default.
 If you want to develop Unity apps, you’ll need to add the package <strong>Game development with Unity</strong>.
 To be able to deploy chARpack on the HoloLens2 also install the VS module <strong>Universal Windows Platform development</strong>.</p></blockquote>
@@ -123,8 +123,8 @@ Click <strong>Get Features</strong> and confirm that step by clicking <strong>Im
 <p>For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
 Take the <code>OBDotNet.dll</code> from the OpenBabel install directory and copy it into <code>Assets/plugins</code>.
 If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your <code>PATH</code>.
-Under Windows go to “Edit the system environment variables” under “Environment Variables…” add the OpenBabel install path to your “Path” variable in the system variables.
-Under Linux add the OpenBabel install path to your <code>PATH</code> variable.</p>
+On Windows go to “Edit the system environment variables”; under “Environment Variables…” add the OpenBabel install path to your “Path” variable in the system variables.
+On Linux add the OpenBabel install path to your <code>PATH</code> variable.</p>
 <h3>NuGet</h3>
 <p>Download the file <code>NuGetForUnity.*.unitypackage</code> from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a> (Note: Look for the release page of that project, no need to clone the source tree).
 To be able to install the <code>.unitypackage</code> file of <strong>NuGetForUnity</strong> you have to start the project for the first time.</p>
@@ -196,7 +196,7 @@ Using the mouse wheel makes it easy to press buttons in chARpack.</p>
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -206,8 +206,8 @@ Using the mouse wheel makes it easy to press buttons in chARpack.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],

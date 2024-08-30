@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.adf72056.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.c3716209.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.9e7f84a4.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.ede3e423.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -73,6 +73,12 @@
     <span class="ml-3">Connect</span>
     </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/03-collaboration/03-server_controls">
     <span class="ml-3">Server Controls</span>
+    </a></li>
+      </ul><ul class="space-y-0 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/04-async_mode">Async Mode</a></h4>
+      <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/04-async_mode/00-general">
+    <span class="ml-3">General</span>
+    </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/04-async_mode/01-transition-modes">
+    <span class="ml-3">Transition Modes and Options</span>
     </a></li>
       </ul></div></aside>
 
@@ -135,6 +141,15 @@ It can be toggled using this button.</p>
 <h3>Interpolate bond colors</h3>
 <p>By default, the color of bonds between atoms is interpolated from the atom’s color to a neutral grey in the middle to provide a smooth look.
 If you prefer the look of bonds comprised of two solid-colored halves, you can toggle the interpolation off.</p>
+<h3>Licorice (stick) rendering</h3>
+<p>By default, atoms are rendered as spheres with relatively thin cylindrical bonds connecting them.
+This button activates the “licorice” rendering method where the molecule is rendered as a network of comparatively thick sticks (bonds) in the colors of their
+respective connected atoms.</p>
+<h3>Video pass-through</h3>
+<p>This button toggles the optional behaviour of VR devices that pass video footage of their surroundings from their camera to the user.
+This is useful in cases of live collaboration where every participant would like to see the room they are in, but can be toggled off for remote collaboration purposes.</p>
+<h3>Color scheme</h3>
+<p>chARpack support multiple different color schemes that change the background color of menus and the color of the toggle indicators.</p>
 <h2>Integration method</h2>
 <img src="/images/manual/integration_method.png" alt="Integration Method Menu" class="mx-auto max-w-md">
 <p>The integration method is the method used for numerical integration in force field computations.
@@ -187,7 +202,7 @@ However, too low a repulsion scale may cause molecules to get tangled.</p>
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -197,8 +212,8 @@ However, too low a repulsion scale may cause molecules to get tangled.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],

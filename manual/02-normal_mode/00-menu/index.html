@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.adf72056.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.c3716209.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.9e7f84a4.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.ede3e423.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -74,6 +74,12 @@
     </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/03-collaboration/03-server_controls">
     <span class="ml-3">Server Controls</span>
     </a></li>
+      </ul><ul class="space-y-0 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/04-async_mode">Async Mode</a></h4>
+      <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/04-async_mode/00-general">
+    <span class="ml-3">General</span>
+    </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/04-async_mode/01-transition-modes">
+    <span class="ml-3">Transition Modes and Options</span>
+    </a></li>
       </ul></div></aside>
 
 <div class="2xl:w-full xl:w-5/6 lg:w-4/6 md:w-full mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2 z-20"><main><nav aria-label="manual breadcrumb" class="bg-gray-50 dark:bg-gray-800 rounded mb-3"><ol class="inline-flex items-center space-x-1 md:space-x-3"><li class="inline-flex items-center"><a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="/manual"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
@@ -108,7 +114,7 @@ This menu can be navigated using the up and down arrows to the right; pressing a
 These dummies are used to create bonds or to be switched out for Hydrogen atoms.
 The number of dummies depends on the hybridization of the atom.</p>
 <h3>Creation Hybridization</h3>
-<p>When pressing the <strong>Create Atom</strong> button, the displayed number (here 1) is as the hybridization for the freshly created atom.
+<p>When pressing the <strong>Create Atom</strong> button, the displayed number (here 1) is used as the hybridization for the freshly created atom.
 The numbers correspond to the following hybridizations:</p>
 <ul><li>1: sp</li>
 <li>2: sp2</li>
@@ -116,7 +122,7 @@ The numbers correspond to the following hybridizations:</p>
 <p>The Hybridization can also be adjusted after creation.</p>
 <h3>Save/Load</h3>
 <p>The <strong>Save/Load</strong> button opens another dialog that shows you all the molecule files on your device.
-Loading a file adds its contents, which consists of one or multiple molecules, to the scene.
+Loading a file adds its contents, which consist of one or multiple molecules, to the scene.
 Saving to a file saves the whole content of the current scene.
 The files are stored in chARpack’s internal molecules/scene format.
 For saving or loading to different file formats, you need to connect your device to a dedicated chARpack server.
@@ -148,7 +154,7 @@ Check the later chapters for more information on how to do that.</p>
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -158,8 +164,8 @@ Check the later chapters for more information on how to do that.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],

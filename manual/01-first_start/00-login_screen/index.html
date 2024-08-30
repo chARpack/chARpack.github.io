@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.adf72056.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.c3716209.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.9e7f84a4.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.ede3e423.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -74,6 +74,12 @@
     </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/03-collaboration/03-server_controls">
     <span class="ml-3">Server Controls</span>
     </a></li>
+      </ul><ul class="space-y-0 list-none"><h4 class="text-2xl font-bold text-gray-900 dark:text-white w-full"><a data-sveltekit-reload="" class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/manual/04-async_mode">Async Mode</a></h4>
+      <li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/04-async_mode/00-general">
+    <span class="ml-3">General</span>
+    </a></li><li><a data-sveltekit-reload="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 hover:no-underline" href="/manual/04-async_mode/01-transition-modes">
+    <span class="ml-3">Transition Modes and Options</span>
+    </a></li>
       </ul></div></aside>
 
 <div class="2xl:w-full xl:w-5/6 lg:w-4/6 md:w-full mx-auto bg-gray-100 dark:bg-gray-700 px-6 rounded-lg pb-10 pt-2 z-20"><main><nav aria-label="manual breadcrumb" class="bg-gray-50 dark:bg-gray-800 rounded mb-3"><ol class="inline-flex items-center space-x-1 md:space-x-3"><li class="inline-flex items-center"><a class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="/manual"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
@@ -92,7 +98,7 @@ When your finger gets close to the button, you should see some visual feedback.
 When the button got pressed successfully you’ll be notified by a kind of clicking sound.</p>
 <h2>Menus</h2>
 <p>Entering chARpack you’re put into a menu environment, where you can choose the mode of operation.</p>
-<img src="/images/manual/login_screen.png" alt="Login Screen Menu" class="mx-auto max-w-md">
+<img src="/images/manual/login_menu.png" alt="Login Screen Menu" class="mx-auto max-w-md">
 <p>The <strong>Login Menu</strong> is designed as a so called <strong>Near Menu</strong>, which means by default it will follow you around.
 To stop that behavior press the <strong>Follow Me</strong> button.
 This lets the menu stay in the same position in the room.
@@ -105,20 +111,20 @@ For more details on this mode see the section <a href="/manual/02-normal_mode">N
 <h4>Connect</h4>
 <p>The button <strong>Connect</strong> lets you connect to a chARpack server that is hosted in your network.
 The number in brackets behind the text gives an indication of how many servers are visible at the moment in the network.</p>
-<h4>Host</h4>
-<p><strong>Host</strong> will start a dedicated server on the device or an instance of chARpack on your workstation.</p>
-<blockquote><p>It is recommended to start the server via Unity on your workstation and not on the device.</p></blockquote>
-<p>This is because not all features of the server are supported on the HoloLens2.
-Additionally, running a server on the HoloLens2 can only work by starting chARpack twice, once as dedicated server and once to connect as a client.</p>
 <h4>Scan QR</h4>
 <p>The button <strong>Scan QR</strong> lets you scan room anchors for collaboration in the same room.</p>
-<h4>Debug Log</h4>
-<p>Pressing the <strong>Debug Log</strong> button opens the debug window (see below).
-Similar to the functions of the <strong>Login Menu</strong> the debug log has a follow me function and can be placed by grabbing the top bar.</p>
+<h4>Scan Screen</h4>
+<p>The button <strong>Scan Screen</strong> lets you scan your desktop screen to enable <a data-sveltekit-reload href="/manual/04-async_mode/00-general">Async Mode</a> interactions.</p>
+<h4>Settings</h4>
+<p>The button <strong>Settings</strong> opens a menu containing different <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">settings</a>;
+most of them are only useful once in <em>Normal Mode</em> or connected to a server.
+However, you can already do things such as changing the color scheme (the background color of the AR windows), switch the active language or
+open a debug log for troubleshooting:</p>
+<p>Similar to the functions of the <strong>Login Menu</strong> the debug log has a follow me function and can be placed by grabbing the top bar.</p>
 <img src="/images/manual/debug_log.png" alt="Debug Log" class="mx-auto max-w-sm">
 <p>Each entry of the debug log is clickable to get access to the stack trace.
-Using a scroll gesture like on a smart phone lets you scroll through the contents of the debug log.
-Behind some message you will see a number in brackets.
+Using a scroll gesture like on a smart phone or pressing the arrow buttons on the right lets you scroll through the contents of the debug log.
+Behind some messages you will see a number in brackets.
 This number indicates how often this message was written to the log.
 If there is a severe problem, the number behind an error message will rise quickly.
 Normal debug output is displayed in white text, warnings in orange and error messages are displayed in red color.
@@ -150,7 +156,7 @@ Checking the debug log and stack trace of the messages makes analyzing errors on
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -160,8 +166,8 @@ Checking the debug log and stack trace of the messages makes analyzing errors on
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],

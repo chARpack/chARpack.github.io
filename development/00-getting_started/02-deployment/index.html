@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.22e4d02c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.dfec1183.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.0ebffba0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.acda80ae.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -78,15 +78,15 @@
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <h2>Deploy on Device</h2>
-<p>The basic steps are also fund on the official Microsoft page <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2" rel="nofollow">here</a>.
-When the test was successful, you’re now ready to deploy chARpack to your HoloLens2.
+<p>The basic steps are also found on the official Microsoft page <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-visual-studio?tabs=hl2" rel="nofollow">here</a>.
+Once the test run was successful, you’re now ready to deploy chARpack to your HoloLens2.
 Again, go to </p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
 <p>This time, click on <strong>Build</strong>, which opens a folder dialog.</p>
 <img src="/images/manual/build.png" alt="Build" class="mx-auto max-w-xl">
 <p>Create a folder named <strong>build</strong> inside the chARpack project folder and select it using the dialog.
 Unity should start the <strong>Building Player</strong> process.
-When finished, got to the freshly created <strong>build</strong> folder and open the <code>.sln</code> file that is located there.
+When finished, go to the freshly created <strong>build</strong> folder and open the <code>.sln</code> file that is located there.
 This will start up Visual Studio.
 In the solution explorer, right click <strong>chARpack (Universal Windows)</strong> and select <strong>Set as Startup Project</strong>.
 Set <strong>Release</strong> as solution configuration and <strong>ARM64</strong> as solution platforms.
@@ -103,20 +103,20 @@ Go to the <strong>Player Settings</strong></p>
 <h3>IP of your HoloLens2</h3>
 <p>To be able to deploy chARpack via WiFi, you need to connect your machine that runs Unity to the same network (or a reachable network) as the HoloLens2.
 Open the WiFi options on the HoloLens2 and click on <strong>Adapter Settings</strong>.
-Scroll down until you can find the devices IP address.</p>
+Scroll down until you can find the device’s IP address.</p>
 <blockquote><p>Make sure that your HoloLens2 is in <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal" rel="nofollow">Developer Mode</a>.</p></blockquote>
 <h3>Back to VS</h3>
 <p>Right click <strong>chARpack (Universal Windows)</strong> in the solution explorer again and go to <strong>Properties</strong>.
 Make sure you’re on the same configuration and platform as set earlier.
-Go to the section <strong>Debugging</strong> and put your devices IP address into the field <strong>Machine Name</strong>.
+Go to the section <strong>Debugging</strong> and put your device’s IP address into the field <strong>Machine Name</strong>.
 Confirm these settings by clicking <strong>OK</strong>.
-In the main bar, click on <strong>Debug</strong> and run the build + deploy by selecting <strong>Start Without Debugging</strong>.</p>
+In the main bar, click on <strong>Debug</strong> and run the build and deploy by selecting <strong>Start Without Debugging</strong>.</p>
 <blockquote><p>Running this for the first time requires you to pair your HoloLens2 with Visual Studio.<br>
 Check the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal" rel="nofollow">Microsoft documentation</a> for instructions.</p></blockquote>
 <p>Successfully deploying chARpack on the HoloLens2 should start it automatically.
 Now you’re ready to use chARpack.</p>
 <h2>Deploy on Meta Quest 2 &amp; 3</h2>
-<p>If you want to deploy the app to a Meta Quest device, switch your <strong>Build Platform</strong> to <strong>Andriod</strong> in the Build Settings
+<p>If you want to deploy the app to a Meta Quest device, switch your <strong>Build Platform</strong> to <strong>Android</strong> in the Build Settings.
 You can either directly build and deploy on to device or build an <code>.apk</code> file which you can deploy manually via the <a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-win" target="_blank">Meta Quest Developer Hub</a>.
 In any case you should download the Developer Hub to activate the <strong>Developer Mode</strong> on your device.
 If the Developer Mode is already activated and your device is connected via USB to the PC that runs Unity, then your Meta Quest device should show up in the Build Settings in the <strong>Run Device</strong> list.
@@ -133,6 +133,12 @@ To be able to benefit from these changes, all compiled and deployed versions of 
 <p>When everything is set up to start the server either start the server scene directly by double clicking </p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Assets &gt; Scenes &gt; ServerScene</code><!-- HTML_TAG_END --></pre>
 <p>in Unity editor, or press the <strong>Host</strong> button in the login screen.</p>
+<h3>Deploying the Windows Standalone app</h3>
+<p>To deploy the Windows standalone app, switch your <strong>Build Platform</strong> to <strong>Windows, Mac, Linux</strong> in the Build Settings.
+Make sure only the <em>Server Scene</em> is selected in <strong>Scenes in Build</strong> and that <em>Create Visual Studio Solution</em> is checked.
+Then click on <strong>Build</strong> and select the folder to build to (if necessary, create a new one).</p>
+<p>Once Unity has finished the build process, go to your chosen folder and open the <code>.sln</code> file located there in Visual Studio.
+Now, you can start the Standalone app by clicking on <strong>Debug</strong> in the main bar and run the build and deploy by selecting <strong>Start Without Debugging</strong>.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -158,7 +164,7 @@ To be able to benefit from these changes, all compiled and deployed versions of 
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -168,8 +174,8 @@ To be able to benefit from these changes, all compiled and deployed versions of 
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],

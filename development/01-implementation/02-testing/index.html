@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.6967561e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e33cba56.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.9227cfec.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.22e4d02c.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.9a9ca403.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.dfec1183.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f83603a8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.0ebffba0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.acda80ae.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -79,20 +79,20 @@
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
 <p>In order to ensure the program functions as expected, test whether the following functions and features still work after every major change:</p>
 <h2>Creating, moving and merging molecules</h2>
-<p>chARps most fundamental functions are interactions with atoms and molecules.
+<p>chARpack’s most fundamental functions are interactions with atoms and molecules.
 They should be unaffected by most changes, but always test the basic actions like creating, merging, deleting, moving and splitting.</p>
 <h2>Selecting and deselecting</h2>
-<p>The selection of Atoms and molecules is outlined differently to selecting bonds.
-Also, each type of selection spawns a different types of tool tip.</p>
+<p>The selection of atoms and molecules is outlined differently to selecting bonds.
+Also, each type of selection spawns a different type of tool tip.</p>
 <h2>Networking</h2>
 <p>When implementing a new feature, consider whether it will need to be broadcast to other collaborators and if so, test whether the communication works correctly.</p>
 <h2>Tool tip functionalities</h2>
 <h3>Copy</h3>
-<p>The copy function should create a duplicate of the current selected molecule slightly above it.</p>
+<p>The copy function should create a duplicate of the currently selected molecule slightly above it.</p>
 <h3>Scale</h3>
 <p>Pressing the scale button should create a scaling slider which can be used to scale the molecule up or down.</p>
 <h3>Freeze</h3>
-<p>This button should the molecule/atom in a frozen state, meaning it cannot be moved or otherwise manipulated.
+<p>This button should put the molecule/atom in a frozen state, meaning it cannot be moved or otherwise manipulated.
 The indicator on the button should change color when pressed.
 The atoms in the molecule should also gain a different texture when frozen and return to their normal state when unfrozen.</p>
 <h3>Toggle Dummies</h3>
@@ -133,7 +133,7 @@ Therefore, make sure your implementation is independent of the current molecule 
 			
 			<script>
 				{
-					__sveltekit_dheqab = {
+					__sveltekit_125jzkp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -143,8 +143,8 @@ Therefore, make sure your implementation is independent of the current molecule 
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.6967561e.js"),
-						import("../../../_app/immutable/entry/app.9227cfec.js")
+						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
+						import("../../../_app/immutable/entry/app.66088596.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],
