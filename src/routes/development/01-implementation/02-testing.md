@@ -5,7 +5,7 @@ title: Testing Changes
 In order to ensure the program functions as expected, test whether the following functions and features still work after every major change:
 
 ## Creating, moving and merging molecules
-chARp's most fundamental functions are interactions with atoms and molecules. 
+chARpack's most fundamental functions are interactions with atoms and molecules. 
 They should be unaffected by most changes, but always test the basic actions like creating, merging, deleting, moving and splitting.
 
 ## Selecting and deselecting
