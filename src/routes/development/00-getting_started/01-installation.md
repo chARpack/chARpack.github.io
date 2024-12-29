@@ -58,6 +58,9 @@ All these features should also appear with the tag "Version x.x.x currently inst
 Click **Get Features** and confirm that step by clicking **Import**.
 
 ### OpenBabel
+In the current version of chARpack, OpenBabel should automatically be downloaded and installed if it is not already found on the system.
+If this is unsuccessful for some reason, you may need to perform a manual installation:
+
 For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
 Take the `OBDotNet.dll` from the OpenBabel install directory and copy it into `Assets/plugins`.
 If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your `PATH`.
@@ -88,6 +91,7 @@ NuGet > Manage NuGet Packages
 to open the package manager.
 In the search bar type in the following packages one by one and install them
 ```
+MathNet.Numerics
 Microsoft.MixedReality.QR
 Microsoft.VCRTForwarders.140
 pythonnet
