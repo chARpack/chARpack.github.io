@@ -45,6 +45,9 @@ Similar to the functions of the **Login Menu** the debug log has a follow me fun
 
 <img src="/images/manual/debug_log.png" alt="Debug Log" class="mx-auto max-w-sm" />
 
+The button at the top left toggles an FPS counter; when active, it is positioned in a comfortable location for AR purposes.
+This can be useful if you are experiencing performance issues.
+
 Each entry of the debug log is clickable to get access to the stack trace.
 Using a scroll gesture like on a smart phone or pressing the arrow buttons on the right lets you scroll through the contents of the debug log.
 Behind some messages you will see a number in brackets.

@@ -43,6 +43,9 @@ Scroll down until you can find the device's IP address.
 > Make sure that your HoloLens2 is in [Developer Mode](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal).
 
 ### Back to VS
+You now have two options for deploying the project on your HoloLens2.
+
+#### Start on remote machine from Visual Studio
 Right click **chARpack (Universal Windows)** in the solution explorer again and go to **Properties**.
 Make sure you're on the same configuration and platform as set earlier.
 Go to the section **Debugging** and put your device's IP address into the field **Machine Name**.
@@ -54,6 +57,21 @@ In the main bar, click on **Debug** and run the build and deploy by selecting **
 
 Successfully deploying chARpack on the HoloLens2 should start it automatically.
 Now you're ready to use chARpack.
+
+#### Upload an app package via the device portal
+Right click **chARpack (Universal Windows)** in the solution explorer and go to *Publish > Create App Packages*.
+In the following dialogue, make sure you have selected the same configuration and platform as earlier. For all other options, the default settings are usually fine.
+
+<img src="/images/development/app_package.png" alt="AppPackage" class="mx-auto max-w-xl" />
+
+Click **Create** and wait for the build to finish.
+
+You can now upload the app package to the HoloLens2 using the device portal.
+The steps to connect to the device portal are outlined in the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal).
+
+On the device portal page, navigate to *Views > Apps*. In the section **Deploy Apps**, make sure **Local Storage** is selected and 
+click **Choose file**. In the following dialogue, navigate to the *.appx* file created by Visual Studio in the previous step.
+Select **Install**. Once the installation is finished, you can access the chARpack app from the main menu on your HoloLens2.
 
 ## Deploy on Meta Quest 2 & 3
 If you want to deploy the app to a Meta Quest device, switch your **Build Platform** to **Android** in the Build Settings.
