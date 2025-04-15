@@ -8,26 +8,27 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.02c3b0fe.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.a4066bfa.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.40334992.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.66088596.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1089238d.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.6addb48b.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.dfec1183.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.ba4bbd1a.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.e8036ca4.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.387d778a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.58eda30f.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.acda80ae.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.8fc15662.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.54895411.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
 	</head>
 	<!-- <body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
+
 
 
 <div class="app svelte-6pmp65"><header class="self-center xl:w-3/6 lg:w-4/6 w-auto z-10"><nav class="bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg border-gray-300 dark:border-gray-700 px-2 sm:px-4 py-2.5 w-full min-w-full dark:bg-gray-900"><div class="mx-auto flex flex-wrap justify-between items-center  container"><a href="/" class="flex items-center"><img src="/charpack_logo.svg" class="mr-3 h-20 sm:h-25" alt="chARpack Logo">
@@ -106,6 +107,8 @@ Open the WiFi options on the HoloLens2 and click on <strong>Adapter Settings</st
 Scroll down until you can find the device’s IP address.</p>
 <blockquote><p>Make sure that your HoloLens2 is in <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal" rel="nofollow">Developer Mode</a>.</p></blockquote>
 <h3>Back to VS</h3>
+<p>You now have two options for deploying the project on your HoloLens2.</p>
+<h4>Start on remote machine from Visual Studio</h4>
 <p>Right click <strong>chARpack (Universal Windows)</strong> in the solution explorer again and go to <strong>Properties</strong>.
 Make sure you’re on the same configuration and platform as set earlier.
 Go to the section <strong>Debugging</strong> and put your device’s IP address into the field <strong>Machine Name</strong>.
@@ -115,6 +118,16 @@ In the main bar, click on <strong>Debug</strong> and run the build and deploy by
 Check the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal" rel="nofollow">Microsoft documentation</a> for instructions.</p></blockquote>
 <p>Successfully deploying chARpack on the HoloLens2 should start it automatically.
 Now you’re ready to use chARpack.</p>
+<h4>Upload an app package via the device portal</h4>
+<p>Right click <strong>chARpack (Universal Windows)</strong> in the solution explorer and go to <em>Publish &gt; Create App Packages</em>.
+In the following dialogue, make sure you have selected the same configuration and platform as earlier. For all other options, the default settings are usually fine.</p>
+<img src="/images/development/app_package.png" alt="AppPackage" class="mx-auto max-w-xl">
+<p>Click <strong>Create</strong> and wait for the build to finish.</p>
+<p>You can now upload the app package to the HoloLens2 using the device portal.
+The steps to connect to the device portal are outlined in the <a href="https://learn.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/using-the-windows-device-portal" rel="nofollow">Microsoft documentation</a>.</p>
+<p>On the device portal page, navigate to <em>Views &gt; Apps</em>. In the section <strong>Deploy Apps</strong>, make sure <strong>Local Storage</strong> is selected and
+click <strong>Choose file</strong>. In the following dialogue, navigate to the <em>.appx</em> file created by Visual Studio in the previous step.
+Select <strong>Install</strong>. Once the installation is finished, you can access the chARpack app from the main menu on your HoloLens2.</p>
 <h2>Deploy on Meta Quest 2 &amp; 3</h2>
 <p>If you want to deploy the app to a Meta Quest device, switch your <strong>Build Platform</strong> to <strong>Android</strong> in the Build Settings.
 You can either directly build and deploy on to device or build an <code>.apk</code> file which you can deploy manually via the <a href="https://developer.oculus.com/downloads/package/oculus-developer-hub-win" target="_blank">Meta Quest Developer Hub</a>.
@@ -164,7 +177,7 @@ Now, you can start the Standalone app by clicking on <strong>Debug</strong> in t
 			
 			<script>
 				{
-					__sveltekit_125jzkp = {
+					__sveltekit_ceseoo = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -174,8 +187,8 @@ Now, you can start the Standalone app by clicking on <strong>Debug</strong> in t
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.02c3b0fe.js"),
-						import("../../../_app/immutable/entry/app.66088596.js")
+						import("../../../_app/immutable/entry/start.a4066bfa.js"),
+						import("../../../_app/immutable/entry/app.6addb48b.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],
