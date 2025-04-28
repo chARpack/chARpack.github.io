@@ -53,7 +53,7 @@ Each created script is initialized as a child of a **Unity** specific class call
 For details on the components of this class see the [`MonoBehaviour`](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) in the official documentation.
 
 Unity uses C# (C Sharp) as a programming language.
-If you followed the described installation process, **Visual Studio 2019 Community Edition** should already be installed on your computer, as well as the modules **Game development with Unity** and **Universal Windows Platform development**. We recommend using it as your code editor.
+If you followed the described installation process, **Visual Studio 2019 Community Edition** should already be installed on your computer, as well as the modules **Game development with Unity** and **Universal Windows Platform development** (or *Universal Platform Tools* from the **WinUI Application Development** module in Visual Studio 17.10 or later). We recommend using it as your code editor.
 Double click on a script in the Project view to open it in your editor.
 
 Any script intended to work with Unity needs the line 
