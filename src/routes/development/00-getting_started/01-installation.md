@@ -15,10 +15,13 @@ To be able to run builds for Android devices like the Meta Quest series, add **A
 
 > Unity also installs **Visual Studio (VS) 2022 Community Edition**  by default.
 > If you want to develop Unity apps, you'll need to add the package **Game development with Unity**.
-> To be able to deploy chARpack on the HoloLens2 also install the VS module **Universal Windows Platform development**.
+> To be able to deploy chARpack on the HoloLens2 also install the VS module **Universal Windows Platform development**\*.
+
+\* In recent versions of Visual Studio, this module has been replaced by the **WinUI Application Development** workload, which, among others, contains the necessary
+*Universal Windows Platform tools* and a Windows SDK.
 
 For an already installed Visual Studio, you have to add the modules mentioned above via the **Visual Studio Installer**.
-Open the installer and click on **Modify** at your preferred version of Visual Studio.
+Open the installer by selecting `Tools > Get Tools and Features` and click on **Modify** at your preferred version of Visual Studio.
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
