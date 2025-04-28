@@ -138,4 +138,6 @@ Another important interaction is the `mousewheel`.
 Scrolling with the mouse wheel moves the currently activated hand forward and backward.
 Using the mouse wheel makes it easy to press buttons in chARpack.
 
+Alternatively, both buttons and molecules in the scene can be interacted with using mouse clicks.
+
 For instructions on deploying chARpack to your device, see the <a data-sveltekit-reload href="/development/00-getting_started/02-deployment">Deployment</a> section.
