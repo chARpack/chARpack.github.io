@@ -38,14 +38,14 @@ The button **Scan Screen** lets you scan your desktop screen to enable <a data-s
 #### Settings
 The button **Settings** opens a menu containing different <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">settings</a>; 
 most of them are only useful once in *Normal Mode* or connected to a server.
-However, you can already do things such as changing the color scheme (the background color of the AR windows), switch the active language or
-open a debug log for troubleshooting:
+However, you can already do things such as changing the color scheme (the background color of the AR windows), switching the active language or
+opening a debug log for troubleshooting:
 
 Similar to the functions of the **Login Menu** the debug log has a follow me function and can be placed by grabbing the top bar.
 
 <img src="/images/manual/debug_log.png" alt="Debug Log" class="mx-auto max-w-sm" />
 
-The button at the top left toggles an FPS counter; when active, it is positioned in a comfortable location for AR purposes.
+The button at the top left toggles a frame rate counter; when active, it is positioned in a comfortable location for AR purposes.
 This can be useful if you are experiencing performance issues.
 
 Each entry of the debug log is clickable to get access to the stack trace.

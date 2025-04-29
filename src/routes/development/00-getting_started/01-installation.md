@@ -25,8 +25,9 @@ Open the installer by selecting `Tools > Get Tools and Features` and click on **
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
+In order to be able to contribute to the project and benefit from version control functionalities, you will need to install <a href="https://git-scm.com/downloads" target="_blank">Git</a>.
 To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
-You click on the green Button **code** and select `Download ZIP` or you use git to clone the project to your disk
+You click on the green Button **code** and select `Download ZIP` (this also works without having Git installed) or you use Git to clone the project to your disk
 ```bash
 git clone --recursive --depth=1 https://github.com/KoehnLab/chARpack.git
 ```
