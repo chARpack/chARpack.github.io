@@ -50,6 +50,13 @@ The resulting highlighting is shown in both representations on corresponding str
 
 Instead of displaying this highlighting, you may also choose to show a heatmap on the structure formula, which can for example be obtained by using eye-tracking data.
 
+## Transforming Molecules
+Selecting a molecule creates a Gizmo consisting of three colored arrows in its center (this can be toggled on or off using the **Tab** key).
+Clicking and dragging one of the arrows moves the entire molecule along this line, while clicking the cube in the center allows to freely move the molecule.
+You can switch to similar Gizmos for rotating or scaling the molecule by pressing the number keys on the keyboard (1 for translation, 2 for rotation, 3 for scaling, 4, 5 and 6 for combinations).
+
+> Scaling a molecule non-uniformly (stretching it more along one axis than others) will cause unexpected behavior!
+
 ## Other interactions
 There are more shortcuts available to perform specific actions on the server. 
 Hovering your mouse over the *Info* icon in the top right corner shows you a list of them.
