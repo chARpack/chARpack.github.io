@@ -15,15 +15,19 @@ To be able to run builds for Android devices like the Meta Quest series, add **A
 
 > Unity also installs **Visual Studio (VS) 2022 Community Edition**  by default.
 > If you want to develop Unity apps, you'll need to add the package **Game development with Unity**.
-> To be able to deploy chARpack on the HoloLens2 also install the VS module **Universal Windows Platform development**.
+> To be able to deploy chARpack on the HoloLens2 also install the VS module **Universal Windows Platform development**\*.
+
+\* In recent versions of Visual Studio, this module has been replaced by the **WinUI Application Development** workload, which, among others, contains the necessary
+*Universal Windows Platform tools* and a Windows SDK.
 
 For an already installed Visual Studio, you have to add the modules mentioned above via the **Visual Studio Installer**.
-Open the installer and click on **Modify** at your preferred version of Visual Studio.
+Open the installer by selecting `Tools > Get Tools and Features` and click on **Modify** at your preferred version of Visual Studio.
 Enable the modules and **Modify** in the bottom right corner to install them.
 
 ## Download
+In order to be able to contribute to the project and benefit from version control functionalities, you will need to install <a href="https://git-scm.com/downloads" target="_blank">Git</a>.
 To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
-You click on the green Button **code** and select `Download ZIP` or you use git to clone the project to your disk
+You click on the green Button **code** and select `Download ZIP` (this also works without having Git installed) or you use Git to clone the project to your disk
 ```bash
 git clone --recursive --depth=1 https://github.com/KoehnLab/chARpack.git
 ```
@@ -134,5 +138,7 @@ Holding `right click` lets you look around in the scene.
 Another important interaction is the `mousewheel`.
 Scrolling with the mouse wheel moves the currently activated hand forward and backward.
 Using the mouse wheel makes it easy to press buttons in chARpack.
+
+Alternatively, both buttons and molecules in the scene can be interacted with using mouse clicks.
 
 For instructions on deploying chARpack to your device, see the <a data-sveltekit-reload href="/development/00-getting_started/02-deployment">Deployment</a> section.

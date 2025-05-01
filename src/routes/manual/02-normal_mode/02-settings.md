@@ -17,7 +17,7 @@ Note: changing scenes does not clear the debug log for easier error detection.
 
 ## Toggle Force Field
 chARpack calculates forces in the background to empirically simulate a semi-realistic molecule behavior.
-The forces are integrated using a simple [Euler integration](https://en.wikipedia.org/wiki/Euler_method).
+The forces are integrated using a simple [Midpoint integration](https://en.wikipedia.org/wiki/Midpoint_method) by default.
 The force field is developed to be responsive, lightweight, and makes it easy to handle objects in the chARpack Molecular Builder environment.
 Toggling the force field off stops any calculations in the background and lets every part of the molecule move unhindered (without any force feedback).
 This mode comes in handy when creating a bond within a molecule where the force field makes it difficult to bring these two dummies together.
@@ -106,7 +106,7 @@ Setting any of these time factors to too high a number may cause molecules to be
 This button toggles the unit of measurement used in tooltips and on distance measurements between Angstrom and picometers.
 
 ## Bond Stiffness
-The bond stiffness parameter changes the number of force field iterations and therefore the felt stiffness of the molecule.
+The bond stiffness parameter changes the number of force field iterations and therefore the perceived stiffness of the molecule.
 The number of iterations changes how fast the molecule will go into its minimal state.
 A lower number makes the molecules feel rubbery, higher numbers will keep the structure intact.
  > Note: A higher number of iterations means more computational power goes into the force field calculation/iteration.
