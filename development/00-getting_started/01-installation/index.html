@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.a4066bfa.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.c259e834.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1089238d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.6addb48b.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.f48440d6.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.02033d74.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.e8036ca4.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.387d778a.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.99d078c7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.fd0703cf.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.8fc15662.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.54895411.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.698bac59.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.26252ea6.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -90,13 +90,16 @@ Make sure that you add the modules <strong>Universal Windows Platform Build</str
 To be able to run builds for Android devices like the Meta Quest series, add <strong>Android Build Support</strong> and the connected modules.</p>
 <blockquote><p>Unity also installs <strong>Visual Studio (VS) 2022 Community Edition</strong>  by default.
 If you want to develop Unity apps, you’ll need to add the package <strong>Game development with Unity</strong>.
-To be able to deploy chARpack on the HoloLens2 also install the VS module <strong>Universal Windows Platform development</strong>.</p></blockquote>
+To be able to deploy chARpack on the HoloLens2 also install the VS module <strong>Universal Windows Platform development</strong>*.</p></blockquote>
+<p>* In recent versions of Visual Studio, this module has been replaced by the <strong>WinUI Application Development</strong> workload, which, among others, contains the necessary
+<em>Universal Windows Platform tools</em> and a Windows SDK.</p>
 <p>For an already installed Visual Studio, you have to add the modules mentioned above via the <strong>Visual Studio Installer</strong>.
-Open the installer and click on <strong>Modify</strong> at your preferred version of Visual Studio.
+Open the installer by selecting <code>Tools &gt; Get Tools and Features</code> and click on <strong>Modify</strong> at your preferred version of Visual Studio.
 Enable the modules and <strong>Modify</strong> in the bottom right corner to install them.</p>
 <h2>Download</h2>
-<p>To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
-You click on the green Button <strong>code</strong> and select <code>Download ZIP</code> or you use git to clone the project to your disk</p>
+<p>In order to be able to contribute to the project and benefit from version control functionalities, you will need to install <a href="https://git-scm.com/downloads" target="_blank">Git</a>.
+To load chARpack into Unity you first need to download chARpack from our <a href="https://github.com/KoehnLab/chARpack" target="_blank">GitHub repository</a>.
+You click on the green Button <strong>code</strong> and select <code>Download ZIP</code> (this also works without having Git installed) or you use Git to clone the project to your disk</p>
 <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">git</span> clone <span class="token parameter variable">--recursive</span> <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> https://github.com/KoehnLab/chARpack.git</code><!-- HTML_TAG_END --></pre>
 <h2>Prepare the Project</h2>
 <p>Open Unity Hub and select the <strong>Projects</strong> tab.
@@ -174,6 +177,7 @@ Holding <code>right click</code> lets you look around in the scene.
 Another important interaction is the <code>mousewheel</code>.
 Scrolling with the mouse wheel moves the currently activated hand forward and backward.
 Using the mouse wheel makes it easy to press buttons in chARpack.</p>
+<p>Alternatively, both buttons and molecules in the scene can be interacted with using mouse clicks.</p>
 <p>For instructions on deploying chARpack to your device, see the <a data-sveltekit-reload href="/development/00-getting_started/02-deployment">Deployment</a> section.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
@@ -200,7 +204,7 @@ Using the mouse wheel makes it easy to press buttons in chARpack.</p>
 			
 			<script>
 				{
-					__sveltekit_ceseoo = {
+					__sveltekit_1yul2j6 = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -210,8 +214,8 @@ Using the mouse wheel makes it easy to press buttons in chARpack.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.a4066bfa.js"),
-						import("../../../_app/immutable/entry/app.6addb48b.js")
+						import("../../../_app/immutable/entry/start.c259e834.js"),
+						import("../../../_app/immutable/entry/app.02033d74.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],

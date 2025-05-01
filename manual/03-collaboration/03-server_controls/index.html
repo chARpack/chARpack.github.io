@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.a4066bfa.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.c259e834.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.1089238d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.6addb48b.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.f48440d6.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.02033d74.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.3ee26e2b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.387d778a.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.ed525af6.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.fd0703cf.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.8fc15662.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.129336f1.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.698bac59.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.a39e326a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -103,9 +103,38 @@ The <strong>Load</strong> button opens a file dialog and lets you import all fil
 The loaded molecule appears in front of the currently selected client.
 You can select a molecule in the active scene under the section <strong>AtomWorld</strong> and press the <strong>Save</strong> button to store the data in a file.
 Here, you have the option to pick a supported output format (by adding the corresponding file extension) and the data is automatically converted and saved in this format.</p>
+<h2>Creating Molecules</h2>
+<p>Pressing the <strong>C</strong> key on your keyboard activates a text input field.
+Entering any valid element symbol <a href="https://de.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System" target="_blank">SMILES</a> string and pressing the <strong>Enter</strong> key creates the specified molecule.</p>
+<img src="/images/manual/server_molecule_creation.png" alt="Creating molecules on the server" class="mx-auto max-w-md">
+<p>Pressing the <strong>Clear</strong> button at the bottom of the screen deletes all molecules in the scene.</p>
+<h2>Settings</h2>
+<p>A settings menu is activated by pressing the <strong>Settings</strong> button; it contains separate pages with different categories of settings.
+This includes settings for the force field, the UI, networking and more.
+Choosing your desired settings and pressing the <strong>Save</strong> button in the menu updates the settings both in the server scene and on any connected devices, if applicable.</p>
+<h2>Interacting with Molecules</h2>
+<p>In the server scene, molecules can be interacted with using the mouse in a similar way to the AR environment.
+Clicking on an atom highlights it and displays a tooltip with information.
+Subsequent clicks on connected atoms display information about bonds, angles and torsion terms.
+Whole molecules can also be selected by clicking on a corner of their bounding box.</p>
+<p>Tooltips can be dragged around the screen on the top bar or collapsed to save space.</p>
+<img src="/images/manual/server_tooltip.png" alt="Server Tooltip" class="mx-auto max-w-md">
+<h3>Structure formulas</h3>
+<p>When selecting a whole molecule, the tooltip offers the additional option to generate a structure formula for the molecule using a Python library.</p>
+<img src="/images/manual/structure_formula.png" alt="Structure Formula" class="mx-auto max-w-md">
+<p>The structure formula window can be dragged (similar to the tooltip) or resized using the indicated corners.
+Atoms can be selected within the structure formula (turquoise) or within the molecule (default selection colors).
+The resulting highlighting is shown in both representations on corresponding structures.</p>
+<p>Instead of displaying this highlighting, you may also choose to show a heatmap on the structure formula, which can for example be obtained by using eye-tracking data.</p>
+<h2>Transforming Molecules</h2>
+<p>Selecting a molecule creates a Gizmo consisting of three colored arrows in its center (this can be toggled on or off using the <strong>Tab</strong> key).
+Clicking and dragging one of the arrows moves the entire molecule along this line, while clicking the cube in the center allows to freely move the molecule.
+You can switch to similar Gizmos for rotating or scaling the molecule by pressing the number keys on the keyboard (1 for translation, 2 for rotation, 3 for scaling, 4, 5 and 6 for combinations).</p>
+<blockquote><p>Scaling a molecule non-uniformly (stretching it more along one axis than others) will cause unexpected behavior!</p></blockquote>
 <h2>Other interactions</h2>
-<p>There are different shortcuts to perform specific actions on the server.
+<p>There are more shortcuts available to perform specific actions on the server.
 Hovering your mouse over the <em>Info</em> icon in the top right corner shows you a list of them.</p>
+<img src="/images/manual/info_panel.png" alt="Info panel" class="mx-auto max-w-md">
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -131,7 +160,7 @@ Hovering your mouse over the <em>Info</em> icon in the top right corner shows yo
 			
 			<script>
 				{
-					__sveltekit_ceseoo = {
+					__sveltekit_1yul2j6 = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -141,8 +170,8 @@ Hovering your mouse over the <em>Info</em> icon in the top right corner shows yo
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.a4066bfa.js"),
-						import("../../../_app/immutable/entry/app.6addb48b.js")
+						import("../../../_app/immutable/entry/start.c259e834.js"),
+						import("../../../_app/immutable/entry/app.02033d74.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],
