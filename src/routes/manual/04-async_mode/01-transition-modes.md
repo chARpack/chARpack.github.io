@@ -54,5 +54,14 @@ small ball to move it to AR.
 ## Other Options
 In the server settings, you can influence some more behaviours of asynchronous mode, for example the *Immersive Target* (where in the
 AR environment a molecule should appear when transitioning from the desktop), the *Desktop Target* (where on the desktop the molecule 
-should appear) and some animation parameters.
+should appear) and settings to control the duration of an animation as well as what parameters should be animated (rotation, scale, both or none).
+
+### Require Grab Hold
+If this is active (default), you are required to keep your fingers in the grab position used to initiate the transition for the duration
+of the transition animation (1.5 seconds by default). 
+Changing your hand position early ("letting go" of the molecule) aborts the transition.
+
+### Hover/Gaze as Selection
+If this is active (default), you can look at a molecule to select it for transition with the **Button Press** interaction.
+By deactivating it, you need to instead select the desired molecule using a standard selection gesture in AR before it can be transitioned.
 
