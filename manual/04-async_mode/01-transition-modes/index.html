@@ -8,20 +8,20 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.c259e834.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.1fa0dceb.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.e314a591.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.f48440d6.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.02033d74.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.adfce31f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.90a8e219.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.43263dfd.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.6c1c5497.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.ed525af6.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.fd0703cf.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/4.438d58f0.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.dde664da.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.8487fe2a.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.365b0f50.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.698bac59.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.a39e326a.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.8ab05f23.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/14.6fec4b56.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.3ac9772d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.4106ef7e.js">
@@ -95,7 +95,11 @@
 <p>chARpack offers three different ways to transfer (transition) molecules between AR and desktop:</p>
 <h3>Desktop2D</h3>
 <h3>Full3D</h3>
+<p>In this mode, molecules are animated moving in 3D when transitioning to make the interaction feel natural.
+By default, molecule scale and rotation are also animated.</p>
 <h3>Instant</h3>
+<p>This mode makes molecules transition instantly from desktop to AR and vice versa; in 2D, they appear in the center of the screen
+whereas in AR it appears at the chosen <em>Immersive Target</em>.</p>
 <h2>Interactions to initiate transition</h2>
 <p>There are multiple ways available to transition molecules; by default, all of them are active, but you can choose
 to only use one of them in the settings on the server.</p>
@@ -105,6 +109,9 @@ to only use one of them in the settings on the server.</p>
 <p><strong>Desktop to AR:</strong> Move the <strong>Hover Cursor</strong> over the molecule you want to transfer so its bounding box turns orange
 and then press the <strong>Space</strong> key to move it out of the screen.</p>
 <h3>Close Grab</h3>
+<p>Move your index finger close to the screen.
+Once it is close enough, you should see an arc going from your finger tip to a projected position on the desktop.
+Move this arc over a molecule and perform a normal grab gesture with your index finger and thumb to move it to AR while grabbed.</p>
 <h3>Distant Grab</h3>
 <p>Move the <strong>Hover Cursor</strong> over the molecule, then touch your middle finger to your thumb to move a molecule to AR.</p>
 <h3>Onscreen Pull</h3>
@@ -117,10 +124,19 @@ the molecule should be transferred to the desktop.</p>
 <p>Flick your index finger towards a molecule (in direct proximity of your hand). This means you start from a position similar to the grab
 gesture and then straighten your index finger fast. This should move the molecule to the screen.</p>
 <h3>Catch</h3>
+<p>Move the <strong>Hover Cursor</strong> over the molecule to transition and curl your index finger, middle finger and thumb like you are catching a
+small ball to move it to AR.</p>
 <h2>Other Options</h2>
 <p>In the server settings, you can influence some more behaviours of asynchronous mode, for example the <em>Immersive Target</em> (where in the
 AR environment a molecule should appear when transitioning from the desktop), the <em>Desktop Target</em> (where on the desktop the molecule
-should appear) and some animation parameters.</p>
+should appear) and settings to control the duration of an animation as well as what parameters should be animated (rotation, scale, both or none).</p>
+<h3>Require Grab Hold</h3>
+<p>If this is active (default), you are required to keep your fingers in the grab position used to initiate the transition for the duration
+of the transition animation (1.5 seconds by default).
+Changing your hand position early (“letting go” of the molecule) aborts the transition.</p>
+<h3>Hover/Gaze as Selection</h3>
+<p>If this is active (default), you can look at a molecule to select it for transition with the <strong>Button Press</strong> interaction.
+By deactivating it, you need to instead select the desired molecule using a standard selection gesture in AR before it can be transitioned.</p>
 
 <div class="inline-flex justify-center items-center w-full relative"><hr class="bg-gray-200 rounded border-0 dark:bg-gray-700 w-full h-1 mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900">
     <div class="dark:bg-gray-900 absolute left-1/2 px-3 font-medium text-gray-900 bg-white -translate-x-1/2 dark:text-white "></div></div>
@@ -146,7 +162,7 @@ should appear) and some animation parameters.</p>
 			
 			<script>
 				{
-					__sveltekit_1yul2j6 = {
+					__sveltekit_5z5rrp = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -156,8 +172,8 @@ should appear) and some animation parameters.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.c259e834.js"),
-						import("../../../_app/immutable/entry/app.02033d74.js")
+						import("../../../_app/immutable/entry/start.1fa0dceb.js"),
+						import("../../../_app/immutable/entry/app.90a8e219.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4, 14],
