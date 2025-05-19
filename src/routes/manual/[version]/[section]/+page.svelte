@@ -1,13 +1,15 @@
 <script>
     import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte'
     import { page } from "$app/stores";
-    
-    let section = $page.data.sections.filter(sec => {return sec.name === $page.params.section})[0];
+    import { versionstore } from "$lib/stores/versionstorage";
+    export let data;
+
+    let section = data.sections.filter(sec => {return sec.name === $page.params.section})[0];
 
 </script>
 
 <Breadcrumb aria-label="manual breadcrumb" solid class="mb-3" solidClass="bg-gray-50 dark:bg-gray-800 rounded">
-    <BreadcrumbItem href="/manual" home>Manual</BreadcrumbItem>
+    <BreadcrumbItem href="/manual/{$versionstore}" home>Manual</BreadcrumbItem>
     <BreadcrumbItem href={section.absRoute}>{section.title}</BreadcrumbItem>
 </Breadcrumb>
 <Heading tag="h2" class="mb-4">{section.title}</Heading>

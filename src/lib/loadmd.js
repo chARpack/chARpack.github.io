@@ -114,6 +114,74 @@ export function loadFullTreeManual() {
     return sections;
 }
 
+export function loadFullTreeVersionManual(selectedVersion) {
+    const allPages = import.meta.globEager('/src/routes/manual/*/**/*.md');
+    let pages = Object.entries(allPages)
+
+    .filter(([path]) => path.includes(`/manual/${selectedVersion}/`))
+    .map(([path, mod]) => ({
+        path,
+        ...mod
+    }));
+
+    const newPages = [];
+
+    pages.forEach(page => {
+        const section = page.path.split('/').slice(-2)[0];
+        const sectionNeat = formatSectionString(section);
+        const section_prio = section.split('-')[0];
+        const fullRoute = page.path.replace('.md', '');
+        const absRoute = '/' + fullRoute.split('/').slice(-4)[0] + '/' + fullRoute.split('/').slice(-3)[0] + '/' + fullRoute.split('/').slice(-2)[0] + '/' + fullRoute.split('/').slice(-1)[0];
+        const route = fullRoute.split('/').slice(-2)[0] + '/' + fullRoute.split('/').slice(-1)[0];
+        const pageRoute = fullRoute.split('/').slice(-1)[0];
+        const absSectionRoute =  '/' + fullRoute.split('/').slice(-4)[0] + '/' + fullRoute.split('/').slice(-3)[0] + '/' + fullRoute.split('/').slice(-2)[0];
+        const file_prio = page.path.split('/').slice(-1)[0].split('-')[0];
+        const overall_prio = section_prio + file_prio;
+
+        page['section'] = section;
+        page['sectionTitle'] = sectionNeat;
+        page['absRoute'] = absRoute;
+        page['route'] = route;
+        page['pageRoute'] = pageRoute;
+        page['absSectionRoute'] = absSectionRoute;
+        page['prio'] = overall_prio;
+        newPages.push(page);
+    });
+
+    // sort by prio
+    newPages.sort(comparePrio);
+
+
+
+    // group by page
+    // Group the dictionaries by section using Array.reduce()
+    let groupedBySection = newPages.reduce(function(acc, cur) {
+        let section = cur.section;
+        if (!(section in acc)) {
+            acc[section] = [];
+        }
+        acc[section].push(cur);
+        return acc;
+    }, {});
+
+    //console.log(groupedBySection);
+
+    let sections = Object.keys(groupedBySection).map(function(section) {
+        // console.log('/manual/' + selectedVersion + '/' + section);
+        return {
+            name: section,
+            title: formatSectionString(section),
+            absRoute: '/manual/' + selectedVersion + '/' + section,
+            pages: groupedBySection[section],
+        };
+    });
+
+    //console.log(sections[0].dictionaries);
+
+    return sections;
+}
+
+
 // params has key section
 export function loadSectionManual(params) {
 

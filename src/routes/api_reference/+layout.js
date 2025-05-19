@@ -1,8 +1,8 @@
-import { loadFullTreeManual } from '$lib/loadmd';
+import { loadFullTreeVersionManual } from '$lib/loadmd';
 
 export function load() {
     try {
-      const sections = loadFullTreeManual();
+      const sections = loadFullTreeVersionManual();
       return { sections };
     } catch (error) {
       console.error(error);

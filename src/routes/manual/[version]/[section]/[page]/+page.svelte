@@ -7,17 +7,19 @@
 
     import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem, Button } from 'flowbite-svelte'
     import { page } from "$app/stores";
+    import { versionstore } from "$lib/stores/versionstorage";
+    export let data;
 
-    let pageContent = $page.data.sections.filter(sec => {return sec.name === $page.params.section})[0].pages.filter(p => {return p.pageRoute === $page.params.page})[0];
+    let pageContent = data.sections.filter(sec => {return sec.name === $page.params.section})[0].pages.filter(p => {return p.pageRoute === $page.params.page})[0];
 
-    $: pageList = $page.data.sections.flatMap((section) => section.pages);
+    $: pageList = data.sections.flatMap((section) => section.pages);
 	$: index = pageList.findIndex(({ absRoute }) => absRoute + '/' === $page.url.pathname);
 	$: prev = pageList[index - 1];
 	$: next = pageList[index + 1];
 </script>
 
 <Breadcrumb aria-label="manual breadcrumb" solid class="mb-3" solidClass="bg-gray-50 dark:bg-gray-800 rounded">
-    <BreadcrumbItem href="/manual" home>Manual</BreadcrumbItem>
+    <BreadcrumbItem href="/manual/{$versionstore}" home>Manual</BreadcrumbItem>
     <BreadcrumbItem href={pageContent.absSectionRoute}>{pageContent.sectionTitle}</BreadcrumbItem>
     <BreadcrumbItem href={pageContent.absRoute}>{pageContent.metadata.title}</BreadcrumbItem>
 </Breadcrumb>

@@ -1,11 +1,16 @@
-import { loadFullTreeManual } from '$lib/loadmd';
+import { loadFullTreeVersionManual } from '$lib/loadmd';
+import { getAvailableVersions } from '$lib/getversions';
 
-export function load() {
-    try {
-      const sections = loadFullTreeManual();
-      return { sections };
-    } catch (error) {
-      console.error(error);
-      return { sections: [] }; // Return an empty array if there's an error
-    }
+/** @type {import('./$types').LayoutLoad} */
+export async function load({ params }) {
+	const { version } = params;
+  try {
+    const versions = getAvailableVersions();
+    // TODO check if version is valid
+    const sections = loadFullTreeVersionManual(version);
+    return { sections, versions, version };
+  } catch (error) {
+    console.error(error);
+    return { sections: [], versions: [], version };
+  }
 }
