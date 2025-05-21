@@ -23,7 +23,7 @@ The button **Quit** obviously closes chARpack.
 
 #### Normal
 Pressing the button **Normal** puts you into the main building environment.
-For more details on this mode see the section [Normal Mode](/manual/02-normal_mode) of the manual.
+For more details on this mode see the section [Normal Mode](/manual/1.1.0/02-normal_mode) of the manual.
 
 #### Connect
 The button **Connect** lets you connect to a chARpack server that is hosted in your network.
