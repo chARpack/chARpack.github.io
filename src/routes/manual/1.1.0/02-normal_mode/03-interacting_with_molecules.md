@@ -56,7 +56,7 @@ Measurement mode freezes the entire scene so input can not accidentally change a
 
 By applying a selection gesture on an atom, a measurement will be initialized.
 At first, the measurement will be attached to the tip of your index finger until you select another atom and thereby fix the measurement.
-A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom (you can change the unit of measurement to picometers in the <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">Settings</a> menu).
+A simple measurement between two atoms will draw a dashed line between them, labelled with their current distance in Angstrom (you can change the unit of measurement to picometers in the <a data-sveltekit-reload href="/manual/1.1.0/02-normal_mode/02-settings">Settings</a> menu).
 Adding another measurement to an atom that already is part of a measurement, shows the angle between their respective distance lines.
 The applied measurements are updated live when manipulating atoms or molecules again when outside of the Measurement mode.
 

@@ -8,14 +8,14 @@ When **Async Mode** is active, molecules and atoms are not automatically network
 
 In this mode, you can create molecules on the device or the server as normal, but they will not show up on the other side.
 You can now manipulate it as you wish; if you want to transfer it from the desktop to AR or vice versa, you will
-need to perform one of the actions specified in <a data-sveltekit-reload href="/manual/04-async_mode/01-transition-modes">Transition Modes and Options</a>.
+need to perform one of the actions specified in <a data-sveltekit-reload href="/manual/master/04-async_mode/01-transition-modes">Transition Modes and Options</a>.
 
 It also provides the ability to interact with molecules on the desktop from the AR environment;
 by pointing at the screen, you can control a *Hover Cursor* which highlights molecules it passes over.
 
 ### Scanning the screen
 In order to correctly transfer molecules between desktop and AR, you need to scan your desktop screen to register its coordinates.
-To start the scan, press the **Scan Screen** button in the <a data-sveltekit-reload href="/manual/01-first_start/00-login_screen">Login Menu</a>.
+To start the scan, press the **Scan Screen** button in the <a data-sveltekit-reload href="/manual/master/01-first_start/00-login_screen">Login Menu</a>.
 
 You should now be in an environment without any menus or buttons. This way, you can perform the screen scan uninterrupted.
 

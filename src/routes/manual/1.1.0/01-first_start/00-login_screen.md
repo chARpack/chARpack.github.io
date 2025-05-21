@@ -33,10 +33,10 @@ The number in brackets behind the text gives an indication of how many servers a
 The button **Scan QR** lets you scan room anchors for collaboration in the same room.
 
 #### Scan Screen
-The button **Scan Screen** lets you scan your desktop screen to enable <a data-sveltekit-reload href="/manual/04-async_mode/00-general">Async Mode</a> interactions.
+The button **Scan Screen** lets you scan your desktop screen to enable <a data-sveltekit-reload href="/manual/1.1.0/04-async_mode/00-general">Async Mode</a> interactions.
 
 #### Settings
-The button **Settings** opens a menu containing different <a data-sveltekit-reload href="/manual/02-normal_mode/02-settings">settings</a>; 
+The button **Settings** opens a menu containing different <a data-sveltekit-reload href="/manual/1.1.0/02-normal_mode/02-settings">settings</a>; 
 most of them are only useful once in *Normal Mode* or connected to a server.
 However, you can already do things such as changing the color scheme (the background color of the AR windows), switching the active language or
 opening a debug log for troubleshooting:
