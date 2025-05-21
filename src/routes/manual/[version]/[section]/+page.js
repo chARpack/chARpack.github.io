@@ -11,6 +11,7 @@ export async function load({params}) {
     }
 
     return {
-        section
+        section,
+        version
     };
 }

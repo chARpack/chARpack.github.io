@@ -7,25 +7,28 @@
 
     import { Heading, P, Hr, A, Mark, Secondary, Breadcrumb, BreadcrumbItem, Button } from 'flowbite-svelte'
     import { page } from "$app/stores";
-    import { versionstore } from "$lib/stores/versionstorage";
     export let data;
 
-    let pageContent = data.sections.filter(sec => {return sec.name === $page.params.section})[0].pages.filter(p => {return p.pageRoute === $page.params.page})[0];
+    let pageContent = data.pageContent;
+    let sections = data.sections;
+    let version = data.version;
 
-    $: pageList = data.sections.flatMap((section) => section.pages);
-	$: index = pageList.findIndex(({ absRoute }) => absRoute + '/' === $page.url.pathname);
-	$: prev = pageList[index - 1];
-	$: next = pageList[index + 1];
+    let content = data.content;
+    let metadata = data.metadata;
+
+    let next = data.next;
+    let prev = data.prev;
+
 </script>
 
 <Breadcrumb aria-label="manual breadcrumb" solid class="mb-3" solidClass="bg-gray-50 dark:bg-gray-800 rounded">
-    <BreadcrumbItem href="/manual/{$versionstore}" home>Manual</BreadcrumbItem>
+    <BreadcrumbItem href="/manual/{version}" home>Manual</BreadcrumbItem>
     <BreadcrumbItem href={pageContent.absSectionRoute}>{pageContent.sectionTitle}</BreadcrumbItem>
     <BreadcrumbItem href={pageContent.absRoute}>{pageContent.metadata.title}</BreadcrumbItem>
 </Breadcrumb>
-<Heading tag="h1">{pageContent.metadata.title}</Heading>
+<Heading tag="h1">{metadata.title}</Heading>
 <Hr  class="mx-auto my-2 bg-gray-100 border-0 rounded dark:bg-gray-900" height="h-1"/>
-<svelte:component this={pageContent.default} />
+<svelte:component this={content} />
 
 <Hr  class="mx-auto my-6 bg-gray-100 border-0 rounded dark:bg-gray-900" height="h-1"/>
 <div class="flex justify-between">

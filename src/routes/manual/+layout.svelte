@@ -3,9 +3,6 @@
   import { A, Heading, Sidebar, SidebarWrapper, SidebarBrand, SidebarItem, SidebarGroup } from 'flowbite-svelte';
   import { page } from "$app/stores";
   import { get } from 'svelte/store';
-  // import { versionstore } from '$lib/stores/versionstorage';
-  // import { select_value } from 'svelte/internal';
-  // let spanClass = 'flex-1 ml-3 whitespace-nowrap';
 
   let site = {
     name: 'chARpack',
@@ -33,10 +30,6 @@
   let sections = $page.data.sections;
   let versions = $page.data.versions;
 
-  // console.log(selectedVersion)
-  // // Derive current version from store
-	// versionstore.subscribe((v) => selectedVersion = v);
-  // console.log(selectedVersion)
 </script>
 
 <Sidebar class="fixed min-[1560px]:left-10 top-10 left-0 z-0 lg:w-64 md:w-auto h-screen transition-transform -translate-x-full lg:translate-x-0">

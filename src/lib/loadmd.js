@@ -114,6 +114,29 @@ export function loadFullTreeManual() {
     return sections;
 }
 
+export function getPageFromMDPath(mdPath) {
+    const section = mdPath.split('/').slice(-2)[0];
+    const sectionNeat = formatSectionString(section);
+    const section_prio = section.split('-')[0];
+    const fullRoute = mdPath.replace('.md', '');
+    const absRoute = '/' + fullRoute.split('/').slice(-4)[0] + '/' + fullRoute.split('/').slice(-3)[0] + '/' + fullRoute.split('/').slice(-2)[0] + '/' + fullRoute.split('/').slice(-1)[0];
+    const route = fullRoute.split('/').slice(-2)[0] + '/' + fullRoute.split('/').slice(-1)[0];
+    const pageRoute = fullRoute.split('/').slice(-1)[0];
+    const absSectionRoute =  '/' + fullRoute.split('/').slice(-4)[0] + '/' + fullRoute.split('/').slice(-3)[0] + '/' + fullRoute.split('/').slice(-2)[0];
+    const file_prio = mdPath.split('/').slice(-1)[0].split('-')[0];
+    const overall_prio = section_prio + file_prio;
+
+    let page = {};
+    page['section'] = section;
+    page['sectionTitle'] = sectionNeat;
+    page['absRoute'] = absRoute;
+    page['route'] = route;
+    page['pageRoute'] = pageRoute;
+    page['absSectionRoute'] = absSectionRoute;
+    page['prio'] = overall_prio;
+    return page;
+}
+
 export function loadFullTreeVersionManual(selectedVersion) {
     const allPages = import.meta.globEager('/src/routes/manual/*/**/*.md');
     let pages = Object.entries(allPages)
