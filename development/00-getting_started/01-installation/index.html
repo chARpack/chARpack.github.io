@@ -8,24 +8,24 @@
 		
 		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.7425e530.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.df46355c.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.0d0b5578.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.2e7e4575.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/paths.ae374067.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.8d347296.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/paths.88512e4f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/control.c2cf8273.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.07edfe6c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.374211a6.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/preload-helper.a4192956.js">
 		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.eaef2a03.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.15941470.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.e349bd8d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.0ae00ca7.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.c6375092.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.46c4a073.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/SidebarWrapper.3ddb2ec4.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.b6acc629.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.e5ddda8b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.9dcaba2e.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.f0da72f6.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.97807e57.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.8885210b.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.04d6a9c7.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.f8c8ae86.js">
@@ -87,9 +87,9 @@
 Go to the <a href="https://unity.com/download" target="_blank">download page of Unity</a> and download Unity Hub on your computer.
 Unity Hub is a management tool that will help you download and install different versions of Unity.
 Once the download is complete, run the installer and follow the on-screen instructions to install Unity Hub.
-Here we need to install the correct version of Unity which is <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a>.
+Here we need to install the correct version of Unity which is <a href="unityhub://6000.0.38f1/82314a941f2d" target="_blank">6000.0.38f1</a>.
 You can also download the newest version of Unity and update the project, but this is <strong>not recommended</strong>.
-Download and install version <a href="unityhub://2022.3.27f1/73effa14754f" target="_blank">2022.3.27f1</a> of Unity.
+Download and install version <a href="unityhub://6000.0.38f1/82314a941f2d" target="_blank">6000.0.38f1</a> of Unity.
 Make sure that you add the modules <strong>Universal Windows Platform Build</strong> and <strong>Windows Build Support (IL2CPP)</strong> to be able to deploy chARpack on the HoloLens2.
 To be able to run builds for Android devices like the Meta Quest series, add <strong>Android Build Support</strong> and the connected modules.</p>
 <blockquote><p>Unity also installs <strong>Visual Studio (VS) 2022 Community Edition</strong>  by default.
@@ -112,29 +112,30 @@ Put in the location to the root folder of your copy of chARpack and confirm the 
 The project should now show in the list of projects.</p>
 <blockquote><p>Before we can start the project, we first need to apply some more steps.</p></blockquote>
 <p>Since chARpack runs on the HoloLens2, we need to add Microsoft’s MRTK tarballs.</p>
-<h3>MRTK</h3>
+<h3>MRTK3</h3>
 <p>Because of their size, MRTK tarballs are not checked into the git repository.
-Therefore, the used MRTK packages have to be reinstalled.
+Therefore, the used packages have to be reinstalled.
 Download and run the <a href="https://www.microsoft.com/en-us/download/details.aspx?id=102778" target="_blank">MixedRealityFeatureTool</a> and select chARpack’s root folder as <strong>Project Path</strong>.
 Click <strong>Discover Features</strong> and activate the following features:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Mixed Reality Toolkit &gt;
-Mixed Reality Toolkit Foundations
-Mixed Reality Toolkit Extensions
-Mixed Reality Toolkit Examples
-Mixed Reality Toolkit Standard Assets
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">MRTK3 &gt;
+MRTK Graphics Tools
+MRTK Core Definitions 
+MRTK Extended Assets
+MRTK Input 
+MRTK Spatial Manipulation
+MRTK Standard Assets
+MRTK Tools
+MRTK UX Components
+MRTK UX Components (Non-Canvas)
+MRTK UX Core Scripts
 
 Platform Support &gt;
 Mixed Reality OpenXR Plugin</code><!-- HTML_TAG_END --></pre>
-<p>All these features should also appear with the tag “Version x.x.x currently installed”.
+<p>All these features should also appear with the tag “Version x.x.x currently installed”; this does not always work for MRTK3 packages. Usually, it should be sufficient to use the newest (non-prerelease) version. If you encounter any errors here, check for the correct package version on GitHub in <code>Packages &gt; manifest.json</code>.
 Click <strong>Get Features</strong> and confirm that step by clicking <strong>Import</strong>.</p>
 <h3>OpenBabel</h3>
-<p>In the current version of chARpack, OpenBabel should automatically be downloaded and installed if it is not already found on the system.
-If this is unsuccessful for some reason, you may need to perform a manual installation:</p>
-<p>For server support of OpenBabel please install the <a href="https://github.com/openbabel/openbabel/releases/latest" target="_blank">latest</a> version (x64 exe).
-Take the <code>OBDotNet.dll</code> from the OpenBabel install directory and copy it into <code>Assets/plugins</code>.
-If your system if having trouble to detect all necessary DLLs, check if the OpenBabel install path is added to your <code>PATH</code>.
-On Windows go to “Edit the system environment variables”; under “Environment Variables…” add the OpenBabel install path to your “Path” variable in the system variables.
-On Linux add the OpenBabel install path to your <code>PATH</code> variable.</p>
+<p>In the current version of chARpack, OpenBabel should automatically be downloaded and installed if it is not already found on the system.</p>
+
 <h3>NuGet</h3>
 <p>Download the file <code>NuGetForUnity.*.unitypackage</code> from the latest release of <a href="https://github.com/GlitchEnzo/NuGetForUnity/releases/latest" target="_blank">NuGet for Unity</a> (Note: Look for the release page of that project, no need to clone the source tree).
 To be able to install the <code>.unitypackage</code> file of <strong>NuGetForUnity</strong> you have to start the project for the first time.</p>
@@ -145,7 +146,7 @@ For now, you can click <strong>Ignore</strong> and continue with the installatio
 Drag-and-drop the <code>.unitypackage</code> into the <strong>Project</strong> section of your Unity window to install it.
 A pop-up should open and shows you the files that will be added to the project, click <strong>Import</strong>.
 This should add a <strong>NuGet</strong> option to the menu bar of Unity.</p>
-<img src="/images/manual/nuget_menu_bar.png" alt="NuGet Menu Bar" class="mx-auto max-w-xl">
+<img src="/images/development/nuget_menu_bar.png" alt="NuGet Menu Bar" class="mx-auto max-w-xl">
 <blockquote><p>Note: If the NuGet option is not available right away, simply close and reload the project.</p></blockquote>
 <p>In case Unity still complains about missing packages, please check the NuGet package manager and verify the installation of the following packages.
 Click on </p>
@@ -158,20 +159,17 @@ Microsoft.VCRTForwarders.140
 pythonnet</code><!-- HTML_TAG_END --></pre>
 <h3>UWP</h3>
 <p>Next, go to the menu bar of Unity and click</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Settings ...</code><!-- HTML_TAG_END --></pre>
-<img src="/images/manual/build_settings.png" alt="Build Settings" class="mx-auto max-w-xl">
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">File &gt; Build Profiles</code><!-- HTML_TAG_END --></pre>
 <p>Select the option <strong>Universal Windows Platform</strong> on the left and click on <strong>Switch Platform</strong>.</p>
-<img src="/images/manual/switch_platform.png" alt="Switch Platform" class="mx-auto max-w-xl">
+<img src="/images/development/switch_platform.png" alt="Switch Platform" class="mx-auto max-w-xl">
+<p>Make sure that, when building for Universal Windows, the LoginScreenScene and the MainScene are checked in the scene list.
+Conversely, when building the standalone desktop application, make sure only the ServerScene is checked here.</p>
 <h2>Test Run</h2>
 <p>Now chARpack should be set up for the first test run.
 In the <strong>Project</strong> window of Unity go to</p>
 <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Assets &gt; Scenes</code><!-- HTML_TAG_END --></pre>
 <p>and double click <strong>LoginScreenScene</strong>.
 Press the play button (top center of the Unity window) for running the test.</p>
-<blockquote><p>If the content of the <strong>LoginScreenScene</strong> or the <strong>MainScene</strong> occur in purple, you’ll need to upgrade the MRTK Standard Shader to Universal Render Pipeline (URP).</p></blockquote>
-<p>Running</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">Mixed Reality &gt; Toolkit &gt; Utilities &gt; Upgrade MRTK Standard Shader to Universal Render Pipeline</code><!-- HTML_TAG_END --></pre>
-<p>should fix the problem, and you will be able to see the GUI when running the program.</p>
 <h3>Interactions inside Unity editor</h3>
 <p>Now chARpack is running inside Unity editor.
 To interact with the menus you can hold <code>shift</code> to simulate the left hand and <code>space bar</code> to simulate the right hand.
@@ -208,7 +206,7 @@ Using the mouse wheel makes it easy to press buttons in chARpack.</p>
 			
 			<script>
 				{
-					__sveltekit_sivr75 = {
+					__sveltekit_57qq4w = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -218,8 +216,8 @@ Using the mouse wheel makes it easy to press buttons in chARpack.</p>
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.7425e530.js"),
-						import("../../../_app/immutable/entry/app.07edfe6c.js")
+						import("../../../_app/immutable/entry/start.df46355c.js"),
+						import("../../../_app/immutable/entry/app.374211a6.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],
