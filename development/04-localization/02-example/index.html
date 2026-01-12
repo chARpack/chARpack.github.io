@@ -6,29 +6,29 @@
 		<link rel="icon" href="../../../charpack_favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../../../_app/immutable/assets/0.52659b6f.css" rel="stylesheet">
+		<link href="../../../_app/immutable/assets/0.ff0091f7.css" rel="stylesheet">
 		<link href="../../../_app/immutable/assets/Indicator.1d121e74.css" rel="stylesheet">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/start.0b3f7148.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/start.f314fd16.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/index.0d0b5578.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.e6b6bac8.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/paths.5b30d062.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/singletons.6a090611.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/paths.c443d5c3.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/control.c2cf8273.js">
-		<link rel="modulepreload" href="../../../_app/immutable/entry/app.1a85261f.js">
+		<link rel="modulepreload" href="../../../_app/immutable/entry/app.0bf6fc59.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/preload-helper.a4192956.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.eaef2a03.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.3aba909d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.15941470.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.a80585d3.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.fb72d12e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/0.e9d6e751.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.06fb026e.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism.bb4fe175.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/3.c226ac00.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/loadmd.7dc0ffdf.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/globToArray.54c2d47d.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/SidebarWrapper.3ddb2ec4.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.b6acc629.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.e5ddda8b.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.c22e23c1.js">
-		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.6c9f053b.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/SidebarWrapper.86e74e7c.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/A.14f7f8bb.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Heading.9d030acb.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/stores.f2c25397.js">
+		<link rel="modulepreload" href="../../../_app/immutable/nodes/10.64d1a12b.js">
 		<link rel="modulepreload" href="../../../_app/immutable/chunks/prism-csharp.bb3e0c8f.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.04d6a9c7.js">
-		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.f8c8ae86.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/BreadcrumbItem.56d78fc9.js">
+		<link rel="modulepreload" href="../../../_app/immutable/chunks/Hr.58589b82.js">
 	</head>
 	<!-- <body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -87,8 +87,7 @@
 The project contains many menu prefabs from which you can copy a single button; there is also a prefab called <strong>CanvasButtonWithBackground</strong> found in <code>Assets/Resources/prefabs</code>.
 Alternatively, you can use the search field in the <em>Project</em> section and for example type <em>button</em> in the search field.
 Make sure the search is executed in the whole project and not only in <em>Assets</em>.</p>
-<p>Choose a type of button and instantiate it.
-Either directly in the Scene/prefab you are working on or via the <em>Instantiate</em> method within a script.</p>
+<p>Choose a type of button and instantiate it, either directly in the Scene/prefab you are working on or via the <em>Instantiate</em> method within a script.</p>
 <h2>Adding method listeners and icons</h2>
 <p>Some of the prefabs already have icons that correspond to their purpose.
 In case you want a different icon, manually update it.
@@ -104,7 +103,7 @@ You can do this in the editor, but for consistency purposes it is preferrable to
 <p>To add a method listener after instantiating the button, follow the structure: </p>
 <pre class="language-csharp"><!-- HTML_TAG_START --><code class="language-csharp">buttonGameObject<span class="token punctuation">.</span>GetComponent<span class="token operator">&lt;</span>PressableButton<span class="token operator">></span><span class="token punctuation">.</span>onClick<span class="token punctuation">.</span><span class="token function">AddListener</span><span class="token punctuation">(</span><span class="token keyword">delegate</span> <span class="token punctuation">&#123;</span> <span class="token function">yourMethod</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
 <p>This will add the corresponding method listener at runtime (i.e., the method will be called when the button is clicked).
-For more information see the <a href="https://learn.microsoft.com/en-us/dotnet/api/mixedreality.toolkit.ux.pressablebutton?view=mrtkuxcore-3.2" target="_blank" rel="noreferrer">MRTK3 documentation</a> or look at other examples of buttons in the project.</p>
+For more information see the <a href="https://learn.microsoft.com/en-us/dotnet/api/mixedreality.toolkit.ux.pressablebutton?view=mrtkuxcore-3.2" rel="noopener noreferrer" target="_blank">MRTK3 documentation</a> or look at other examples of buttons in the project.</p>
 <h2>Adding translations</h2>
 <p>All items should provide English and German texts and labels.
 The following two sections guide you though text and label generation process.</p>
@@ -116,14 +115,14 @@ To localize any content within a scene or prefab that will not be generated by a
 Select English as the active locale and enable the <em>Track Changes</em> toggle.
 Now, any changes you make will be tracked as part of the selected locale.
 Enter the English text for the item if you haven’t yet.
-Content other than text can also be localized, see the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/QuickStartGuideWithVariants.html" target="_blank" rel="noreferrer">documentation of Localization package</a>.
+Content other than text can also be localized, see the <a href="https://docs.unity3d.com/Packages/com.unity.localization@1.3/manual/QuickStartGuideWithVariants.html" rel="noopener noreferrer" target="_blank">documentation of Localization package</a>.
 After that, change the active locale to German and enter the corresponding translation.
 Tracked changes in text will be marked by a green background.
 Translations are saved in a string table (e.g. <code>Assets/Locales/My Strings</code>), which can also be edited separately in <code>Window &gt; Asset Management &gt; Localization Tables</code>.</p>
 <p>Alternatively, if you want to choose a key name for your new localized string (by default, Unity uses the path to its GameObject as a key, which can be quite long), you can also follow a similar process as for the scripting approach.
 Simply right-click on the <strong>TextMeshPro</strong> or <strong>TextMeshProUGUI</strong> component you want to localize and select <em>Localize Property</em> in the menu that appears.
 This will add a <strong>GameObjectLocalizer</strong> component to your object, which contains all the relevant localization information, such as which text or UI object is tracked by the localization system.</p>
-<img src="/images/development/game_object_localizer.png" alt="Game Object Localizer" class="mx-auto max-w-xl">
+<p><img src="/images/development/game_object_localizer.png" alt="Game Object Localizer" class="mx-auto .max-w-xl"></p>
 <p>In this component, you can choose which entry from which localization table you would like to use, as well as directly edit its translations.
 Here, you can either choose an existing localized string that fits your purposes or create a new one with new translations by selecting <code>My Strings</code> as the <em>Table Collection</em> and then pressing <em>Add Table Entry</em>.</p>
 <h3>Scripting</h3>
@@ -149,7 +148,7 @@ In any method within the script, you can now assign the value of <code>Localizat
 <div class="flex justify-between"><div><a class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/01-localization_in_unity"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">previous</button></a></div>
     <div><a class="inline-flex items-center hover:underline text-blue-600 dark:text-blue-500 text-gray-700 dark:text-gray-400 hover:text-gray-400 dark:hover:text-white hover:no-underline" href="/development/04-localization/03-debugging"><button type="button" class="text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 rounded-lg">next</button></a></div></div></main></div></main>
 
-  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
+  <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 self-center xl:w-3/6 lg:w-4/6 w-auto dark:bg-gray-900"><span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2026
   <a href="https://www.itheoc.uni-stuttgart.de/" class="hover:underline">ITheoC</a>
   All Rights Reserved.</span>
     <ul class="max-w-2xl flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"><li class="mr-4 last:mr-0 md:mr-6"><a href="/privacy" class="hover:underline">Privacy Policy</a></li>
@@ -168,7 +167,7 @@ In any method within the script, you can now assign the value of <code>Localizat
 			
 			<script>
 				{
-					__sveltekit_crjk9j = {
+					__sveltekit_1ko4zbz = {
 						base: new URL("../../..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -178,8 +177,8 @@ In any method within the script, you can now assign the value of <code>Localizat
 					const data = [null,null,null];
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.0b3f7148.js"),
-						import("../../../_app/immutable/entry/app.1a85261f.js")
+						import("../../../_app/immutable/entry/start.f314fd16.js"),
+						import("../../../_app/immutable/entry/app.0bf6fc59.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3, 10],
