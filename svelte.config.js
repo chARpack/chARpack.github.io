@@ -2,9 +2,7 @@ import { mdsvex } from "mdsvex";
 import mdsvexConfig from "./mdsvex.config.js";
 import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-static";
-import { getManualVersions } from './src/lib/manualPages.js';
-
-const manualVersions = getManualVersions();
+import { getAvailableVersions } from './src/lib/getversions.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -25,13 +23,22 @@ const config = {
       assets: "build",
       fallback: null,
     }),
-    prerender : {
+    prerender: {
       crawl: true,
       entries: [
         '*', // include everything discoverable via links
-        ...manualVersions.map(v => `/manual/${v}`)
-      ]
-    }
+        // Prerender all manual versions dynamically
+        ...(() => {
+          try {
+            return getAvailableVersions().map((v) => `/manual/${v}`);
+          } catch (e) {
+            // During config load, getAvailableVersions might fail if files aren't ready
+            // In that case, just return an empty array and let crawl handle it
+            return [];
+          }
+        })(),
+      ],
+    },
   },
 };
 
